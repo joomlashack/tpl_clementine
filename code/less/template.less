@@ -1,0 +1,180 @@
+.navbar {
+    &.navbar-inverse {
+        .navbar-inner {
+            box-shadow: none;
+            .container {
+                border-bottom: 4px double @color-two;
+                background-color: @color-one;
+            }
+            .nav {
+                li {
+                    &.active {
+                        a {
+                            box-shadow: none;
+                        }
+                    }
+                    a {
+                        font-family: @monoFontFamily;
+                    }
+                    &.parent {
+                    }
+                }
+            }
+        }
+    }
+    .nav {
+        > li {
+            > a {
+                text-shadow: none;
+            }
+        }
+    }
+}
+.navbar {
+    .navbar-inner {
+        box-shadow: none;
+    }
+    .brand {
+    	text-shadow: none;
+    	margin-left: 0;
+    }
+}
+.dropdown-menu {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	border: none;
+}
+// Buttons
+a {
+   outline: 0;
+}
+.btn {
+    border-radius: 100px;
+    background-image: none;
+    box-shadow: none;
+    -wekit-box-shadow: none;
+    text-shadow: none;
+    border-image: none;
+    color: @color-two;
+    background-color: transparent;
+    border-color: @color-two;
+    &:hover {
+        color: @white;
+    }
+    &.btn-primary {
+        border-color: @color-two;
+        box-shadow: none;
+        &:hover, &:focus {
+        	color: @white;
+        }
+    }
+    &.btn-info {
+        color: @btnInfoBackground;
+        border-color: @btnInfoBackground;
+        &:hover, &:focus {
+        	color: @white;
+        }
+    }
+    &.btn-success {
+        color: @btnSuccessBackground;
+        border-color: @btnSuccessBackground;
+        &:hover, &:focus {
+        	color: @white;
+        }
+    }
+    &.btn-warning {
+        color: @btnWarningBackground;
+        border-color: @btnWarningBackground;
+        &:hover, &:focus {
+        	color: @white;
+        }
+    }
+    &.btn-danger {
+        color: @btnDangerBackground;
+        border-color: @btnDangerBackground;
+        &:hover, &:focus {
+        	color: @white;
+        }
+    }
+    &.btn-link {
+    	padding: 0;
+    	border: none;
+    }
+}
+.label {
+	text-shadow: none;
+	padding: 4px 12px;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+}
+.badge {
+	text-shadow: none;
+}
+// Main styles
+.well {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+// Tables
+table {
+    thead {
+        background-color: @color-two;
+        color: @white;
+        font-family: @serifFontFamily;
+    }
+    &.table {
+        th {
+            text-align: center;
+            font-weight: normal;
+            &:first-child {
+                text-align: left;
+            }
+        }
+    }
+}
+.box-sizing {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    #logo {
+        float: none;
+        margin: 0 auto;
+    }
+}
+.breadcrumbs {
+    .breadcrumb {
+        background-color: transparent;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        padding: 15px 0px;
+        >li {
+            text-shadow: none;
+        }
+    }
+}
+#main-content {
+    margin-bottom: 0px;
+    #main {
+        .box-sizing();
+        background-color: @color-five;
+        padding: 0px 10px;
+        .item-page {
+        	overflow: visible;
+        }
+    }
+}
+#footer {
+    background-color: transparent;
+    background-image: none;
+    background: none;
+    filter: none;
+    .footer-content {
+        background: @textColor;
+        padding: 10px 0px;
+    }
+}

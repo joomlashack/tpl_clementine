@@ -1,33 +1,37 @@
 //
 // Variables
 // --------------------------------------------------
-
+@color-one: #FBFBF7;
+@color-two: #FF4D4D;
+@color-three: #575746;
+@color-four: #FF9B75;
+@color-five: #F0F0E1;
 
 // Options dropdown-submenu , this is a element parent with arrow for submenu
 // You can use true/false for show arrow
 // -------------------------
-@dropdownSubmenuLinkArrow : true;
-@navbarInverseDropdownSubmenuLinkArrow : true;
+@dropdownSubmenuLinkArrow : false;
+@navbarInverseDropdownSubmenuLinkArrow : false;
 
 
 // Gradient options of dropdown links
 // You can use true/false for add gradient
 // -------------------------
 
-@dropdownLinkGradient : true;
-@navbarInverseDropdownLinkGradient : true;
+@dropdownLinkGradient : false;
+@navbarInverseDropdownLinkGradient : false;
 
 
 // Dropdown For navbar-inverse
 // -------------------------
-@navbarInverseDropdownBackground : @dropdownBackground;
-@navbarInverseDropdownBorderFallback : #ccc;
-@navbarInverseDropdownBorder : @dropdownBorder;
-@navbarInverseDropdownLinkColor : @dropdownLinkColor;
-@navbarInverseDropdownLinkColorHover : @dropdownLinkColorHover;
-@navbarInverseDropdownLinkColorActive : @dropdownLinkColorActive;
-@navbarInverseDropdownLinkBackgroundHover : @dropdownLinkBackgroundHover;
-@navbarInverseDropdownLinkBackgroundActive : @dropdownLinkBackgroundActive;
+@navbarInverseDropdownBackground : @color-two;
+@navbarInverseDropdownBorderFallback : transparent;
+@navbarInverseDropdownBorder : transparent;
+@navbarInverseDropdownLinkColor : @white;
+@navbarInverseDropdownLinkColorHover : @white;
+@navbarInverseDropdownLinkColorActive : @white;
+@navbarInverseDropdownLinkBackgroundHover : @color-four;
+@navbarInverseDropdownLinkBackgroundActive : @color-four;
 
 
 // Global values
@@ -59,29 +63,29 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
-@textColor:             @grayDark;
+@bodyBackground:        @color-one;
+@textColor:             @color-three;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
-@linkColorHover:        darken(@linkColor, 15%);
+@linkColor:             @color-two;
+@linkColorHover:        @color-two;
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+@sansFontFamily:        'Lato', sans-serif;;
+@serifFontFamily:       'Rozha One', serif;
+@monoFontFamily:        'santanaregular';
 
 @baseFontSize:          14px;
 @baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsFontFamily:    @serifFontFamily; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 
@@ -97,26 +101,26 @@
 @paddingSmall:          2px 10px;  // 26px
 @paddingMini:           0 6px;   // 22px
 
-@baseBorderRadius:      4px;
-@borderRadiusLarge:     6px;
-@borderRadiusSmall:     3px;
+@baseBorderRadius:      0px;
+@borderRadiusLarge:     0px;
+@borderRadiusSmall:     0px;
 
 
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #f9f9f9; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
-@tableBorder:                       #ddd; // table and cell border
+@tableBackgroundAccent:             #F1D0C1; // for striping
+@tableBackgroundHover:              #F1D0C1; // for hover
+@tableBorder:                       @color-two; // table and cell border
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         #ccc;
+@btnBackground:                     transparent;
+@btnBackgroundHighlight:            @color-two;
+@btnBorder:                         @color-two;
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+@btnPrimaryBackground:              transparent;
+@btnPrimaryBackgroundHighlight:     @color-two;
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
@@ -124,7 +128,7 @@
 @btnSuccessBackground:              #62c462;
 @btnSuccessBackgroundHighlight:     #51a351;
 
-@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackground:              @orange;
 @btnWarningBackgroundHighlight:     @orange;
 
 @btnDangerBackground:               #ee5f5b;
@@ -146,17 +150,17 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @white;
-@dropdownBorder:                rgba(0,0,0,.2);
-@dropdownDividerTop:            #e5e5e5;
+@dropdownBackground:            @color-two;
+@dropdownBorder:                none;
+@dropdownDividerTop:            @white;
 @dropdownDividerBottom:         @white;
 
-@dropdownLinkColor:             @grayDark;
+@dropdownLinkColor:             @white;
 @dropdownLinkColorHover:        @white;
 @dropdownLinkColorActive:       @white;
 
-@dropdownLinkBackgroundActive:  @linkColor;
-@dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
+@dropdownLinkBackgroundActive:  @color-four;
+@dropdownLinkBackgroundHover:   @color-four;
 
 
 
@@ -208,35 +212,35 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
-@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
-@navbarBorder:                    darken(@navbarBackground, 12%);
+@navbarBackgroundHighlight:       transparent;
+@navbarBackground:                transparent;
+@navbarBorder:                    transparent;
 
 @navbarText:                      #777;
 @navbarLinkColor:                 #777;
 @navbarLinkColorHover:            @grayDark;
 @navbarLinkColorActive:           @gray;
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+@navbarLinkBackgroundActive:      transparent;
 
 @navbarBrandColor:                @navbarLinkColor;
 
 // Inverted navbar
-@navbarInverseBackground:                #111111;
-@navbarInverseBackgroundHighlight:       #222222;
-@navbarInverseBorder:                    #252525;
+@navbarInverseBackground:                transparent;
+@navbarInverseBackgroundHighlight:       transparent;
+@navbarInverseBorder:                    transparent;
 
-@navbarInverseText:                      @grayLight;
-@navbarInverseLinkColor:                 @grayLight;
-@navbarInverseLinkColorHover:            @white;
-@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+@navbarInverseText:                      @color-two;
+@navbarInverseLinkColor:                 @color-two;
+@navbarInverseLinkColorHover:            @color-two;
+@navbarInverseLinkColorActive:           @color-two;
 @navbarInverseLinkBackgroundHover:       transparent;
-@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+@navbarInverseLinkBackgroundActive:      transparent;
 
-@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
+@navbarInverseSearchBackground:          @white;
 @navbarInverseSearchBackgroundFocus:     @white;
-@navbarInverseSearchBorder:              @navbarInverseBackground;
-@navbarInverseSearchPlaceholderColor:    #ccc;
+@navbarInverseSearchBorder:              @white;
+@navbarInverseSearchPlaceholderColor:    @color-three;
 
 @navbarInverseBrandColor:                @navbarInverseLinkColor;
 
@@ -250,7 +254,7 @@
 
 // Hero unit
 // -------------------------
-@heroUnitBackground:              @grayLighter;
+@heroUnitBackground:              @color-one;
 @heroUnitHeadingColor:            inherit;
 @heroUnitLeadColor:               inherit;
 

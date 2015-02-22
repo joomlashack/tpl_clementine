@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'santanaregular';
+    src: url('../font/santana.eot');
+    src: url('../font/santana.eot?#iefix') format('embedded-opentype'),
+         url('../font/santana.woff') format('woff'),
+         url('../font/santana.ttf') format('truetype'),
+         url('../font/santana.svg#santanaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

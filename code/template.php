@@ -22,7 +22,6 @@ defined('_JEXEC') or die('Restricted access');
 <link href='http://fonts.googleapis.com/css?family=Rozha+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
-<link href='<?php echo JURI::root(true) ?>/templates/js_clementine/css/santana.css' rel='stylesheet' type='text/css'>
 </head>
 <body class="<?php echo $wrightBodyClass ?>">
 	<?php

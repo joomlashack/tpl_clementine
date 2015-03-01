@@ -30,7 +30,7 @@ defined('_JEXEC') or die('Restricted access');
 			:
 	?>
 	<!-- menu -->
-	<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+	<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode ?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
 	<?php
 		endif;
 	?>
@@ -47,7 +47,7 @@ defined('_JEXEC') or die('Restricted access');
 				:
 		?>
 		<!-- menu -->
-   		<w:nav name="menu" />
+   		<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode ?>" wrapClass="navbar-inverse" type="toolbar" name="menu" />
 		<?php
 			endif;
 		?>

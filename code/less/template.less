@@ -6,6 +6,20 @@
         }
     }
     .navbar-inner {
+        .btn {
+            &.btn-navbar {
+                -webkit-border-radius: 0;
+                border-radius: 0;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border: none;
+                margin: 5px;
+                span {
+                    box-shadow: none;
+                    background-color: @color-two;
+                }
+            }
+        }
         box-shadow: none;
         padding-left: 0;
         padding-right: 0;
@@ -58,7 +72,7 @@
                                     border-radius: 0;
                                 }
                                 &.dropdown-submenu {
-                                   > a {
+                                    > a {
                                         &:after {
                                             content: '\f105';
                                             font-family: FontAwesome;
@@ -113,6 +127,13 @@
             }
         }
         .navbar-inner {
+            .btn {
+                &.btn-navbar {
+                    span {
+                        background-color: @white;
+                    }
+                }
+            }
             background-color: @color-six;
             .container {
                 background-color: transparent;
@@ -139,6 +160,10 @@
             padding: 10px 10px;
         }
     }
+}
+// Pagination
+.counter {
+    float: none;
 }
 // Buttons
 a {
@@ -218,6 +243,11 @@ a {
         }
     }
 }
+blockquote {
+    &:before {
+        
+    }
+}
 .label {
     text-shadow: none;
     padding: 4px 12px;
@@ -284,6 +314,12 @@ table {
             overflow: visible;
         }
     }
+    #sidebar1, #sidebar2 {
+        padding-top: 10px;
+    }
+}
+#bottom-menu, #menu {
+    margin-bottom: 0;
 }
 #footer {
     background-color: transparent;
@@ -293,5 +329,23 @@ table {
     .footer-content {
         background: @textColor;
         padding: 10px 0px;
+    }
+}
+// Typography styles
+.tabs {
+    .bs-docs-example {
+        background-color: transparent;
+        border: none;
+        &:after {
+            background-color: transparent;
+            font-family: @sansFontFamily;
+            color: @color-three;
+            font-size: @baseFontSize;
+            border: none;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            padding: 0px 0px 5px 0px;
+            border-bottom: 4px double @color-two;
+        }
     }
 }

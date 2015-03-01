@@ -1,0 +1,180 @@
+@media (max-width: 979px) {
+    .navbar {
+        .navbar-inner {
+            .nav, &.nav {
+                > li {
+                    > a {
+                        &:hover, &:focus {
+                            border-radius: 0;
+                            -webkit-border-radius: 0;
+                        }
+                    }
+                    &:hover, &:focus {
+                        a {
+                            border-radius: 0;
+                            -webkit-border-radius: 0;
+                        }
+                    }
+                    &.active {
+                        a {
+                            border-radius: 0;
+                            -webkit-border-radius: 0;
+                        }
+                    }
+                    &.deeper {
+                        .dropdown-menu {
+                            margin: 0;
+                            > li {
+                                > a {
+                                    color: @color-three;
+                                    padding: 9px 15px 9px 25px;
+                                    &:hover, &:focus {
+                                        color: @white;
+                                        background-color: @color-two;
+                                    }
+                                }
+                                &.current {
+                                    > a {
+                                        background-color: @color-two;
+                                        color: @white;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover, &:focus {
+                            > a {
+                                &:after {
+                                    content: '\f107';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.navbar-inverse {
+            .navbar-inner {
+                .nav, &.nav {
+                    > li {
+                        > a {
+                            &:hover, &:focus {
+                                background-color: @color-two;
+                            }
+                        }
+                        &.deeper {
+                            .dropdown-menu {
+                                > li {
+                                    > a {
+                                        color: @white;
+                                    }
+                                    &.deeper {
+                                        > a {
+                                            &:after {
+                                                content: '\f107';
+                                            }
+                                        }
+                                    }
+                                    &:hover, &:focus {
+                                        > a {
+                                            background-color: @color-two;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .navbar {
+        .navbar-inner {
+            .nav, &.nav {
+                > li {
+                    > a {
+                        &:hover, &:focus {
+                            border-radius: 0;
+                            -webkit-border-radius: 0;
+                        }
+                    }
+                    &:hover, &:focus {
+                        a {
+                            border-radius: 0;
+                            -webkit-border-radius: 0;
+                        }
+                    }
+                    &.active {
+                        a {
+                            border-radius: 0;
+                            -webkit-border-radius: 0;
+                        }
+                    }
+                    &.deeper {
+                        .dropdown-menu {
+                            margin: 0;
+                            > li {
+                                > a {
+                                    color: @color-three;
+                                    padding: 9px 15px 9px 25px;
+                                    &:hover, &:focus {
+                                        color: @white;
+                                        background-color: @color-two;
+                                    }
+                                }
+                                &.current {
+                                    > a {
+                                        background-color: @color-two;
+                                        color: @white;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover, &:focus {
+                            > a {
+                                &:after {
+                                    content: '\f107';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.navbar-inverse {
+            .navbar-inner {
+                .nav, &.nav {
+                    > li {
+                        > a {
+                            &:hover, &:focus {
+                                background-color: @color-two;
+                            }
+                        }
+                        &.deeper {
+                            .dropdown-menu {
+                                > li {
+                                    > a {
+                                        color: @white;
+                                    }
+                                    &.deeper {
+                                        > a {
+                                            &:after {
+                                                content: '\f107';
+                                            }
+                                        }
+                                    }
+                                    &:hover, &:focus {
+                                        > a {
+                                            background-color: @color-two;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

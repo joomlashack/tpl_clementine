@@ -1,21 +1,92 @@
 .navbar {
+    margin-bottom: 0;
+    ul {
+        &.navbar-inner {
+            border-bottom: 4px double @color-two;
+        }
+    }
     .navbar-inner {
         box-shadow: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
         .container, .container-fluid {
             border-bottom: 4px double @color-two;
             background-color: @color-one;
         }
-        .nav {
+        .nav, &.nav {
             li {
-                &.active {
-                    a {
-                        box-shadow: none;
-                    }
-                }
                 a {
                     font-family: @sansFontFamily;
+                    .caret {
+                        display: none;
+                    }
                 }
-                &.parent {}
+            }
+            > li {
+                > a {
+                    color: @color-two;
+                    &:hover, &:focus {
+                        background-color: @color-two;
+                        color: @white;
+                    }
+                }
+                &.deeper {
+                    > a {
+                        &:after {
+                            content: '\f107';
+                            font-family: FontAwesome;
+                            margin-left: 5px;
+                        }
+                    }
+                    &:hover, &:focus {
+                        > a {
+                            background-color: @color-two;
+                            color: @white;
+                            &:after {
+                                content: '\f106';
+                            }
+                        }
+                    }
+                    .dropdown-menu {
+                        border: none;
+                        padding: 0;
+                        > li {
+                            &.deeper {
+                                .dropdown-menu {
+                                    -webkit-border-radius: 0;
+                                    border-radius: 0;
+                                }
+                                &.dropdown-submenu {
+                                   > a {
+                                        &:after {
+                                            content: '\f105';
+                                            font-family: FontAwesome;
+                                            float: none;
+                                            margin: 0;
+                                            border: none;
+                                            display: inline-block;
+                                            margin-left: 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    > a {
+                        box-shadow: none;
+                        color: @white;
+                        background-color: @color-two;
+                    }
+                    &.dropdown {
+                        > a {
+                            color: @white;
+                            background-color: @color-two;
+                        }
+                    }
+                }
             }
         }
     }
@@ -24,16 +95,37 @@
             > a {
                 text-shadow: none;
             }
+            >.dropdown-menu {
+                &:after, &:before {
+                    display: none;
+                }
+            }
         }
-    }
-}
-.navbar {
-    .navbar-inner {
-        box-shadow: none;
     }
     .brand {
         text-shadow: none;
         margin-left: 0;
+    }
+    &.navbar-inverse {
+        ul {
+            &.navbar-inner {
+                border-bottom: none;
+            }
+        }
+        .navbar-inner {
+            background-color: @color-six;
+            .container {
+                background-color: transparent;
+                border-bottom: none;
+            }
+            .nav, &.nav {
+                li {
+                    a {
+                        color: @white;
+                    }
+                }
+            }
+        }
     }
 }
 .dropdown-menu {
@@ -42,6 +134,11 @@
     border-radius: 0;
     -webkit-border-radius: 0;
     border: none;
+    li {
+        a {
+            padding: 10px 10px;
+        }
+    }
 }
 // Buttons
 a {
@@ -136,88 +233,6 @@ a {
     box-shadow: none;
 }
 // Nav tabs
-.nav-tabs {
-    background-color: @color-two;
-    > li {
-        > a {
-            color: white;
-            &:hover, &:focus {
-                color: black;
-            }
-        }
-        > .dropdown-toggle {
-            .caret {
-                border-top-color: white;
-            }
-            &:hover, &:focus {
-                .caret {
-                    border-top-color: black;
-                }
-            }
-        }
-        &.active {
-            > a {
-                color: white;
-                &:hover, &:focus {
-                    color: white;
-                }
-                background-color: @color-four;
-            }
-            > .dropdown-toggle {
-                .caret {
-                    border-top-color: black;
-                }
-                &:hover, &:focus {
-                    .caret {
-                        border-top-color: black;
-                    }
-                }
-            }
-        }
-    }
-    dt {
-        h3 {
-            margin-bottom: 0;
-            margin-right: 0;
-            margin-top: 0;
-            a {
-                font-family: @sansFontFamily;
-                color: @white;
-                padding: 10px 12px;
-                border-radius: 0;
-                -webkit-border-radius: 0;
-                .caret {
-                    border-top-color: @white;
-                }
-                &:hover, &:focus {
-                    color: black;
-                    .caret {
-                        border-top-color: black;
-                    }
-                }
-            }
-        }
-        &.open {
-            h3 {
-                background-color: @color-four;
-                a {
-                    border: none;
-                    background-color: transparent;
-                    color: @white;
-                    .caret {
-                        border-top-color: black;
-                    }
-                    &:hover, &:focus {
-                        color: black;
-                        .caret {
-                            border-top-color: black;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 // Tables
 table {
     thead {
@@ -245,6 +260,7 @@ table {
     #logo {
         float: none;
         margin: 0 auto;
+        text-align: center;
     }
 }
 .breadcrumbs {
@@ -263,7 +279,7 @@ table {
     #main {
         .box-sizing();
         background-color: @color-five;
-        padding: 0px 10px;
+        padding: 10px 10px;
         .item-page {
             overflow: visible;
         }

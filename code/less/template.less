@@ -298,12 +298,18 @@ blockquote {
             top: 17px;
         }
     }
+    &.pull-right {
+        border-right: none;
+    }
 }
 .label {
     text-shadow: none;
     padding: 4px 12px;
-    border-radius: 0;
-    -webkit-border-radius: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    &.label-info {
+        background-color: @color-three;
+    }
 }
 .badge {
     text-shadow: none;
@@ -343,6 +349,16 @@ table {
         margin: 0 auto;
         text-align: center;
     }
+    &.float-logo {
+        #logo {
+            float: left;
+        }
+    }
+}
+.hero-unit {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    background-color: @color-five;
 }
 .breadcrumbs {
     .breadcrumb {

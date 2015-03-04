@@ -9,3 +9,14 @@
 
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
+
+$topModules = intval($this->countModules('top'));
+$logoClass = '';
+$floatLogo = false;
+
+if ($topModules > 0) {
+	$logoClass = 'float-logo';
+	$floatLogo = true;
+}
+
+?>

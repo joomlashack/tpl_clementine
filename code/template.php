@@ -35,7 +35,7 @@ defined('_JEXEC') or die('Restricted access');
 	?>
 	<div class="<?php echo $wrightContainerClass; ?>">
 		<!-- header -->
-		<header id="header">
+		<header id="header" <?php if ($floatLogo): ?>class="<?php echo $logoClass; ?>"<?php endif; ?>>
 			<div class="<?php echo $wrightGridMode; ?> clearfix">
 				<w:logo name="top" />
 				<div class="clear"></div>

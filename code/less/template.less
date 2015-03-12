@@ -438,9 +438,10 @@ a {
         border: none;
     }
     &.dropdown-toggle {
-        &:hover, &:active {
+        &:hover, &:active, &:focus {
             box-shadow: none;
             -webkit-box-shadow: none;
+            color: @white;
         }
         .caret {
             display: none;
@@ -501,6 +502,15 @@ a {
         .btn {
             border-radius: 10px;
             -webkit-border-radius: 10px;
+        }
+    }
+    .actions {
+        &.dropdown-menu {
+            >li {
+                > a {
+                    text-align: center;
+                }
+            }
         }
     }
 }
@@ -575,6 +585,42 @@ table {
 .box-sizing {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+#lateral-menu {
+    .btn-navbar {
+        border: none;
+        position: absolute;
+        right: 0;
+        margin: 15px 0px;
+        .icon-bar {
+            display: block;
+            width: 18px;
+            height: 2px;
+        }
+        span {
+            background-color: @color-two;
+        }
+        &:hover, &:focus {
+            background-color: transparent;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+    }
+    position: relative;
+    .moduletable {
+        position: absolute;
+        background-color: @color-one;
+        right: 0;
+        z-index: -1;
+    }
+}
+.main-container {
+    display: table;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.content-wrapper {
+    background-color: @color-one;
 }
 #header {
     margin-top: 20px;

@@ -89,6 +89,11 @@
     }
 }
 @media (max-width: 767px) {
+    #header {
+        #logo {
+            margin-bottom: 20px;
+        }
+    }
     .navbar {
         .navbar-inner {
             .nav, &.nav {
@@ -173,6 +178,16 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    .nav-tabs {
+        margin: 20px 0px;
+        >li {
+            &:last-child {
+                > a {
+                    border-bottom: none;
                 }
             }
         }

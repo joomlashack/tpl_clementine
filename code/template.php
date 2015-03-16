@@ -33,9 +33,24 @@ defined('_JEXEC') or die('Restricted access');
 	<?php
 		endif;
 	?>
-	<div class="<?php echo $wrightContainerClass; ?>">
+	<div class="main-container">
+	<?php if ($this->countModules('lateral-menu')): ?>
+		<div id="lateral-menu" class="<?php echo $wrightContainerClass ?>">	
+		<a class="btn btn-navbar">
+						            <span class="icon-bar"></span>
+						            <span class="icon-bar"></span>
+						            <span class="icon-bar"></span>
+					            </a>
+			<div class="<?php echo $wrightContainerClass; ?>">
+			<div class="span6"> 		   
+			<w:module type="none" wrapClass="inner-menu" name="lateral-menu" chrome="xhtml" />		
+			</div>
+			</div>
+		</div>
+	<?php endif; ?>
+	<div class="<?php echo $wrightContainerClass; ?> content-wrapper">
 		<!-- header -->
-		<header id="header" <?php if ($floatLogo): ?>class="<?php echo $logoClass; ?>"<?php endif; ?>>
+		<header id="header">
 			<div class="<?php echo $wrightGridMode; ?> clearfix">
 				<w:logo name="top" />
 				<div class="clear"></div>
@@ -155,7 +170,7 @@ defined('_JEXEC') or die('Restricted access');
 		?>
 
 	</div>
-
+	</div>
 	<!-- footer -->
 	<div class="wrapper-footer">
 	   <footer id="footer" <?php
@@ -187,7 +202,5 @@ defined('_JEXEC') or die('Restricted access');
 				<w:footer />
 			</div>
 	   </footer>
-	</div>
-
 </body>
 </html>

@@ -669,7 +669,6 @@ table {
     }
 }
 // Special for the overrides 
-
 .blog {
     .items-row {
         .item {
@@ -677,17 +676,28 @@ table {
                 margin: 0;
             }
             .content-container {
-                h1, h2, h3, h4, h5, h6 {
-                    margin: 0;
-                }
+                background-color: @color-six;
+                color: @color-seven;
+                font-weight: 100;
+                font-style: italic;
                 padding: 20px;
                 float: left;
+                h1, h2, h3, h4, h5, h6 {
+                    margin: 0;
+                    font-style: normal;
+                    &:after {
+                        content: '';
+                        height: 2px;
+                        width: 25%;
+                        border: 1px solid @color-two;
+                        display: inherit;
+                        margin: 10px 0px;
+                    }
+                }
             }
         }
     }
 }
-
-
 #bottom-menu, #menu {
     margin-bottom: 0;
 }

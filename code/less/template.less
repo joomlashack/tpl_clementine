@@ -670,6 +670,7 @@ table {
 }
 // Special for the overrides 
 .blog {
+    margin: 0;
     .items-leading {
         float: left;
         .image-container {
@@ -709,6 +710,17 @@ table {
                     }
                 }
             }
+        }
+    }
+}
+#grid-bottom {
+    margin-bottom: 0;
+    p {
+        &.lead {
+            display: table;
+            margin: 40px auto;
+            font-size: @baseFontSize + 10;
+            font-weight: lighter;
         }
     }
 }

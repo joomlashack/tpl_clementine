@@ -623,7 +623,7 @@ table {
     margin: 0 auto;
     overflow: hidden;
 }
-.content-wrapper {
+.main-content-wrapper {
     background-color: @color-one;
 }
 #header {
@@ -659,9 +659,7 @@ table {
 #main-content {
     margin-bottom: 0px;
     #main {
-        .box-sizing();
         background-color: @color-five;
-        padding: 10px 10px;
         .item-page {
             overflow: visible;
         }
@@ -670,6 +668,26 @@ table {
         padding-top: 10px;
     }
 }
+// Special for the overrides 
+
+.blog {
+    .items-row {
+        .item {
+            [class^="img-intro-"] {
+                margin: 0;
+            }
+            .content-container {
+                h1, h2, h3, h4, h5, h6 {
+                    margin: 0;
+                }
+                padding: 20px;
+                float: left;
+            }
+        }
+    }
+}
+
+
 #bottom-menu, #menu {
     margin-bottom: 0;
 }

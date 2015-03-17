@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
         } else {
 			jQuery(this).addClass('menu-open');
         }
-        jQuery('.content-wrapper').css({
+        jQuery('.main-content-wrapper').css({
             transform: 'translateX(-' + slideMenuWidth + 'px)',
             MozTransform: 'translateX(-' + slideMenuWidth + 'px)',
             WebkitTransform: 'translateX(-' + slideMenuWidth + 'px)',

@@ -48,7 +48,7 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 		</div>
 	<?php endif; ?>
-	<div class="<?php echo $wrightContainerClass; ?> content-wrapper">
+	<div class="<?php echo $wrightContainerClass; ?> main-content-wrapper">
 		<!-- header -->
 		<header id="header">
 			<div class="<?php echo $wrightGridMode; ?> clearfix <?php echo $logoClass; ?>">

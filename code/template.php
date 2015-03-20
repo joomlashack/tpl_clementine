@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Wright
+ * @package     Clementine
  * @subpackage  Template File
  *
  * @copyright   Copyright (C) 2005 - 2015 Joomlashack. Meritage Assets.  All rights reserved.
@@ -29,7 +29,7 @@ defined('_JEXEC') or die('Restricted access');
 			:
 	?>
 	<!-- menu -->
-	<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode ?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+	<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
 	<?php
 		endif;
 	?>
@@ -51,7 +51,7 @@ defined('_JEXEC') or die('Restricted access');
 	<div class="<?php echo $wrightContainerClass; ?> main-content-wrapper">
 		<!-- header -->
 		<header id="header">
-			<div class="<?php echo $wrightGridMode; ?> clearfix <?php echo $logoClass; ?>">
+			<div class="row-fluid clearfix <?php echo $logoClass; ?>">
 				<w:logo name="top" />
 				<div class="clear"></div>
 			</div>
@@ -61,7 +61,7 @@ defined('_JEXEC') or die('Restricted access');
 				:
 		?>
 		<!-- menu -->
-   		<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode ?>" wrapClass="navbar-inverse" type="toolbar" name="menu" />
+   		<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" wrapClass="navbar-inverse" type="toolbar" name="menu" />
 		<?php
 			endif;
 		?>
@@ -82,7 +82,7 @@ defined('_JEXEC') or die('Restricted access');
 				:
 		?>
 		<div id="grid-top">
-			<w:module type="<?php echo $wrightGridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+			<w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
 		</div>
 		<?php
 			endif;
@@ -93,12 +93,12 @@ defined('_JEXEC') or die('Restricted access');
 		?>
 		<!-- grid-top2 -->
 		<div id="grid-top2">
-			<w:module type="<?php echo $wrightGridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+			<w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
 		</div>
 		<?php
 			endif;
 		?>
-		<div id="main-content" class="<?php echo $wrightGridMode; ?>">
+		<div id="main-content" class="row-fluid">
 			<!-- sidebar1 -->
 			<aside id="sidebar1">
 				<w:module name="sidebar1" chrome="xhtml" />
@@ -152,7 +152,7 @@ defined('_JEXEC') or die('Restricted access');
 		?>
 		<!-- grid-bottom -->
 		<div id="grid-bottom" >
-				<w:module type="<?php echo $wrightGridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
+				<w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
 		</div>
 		<?php
 			endif;
@@ -163,7 +163,7 @@ defined('_JEXEC') or die('Restricted access');
 		?>
 		<!-- grid-bottom2 -->
 		<div id="grid-bottom2" >
-				<w:module type="<?php echo $wrightGridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+				<w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
 		</div>
 		<?php
 			endif;
@@ -185,7 +185,7 @@ defined('_JEXEC') or die('Restricted access');
 				:
 			?>
 			<!-- bottom-menu -->
-			<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode ?>" name="bottom-menu" wrapClass="navbar-transparent" />
+			<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" name="bottom-menu" wrapClass="navbar-transparent" />
 			<?php
 				endif;
 			?>
@@ -195,7 +195,7 @@ defined('_JEXEC') or die('Restricted access');
 				if ($this->countModules('footer'))
 				:
 			?>
-					<w:module type="<?php echo $wrightGridMode; ?>" name="footer" chrome="wrightflexgrid" />
+					<w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
 		 	<?php
 				endif;
 			?>

@@ -656,15 +656,26 @@ table {
     margin-bottom: 0px;
     #main {
         background-color: @color_five;
-        .item-page {
-            overflow: visible;
-        }
+        padding: 50px 40px;
     }
+
     #sidebar1, #sidebar2 {
         padding-top: 10px;
     }
 }
-// Special for the overrides 
+
+.item-page {
+    overflow: visible;
+    .page-header:first-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.page-header {
+    padding: 0;
+}
+
+// Special for the overrides
 .blog {
     margin: 0;
     .items-leading {

@@ -2,7 +2,7 @@
     margin-bottom: 0;
     ul {
         &.navbar-inner {
-            border-bottom: 4px double @color-two;
+            border-bottom: 4px double @color_two;
         }
     }
     .navbar-inner {
@@ -16,7 +16,7 @@
                 margin: 5px;
                 span {
                     box-shadow: none;
-                    background-color: @color-two;
+                    background-color: @color_two;
                 }
                 &:hover, &:focus {
                     -webkit-border-radius: 0;
@@ -29,8 +29,8 @@
         padding-right: 0;
         border: none;
         .container, .container-fluid {
-            border-bottom: 4px double @color-two;
-            background-color: @color-one;
+            border-bottom: 4px double @color_two;
+            background-color: @color_one;
         }
         .nav, &.nav {
             li {
@@ -43,9 +43,9 @@
             }
             > li {
                 > a {
-                    color: @color-two;
+                    color: @color_two;
                     &:hover, &:focus {
-                        background-color: @color-two;
+                        background-color: @color_two;
                         color: @white;
                     }
                 }
@@ -59,7 +59,7 @@
                     }
                     &:hover, &:focus {
                         > a {
-                            background-color: @color-two;
+                            background-color: @color_two;
                             color: @white;
                             &:after {
                                 content: '\f106';
@@ -96,12 +96,12 @@
                     > a {
                         box-shadow: none;
                         color: @white;
-                        background-color: @color-two;
+                        background-color: @color_two;
                     }
                     &.dropdown {
                         > a {
                             color: @white;
-                            background-color: @color-two;
+                            background-color: @color_two;
                         }
                     }
                 }
@@ -138,7 +138,7 @@
                     }
                 }
             }
-            background-color: @color-six;
+            background-color: @color_six;
             .container {
                 background-color: transparent;
                 border-bottom: none;
@@ -168,17 +168,17 @@
 // Tab menu
 .nav-tabs {
     border-bottom: none;
-    background-color: @color-two;
+    background-color: @color_two;
     &:before {
         height: 4px;
-        border-top: 1px solid @color-two;
+        border-top: 1px solid @color_two;
         width: 100%;
-        background-color: @color-five;
+        background-color: @color_five;
     }
     &:after {
         height: 4px;
-        border-bottom: 1px solid @color-two;
-        background-color: @color-five;
+        border-bottom: 1px solid @color_two;
+        background-color: @color_five;
         width: 100%;
     }
     > li {
@@ -190,7 +190,7 @@
             border: none;
             margin-right: 0;
             &:hover, &:focus {
-                background-color: @color-four;
+                background-color: @color_four;
             }
         }
         > .dropdown-toggle {
@@ -219,11 +219,11 @@
             > a {
                 color: @white;
                 border: none;
-                background-color: @color-four;
+                background-color: @color_four;
                 &:hover, &:focus {
                     color: @white;
                     border: none;
-                    background-color: @color-four;
+                    background-color: @color_four;
                 }
             }
         }
@@ -266,7 +266,7 @@
                 .active {
                     > a {
                         color: @white;
-                        background-color: @color-four;
+                        background-color: @color_four;
                     }
                 }
                 .deeper {
@@ -290,7 +290,7 @@
                 }
                 a {
                     &:hover, &:focus {
-                        background-color: @color-four;
+                        background-color: @color_four;
                     }
                 }
             }
@@ -304,7 +304,7 @@
                     color: @white;
                     font-family: @sansFontFamily;
                     &:hover, &:focus {
-                        background-color: @color-four;
+                        background-color: @color_four;
                         text-decoration: none;
                     }
                 }
@@ -338,13 +338,13 @@
         &.open {
             h3 {
                 a {
-                    background-color: @color-four;
+                    background-color: @color_four;
                     color: @white;
                 }
             }
             p {
                 a {
-                    background-color: @color-four;
+                    background-color: @color_four;
                     color: @white;
                 }
             }
@@ -396,14 +396,14 @@ a {
     -wekit-box-shadow: none;
     text-shadow: none;
     border-image: none;
-    color: @color-two;
+    color: @color_two;
     background-color: transparent;
-    border-color: @color-two;
+    border-color: @color_two;
     &:hover {
         color: @white;
     }
     &.btn-primary {
-        border-color: @color-two;
+        border-color: @color_two;
         box-shadow: none;
         &:hover, &:focus {
             color: @white;
@@ -465,12 +465,12 @@ a {
             -wekit-box-shadow: none;
             text-shadow: none;
             border-image: none;
-            color: @color-two;
+            color: @color_two;
             background-color: transparent;
-            border-color: @color-two;
+            border-color: @color_two;
             &:hover, &:focus {
                 color: @white;
-                background-color: @color-two;
+                background-color: @color_two;
             }
         }
     }
@@ -557,7 +557,7 @@ blockquote {
     border-radius: 10px;
     -webkit-border-radius: 10px;
     &.label-info {
-        background-color: @color-three;
+        background-color: @color_three;
     }
 }
 .badge {
@@ -572,7 +572,7 @@ blockquote {
 // Tables
 table {
     thead {
-        background-color: @color-two;
+        background-color: @color_two;
         color: @white;
         font-family: @serifFontFamily;
     }
@@ -602,7 +602,7 @@ table {
             height: 2px;
         }
         span {
-            background-color: @color-two;
+            background-color: @color_two;
         }
         &:hover, &:focus {
             background-color: transparent;
@@ -613,7 +613,7 @@ table {
     position: relative;
     .moduletable {
         position: absolute;
-        background-color: @color-one;
+        background-color: @color_one;
         right: 0;
         z-index: -1;
     }
@@ -624,7 +624,7 @@ table {
     overflow: hidden;
 }
 .main-content-wrapper {
-    background-color: @color-one;
+    background-color: @color_one;
 }
 #header {
     margin-top: 20px;
@@ -643,7 +643,7 @@ table {
 .hero-unit {
     border-radius: 0;
     -webkit-border-radius: 0;
-    background-color: @color-five;
+    background-color: @color_five;
 }
 .breadcrumbs {
     .breadcrumb {
@@ -659,7 +659,7 @@ table {
 #main-content {
     margin-bottom: 0px;
     #main {
-        background-color: @color-five;
+        background-color: @color_five;
         .item-page {
             overflow: visible;
         }
@@ -678,7 +678,7 @@ table {
                 margin-bottom: -55px;
                 margin-right: 40px;
                 text-align: right;
-                color: @color-five;
+                color: @color_five;
             }
             [class^="img-intro-"] {
                 margin: 0px;
@@ -691,8 +691,8 @@ table {
                 margin: 0;
             }
             .content-container {
-                background-color: @color-six;
-                color: @color-seven;
+                background-color: @color_six;
+                color: @color_seven;
                 font-weight: 100;
                 font-style: italic;
                 padding: 20px;
@@ -704,7 +704,7 @@ table {
                         content: '';
                         height: 2px;
                         width: 25%;
-                        border: 1px solid @color-two;
+                        border: 1px solid @color_two;
                         display: inherit;
                         margin: 10px 0px;
                     }
@@ -739,7 +739,7 @@ table {
     #bottom-menu {
         .navbar {
             .navbar-inner {
-                background-color: @color-one;
+                background-color: @color_one;
             }
         }
     }
@@ -752,13 +752,13 @@ table {
         &:after {
             background-color: transparent;
             font-family: @sansFontFamily;
-            color: @color-three;
+            color: @color_three;
             font-size: @baseFontSize;
             border: none;
             -webkit-border-radius: 0;
             border-radius: 0;
             padding: 0px 0px 5px 0px;
-            border-bottom: 4px double @color-two;
+            border-bottom: 4px double @color_two;
         }
     }
 }
@@ -770,7 +770,7 @@ table {
             content: '';
             height: 2px;
             width: 33%;
-            border: 1px solid @color-two;
+            border: 1px solid @color_two;
             display: inherit;
             margin-top: 10px;
         }
@@ -787,18 +787,18 @@ table {
     }
 }
 .module_ms2, .moduletable_ms2, .moduletext_ms2 {
-    background-color: @color-six;
+    background-color: @color_six;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     padding: 10px;
-    color: @color-one;
+    color: @color_one;
     h3 {
         margin: 0px 0px 10px 0px;
         &:after {
             content: '';
             height: 2px;
             width: 33%;
-            border: 1px solid @color-two;
+            border: 1px solid @color_two;
             display: inherit;
             margin-top: 10px;
         }
@@ -809,7 +809,7 @@ table {
     }
 }
 .module_ms3, .moduletable_ms3, .moduletext_ms3 {
-    background-color: @color-two;
+    background-color: @color_two;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     padding: 10px;

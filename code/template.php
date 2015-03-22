@@ -20,7 +20,7 @@ defined('_JEXEC') or die('Restricted access');
 	<head>
 		<w:head />
 		<link href='http://fonts.googleapis.com/css?family=Rozha+One' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 	</head>
 	<body class="<?php echo $wrightBodyClass ?>">
@@ -138,7 +138,7 @@ defined('_JEXEC') or die('Restricted access');
 				</aside>
 			</div>
 		</div>
-		<div class="bg_color_one">
+		<div class="bg_color_two">
 			<div class="<?php echo $wrightContainerClass; ?>">
 				<div class="row-fluid">
 					<?php
@@ -155,7 +155,7 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 			</div>
 		</div>
-		<div class="bg_color_two">
+		<div class="bg_color_one">
 			<div class="<?php echo $wrightContainerClass; ?>">
 				<div class="row-fluid">
 					<?php

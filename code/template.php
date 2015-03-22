@@ -138,40 +138,38 @@ defined('_JEXEC') or die('Restricted access');
 				</aside>
 			</div>
 		</div>
+		<?php
+			if ($this->countModules('grid-bottom'))
+				:
+		?>
 		<div class="bg_color_two">
 			<div class="<?php echo $wrightContainerClass; ?>">
 				<div class="row-fluid">
-					<?php
-						if ($this->countModules('grid-bottom'))
-							:
-					?>
-					<!-- grid-bottom -->
 					<div id="grid-bottom" >
-							<w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
+						<w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
 					</div>
-					<?php
-						endif;
-					?>
 				</div>
 			</div>
 		</div>
+		<?php
+			endif;
+		?>
+		<?php
+			if ($this->countModules('grid-bottom2'))
+				:
+		?>
 		<div class="bg_color_one">
 			<div class="<?php echo $wrightContainerClass; ?>">
 				<div class="row-fluid">
-					<?php
-						if ($this->countModules('grid-bottom2'))
-							:
-					?>
-
 					<div id="grid-bottom2" >
-							<w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
+						<w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
 					</div>
-					<?php
-						endif;
-					?>
 				</div>
 			</div>
 		</div>
+		<?php
+			endif;
+		?>
 		<div class="bg_color_one">
 			<div class="<?php echo $wrightContainerClass; ?>">
 				<div class="row-fluid">

@@ -33,8 +33,8 @@ defined('_JEXEC') or die('Restricted access');
 		<?php
 			endif;
 		?>
-		<div class="main-container">
-			<div class="<?php echo $wrightContainerClass; ?> main-content-wrapper">
+		<div class="<?php echo $wrightContainerClass; ?> bg_color_five">
+			<div class="row-fluid">
 				<!-- header -->
 				<header id="header">
 					<div class="row-fluid clearfix <?php echo $logoClass; ?>">
@@ -84,54 +84,60 @@ defined('_JEXEC') or die('Restricted access');
 				<?php
 					endif;
 				?>
-				<div id="main-content" class="row-fluid">
-					<!-- sidebar1 -->
-					<aside id="sidebar1">
-						<w:module name="sidebar1" chrome="xhtml" />
-					</aside>
-					<!-- main -->
-					<section id="main">
-						<?php
-							if ($this->countModules('above-content'))
-								:
-						?>
-						<!-- above-content -->
-						<div id="above-content">
-							<w:module type="none" name="above-content" chrome="xhtml" />
-						</div>
-						<?php
-							endif;
-						?>
-						<?php
-							if ($this->countModules('breadcrumbs'))
-								:
-						?>
-						<!-- breadcrumbs -->
-						<div id="breadcrumbs">
-								<w:module type="single" name="breadcrumbs" chrome="none" />
-						</div>
-						<?php
-							endif;
-						?>
-						<!-- component -->
-						<w:content />
-						<?php
-							if ($this->countModules('below-content'))
-								:
-						?>
-						<!-- below-content -->
-						<div id="below-content">
-							<w:module type="none" name="below-content" chrome="xhtml" />
-						</div>
-						<?php
-							endif;
-						?>
-					</section>
-					<!-- sidebar2 -->
-					<aside id="sidebar2">
-						<w:module name="sidebar2" chrome="xhtml" />
-					</aside>
-				</div>
+			</div>
+		</div>
+		<div class="<?php echo $wrightContainerClass; ?> main-content-wrapper">
+			<div id="main-content" class="row-fluid">
+				<!-- sidebar1 -->
+				<aside id="sidebar1">
+					<w:module name="sidebar1" chrome="xhtml" />
+				</aside>
+				<!-- main -->
+				<section id="main">
+					<?php
+						if ($this->countModules('above-content'))
+							:
+					?>
+					<!-- above-content -->
+					<div id="above-content">
+						<w:module type="none" name="above-content" chrome="xhtml" />
+					</div>
+					<?php
+						endif;
+					?>
+					<?php
+						if ($this->countModules('breadcrumbs'))
+							:
+					?>
+					<!-- breadcrumbs -->
+					<div id="breadcrumbs">
+							<w:module type="single" name="breadcrumbs" chrome="none" />
+					</div>
+					<?php
+						endif;
+					?>
+					<!-- component -->
+					<w:content />
+					<?php
+						if ($this->countModules('below-content'))
+							:
+					?>
+					<!-- below-content -->
+					<div id="below-content">
+						<w:module type="none" name="below-content" chrome="xhtml" />
+					</div>
+					<?php
+						endif;
+					?>
+				</section>
+				<!-- sidebar2 -->
+				<aside id="sidebar2">
+					<w:module name="sidebar2" chrome="xhtml" />
+				</aside>
+			</div>
+		</div>
+		<div class="<?php echo $wrightContainerClass; ?> bg_color_five">
+			<div class="row-fluid">
 				<?php
 					if ($this->countModules('grid-bottom'))
 						:
@@ -143,18 +149,35 @@ defined('_JEXEC') or die('Restricted access');
 				<?php
 					endif;
 				?>
+			</div>
+		</div>
+		<div class="<?php echo $wrightContainerClass; ?> bg_color_two">
+			<div class="row-fluid">
 				<?php
 					if ($this->countModules('grid-bottom2'))
 						:
 				?>
-				<!-- grid-bottom2 -->
+
 				<div id="grid-bottom2" >
 						<w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
 				</div>
 				<?php
 					endif;
 				?>
-
+			</div>
+		</div>
+		<div class="<?php echo $wrightContainerClass; ?> bg_color_five	">
+			<div class="row-fluid">
+				<?php
+ 				 	if ($this->countModules('grid-bottom3'))
+						:
+				?>
+				<div id="grid-bottom3" >
+						<w:module type="row-fluid" name="grid-bottom3" chrome="wrightflexgrid" />
+				</div>
+				<?php
+					endif;
+				?>
 			</div>
 		</div>
 		<!-- footer -->
@@ -189,6 +212,6 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 		   </footer>
 		</div>
-		   <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_clementine/js/jclementine.js'></script>
+		<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_clementine/js/jclementine.js'></script>
 	</body>
 </html>

@@ -14,9 +14,14 @@ $topModules = intval($this->countModules('top'));
 $logoClass = '';
 $floatLogo = false;
 
+$sidebarsExist = '';
+
 if ($topModules > 0) {
 	$logoClass = 'float-logo';
 	$floatLogo = true;
 }
+
+if ($this->countModules('sidebar1') || $this->countModules('sidebar2'))
+	$sidebarsExist = ' sidebars_exist';
 
 ?>

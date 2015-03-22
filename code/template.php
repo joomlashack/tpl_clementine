@@ -23,7 +23,7 @@ defined('_JEXEC') or die('Restricted access');
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 	</head>
-	<body class="<?php echo $wrightBodyClass ?>">
+	<body class="<?php echo $wrightBodyClass . $sidebarsExist?>">
 		<div class="bg_color_one">
 			<?php
 				if ($this->countModules('toolbar'))

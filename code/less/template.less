@@ -657,21 +657,41 @@ dl.article-info {
 
 #main-content {
     margin-bottom: 0px;
-
 }
 
 #main {
-    padding: 50px 0;
+    background-color: @color_five;
+    padding: 50px 40px;
 }
 
 #sidebar1, #sidebar2 {
-
     padding-top: 10px;
 }
 
+.full-image {
+
+    img {
+        min-width: 100%;
+    }
+
+    + #main-content {
+        #main {
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+    }
+}
+
 .sidebars_exist {
-    #main {
-        padding: 50px 40px;
+    .full-image {
+        + #main-content {
+            #main {
+                margin-top: -8%;
+                padding: 50px 40px;
+                position: relative;
+                z-index: 3;
+            }
+        }
     }
 }
 

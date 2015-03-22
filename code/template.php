@@ -89,6 +89,16 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 		</div>
 		<div class="<?php echo $wrightContainerClass; ?>">
+	        <?php
+				if ($wrightSingleArticleDisplay)
+					:
+			?>
+            <div class="full-image">
+                <img src="<?php echo $wrightSingleArticleImage ?>" alt="<?php echo $wrightSingleArticleAlt ?>" />
+            </div>
+            <?php
+				endif;
+			?>
 			<div id="main-content" class="row-fluid">
 				<!-- sidebar1 -->
 				<aside id="sidebar1">

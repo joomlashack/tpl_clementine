@@ -738,14 +738,18 @@ dl.article-info {
             }
             .content-container {
                 background-color: @color_six;
-                color: @color_seven;
-                font-weight: 100;
-                font-style: italic;
                 padding: 20px;
                 float: left;
+
+                p {
+                    color: @color_seven;
+                    font-style: italic;
+                    font-weight: 300;
+                }
+
                 h1, h2, h3, h4, h5, h6 {
                     margin: 0;
-                    font-style: normal;
+
                     &:after {
                         content: '';
                         height: 2px;
@@ -754,6 +758,14 @@ dl.article-info {
                         display: inherit;
                         margin: 10px 0px;
                     }
+
+                    a {
+                        color: @color_five;
+                    }
+                }
+
+                > h2 {
+                    font-size: 35px;
                 }
             }
         }

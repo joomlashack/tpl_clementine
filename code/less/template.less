@@ -25,10 +25,6 @@ h6 {
 
 p {font-weight: 300;}
 
-.muted {
-    color: @color_two;
-}
-
 .navbar {
     margin-bottom: 0;
     ul {
@@ -658,6 +654,10 @@ table {
 dl.article-info {
     margin-bottom: 10px;
 
+    .muted {
+        color: @color_two;
+    }
+
     dd:hover {
         background-color: transparent;
     }
@@ -768,8 +768,45 @@ dl.article-info {
                     font-size: 35px;
                 }
             }
+
+            .img-intro-left {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+
+            [class*="img-intro"] {
+                + .content-container {
+                    position: relative;
+                    &:before {
+                        border-bottom: 32px solid @color_six;
+                        border-left: 20px solid transparent;
+                        border-right: 20px solid transparent;
+                        bottom: 100%;
+                        content: '';
+                        position: absolute;
+                    }
+                }
+            }
         }
     }
+
+    dl.article-info {
+        color: @color_five;
+    }
+    a {
+        color: @textColor;
+    }
+
+    .btn {
+        border-color: @textColor;
+
+        &:hover, &:focus {
+            border-color: @color_two;
+        }
+    }
+
 }
 #grid-bottom {
     margin-bottom: 0;

@@ -813,6 +813,21 @@ dl.article-info {
     }
 
     #grid > .fluid(percentage(78.3334px/@gridRowWidth), 0);
+
+    .category-desc {
+        position: relative;
+        margin-bottom: 15px;
+
+        > img {
+            width: 100%;
+
+            + div {
+                position: absolute;
+                top: 10px;
+                right: 20%;
+            }
+        }
+    }
 }
 #grid-bottom {
     margin-bottom: 0;
@@ -838,6 +853,7 @@ dl.article-info {
 
         small {
             font-size: @baseFontSize  + 2;
+            color: @white;
         }
     }
 }

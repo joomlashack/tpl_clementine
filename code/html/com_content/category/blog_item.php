@@ -21,7 +21,7 @@ $templateSpanValue = $template->params->get('imageSpan', '2');
 $imageSpan = 'span' . $templateSpanValue;
 $contentSpan = 'span' . (12 - $templateSpanValue);
 
-$wrightRowValue = $template->params->get('bs_rowmode');
+$wrightRowValue = 'row-fluid';
 
 if ($specialHomeLayout && $this->item->wrightType == 'leading')
 {

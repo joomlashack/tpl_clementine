@@ -180,22 +180,7 @@ defined('_JEXEC') or die('Restricted access');
 		<?php
 			endif;
 		?>
-		<div class="bg_color_one">
-			<div class="<?php echo $wrightContainerClass; ?>">
-				<div class="row-fluid">
-					<?php
-	 				 	if ($this->countModules('grid-bottom3'))
-							:
-					?>
-					<div id="grid-bottom3" >
-							<w:module type="row-fluid" name="grid-bottom3" chrome="wrightflexgrid" />
-					</div>
-					<?php
-						endif;
-					?>
-				</div>
-			</div>
-		</div>
+
 		<!-- footer -->
 		<div class="wrapper-footer">
 		   <footer id="footer" <?php

@@ -877,9 +877,16 @@ dl.article-info {
     }
 
     #bottom-menu {
-        .navbar {
-            .navbar-inner {
-                background-color: @color_one;
+        .nav {
+            > li {
+                >  a {
+                    color: @color_one;
+
+                    &:hover, &:focus {
+                        background-color: transparent;
+                        color: darken(@color_five, 5%);
+                    }
+                }
             }
         }
     }

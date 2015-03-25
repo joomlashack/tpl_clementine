@@ -419,53 +419,67 @@ a {
 }
 
 .btn {
-    border-radius: 100px;
+    .box-shadow(none);
+    .border-radius(100px);
     background-image: none;
-    box-shadow: none;
-    -wekit-box-shadow: none;
+    color: @white;
     text-shadow: none;
-    border-image: none;
-    color: @color_two;
-    background-color: transparent;
-    border-color: @color_two;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &.btn-large {
+        padding: 6px 35px;
+    }
+
+    &.btn-small {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &.btn-mini {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     &:hover {
         color: @white;
     }
+
+    &:focus {
+        color: @color_two;
+    }
+
     &.btn-primary {
-        border-color: @color_two;
-        box-shadow: none;
-        &:hover, &:focus {
-            color: @white;
+        &:focus {
+            color: @color_two;
         }
     }
     &.btn-info {
-        color: @btnInfoBackground;
-        border-color: @btnInfoBackground;
-        &:hover, &:focus {
-            color: @white;
+        &:focus {
+            color: @btnInfoBackground;
         }
     }
     &.btn-success {
-        color: @btnSuccessBackground;
-        border-color: @btnSuccessBackground;
-        &:hover, &:focus {
-            color: @white;
+        &:focus {
+            color: @btnSuccessBackground;
         }
     }
     &.btn-warning {
-        color: @btnWarningBackground;
-        border-color: @btnWarningBackground;
-        &:hover, &:focus {
-            color: @white;
+        &:focus {
+            color: @btnWarningBackground;
         }
     }
     &.btn-danger {
-        color: @btnDangerBackground;
-        border-color: @btnDangerBackground;
-        &:hover, &:focus {
-            color: @white;
+        &:focus {
+            color: @btnDangerBackground;
         }
     }
+    &.btn-inverse {
+        &:focus {
+            color: @btnInverseBackground;
+        }
+    }
+
     &.btn-link {
         padding: 0;
         border: none;

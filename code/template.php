@@ -24,6 +24,20 @@ defined('_JEXEC') or die('Restricted access');
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 	</head>
 	<body class="<?php echo $wrightBodyClass . $sidebarsExist?>">
+		<?php if ($this->countModules('lateral-menu')): ?>
+		<div id="lateral-menu" class="<?php echo $wrightContainerClass ?>">
+			<a class="btn btn-navbar" id="trigger-lateral-menu">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+            </a>
+			<div class="<?php echo $wrightContainerClass; ?>">
+				<div class="span4 pull-right" id="lateral-menu-container">
+					<w:module type="none" wrapClass="inner-menu" name="lateral-menu" chrome="xhtml" />
+				</div>
+			</div>
+		</div>
+		<?php endif; ?>
 		<div class="bg_color_one">
 			<?php
 				if ($this->countModules('toolbar'))

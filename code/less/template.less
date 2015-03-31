@@ -1008,58 +1008,39 @@ dl.article-info {
     margin-bottom: 10px;
 }
 
--#lateral-menu {
+#lateral-menu {
+    position: relative;
 
--    .btn-navbar {
+    .btn-navbar {
+        border: none;
+        position: absolute;
+        right: 0;
+        margin: 15px 0px;
 
--        border: none;
+        .icon-bar {
+            display: block;
+            width: 18px;
+            height: 2px;
+        }
 
--        position: absolute;
+        span {
+            background-color: @color_two;
+        }
 
--        right: 0;
+        &:hover, &:focus {
+            background-color: transparent;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+        }
 
--        margin: 15px 0px;
+    }
 
--        .icon-bar {
 
--            display: block;
+    .moduletable {
+        position: absolute;
+        background-color: @color_one;
+        right: 0;
+        z-index: -1;
+    }
+}
 
--            width: 18px;
-
--            height: 2px;
-
--        }
-
--        span {
-
--            background-color: @color_two;
-
--        }
-
--        &:hover, &:focus {
-
--            background-color: transparent;
-
--            box-shadow: none;
-
--            -webkit-box-shadow: none;
-
--        }
-
--    }
-
--    position: relative;
-
--    .moduletable {
-
--        position: absolute;
-
--        background-color: @color_one;
-
--        right: 0;
-
--        z-index: -1;
-
--    }
-
--}

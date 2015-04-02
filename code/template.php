@@ -25,208 +25,216 @@ defined('_JEXEC') or die('Restricted access');
 	</head>
 	<body class="<?php echo $wrightBodyClass . $sidebarsExist?>">
 		<?php if ($this->countModules('lateral-menu')): ?>
-		<div id="lateral-menu" class="<?php echo $wrightContainerClass ?>">
-			<a class="btn btn-navbar" id="trigger-lateral-menu">
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-            </a>
-			<div class="<?php echo $wrightContainerClass; ?>">
-				<div class="span4 pull-right" id="lateral-menu-container">
-					<w:module type="none" wrapClass="inner-menu" name="lateral-menu" chrome="xhtml" />
-				</div>
+		<div id="lateral-menu" class="span4 pull-none bg_color_six">
+			<div id="lateral-menu-container">
+				<w:module type="none" wrapClass="inner-menu" name="lateral-menu" chrome="xhtml" />
 			</div>
 		</div>
 		<?php endif; ?>
-		<div class="bg_color_one">
-			<?php
-				if ($this->countModules('toolbar'))
-					:
-			?>
-			<!-- menu -->
-			<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
-			<?php
-				endif;
-			?>
-			<div class="<?php echo $wrightContainerClass; ?>">
-				<div class="row-fluid">
-					<!-- header -->
-					<header id="header">
-						<div class="row-fluid clearfix <?php echo $logoClass; ?>">
-							<w:logo name="top" />
-							<div class="clear"></div>
-						</div>
-					</header>
-					<?php
-						if ($this->countModules('menu'))
-							:
-					?>
-					<!-- menu -->
-			   		<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" wrapClass="navbar-inverse" type="toolbar" name="menu" />
-					<?php
-						endif;
-					?>
-					<!-- featured -->
-					<?php
-						if ($this->countModules('featured'))
-							:
-					?>
-					<div id="featured">
-						<w:module type="none" name="featured" chrome="xhtml" />
-					</div>
-					<?php
-						endif;
-					?>
-					<!-- grid-top -->
-					<?php
-						if ($this->countModules('grid-top'))
-							:
-					?>
-					<div id="grid-top">
-						<w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
-					</div>
-					<?php
-						endif;
-					?>
-					<?php
-						if ($this->countModules('grid-top2'))
-							:
-					?>
-					<!-- grid-top2 -->
-					<div id="grid-top2">
-						<w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
-					</div>
-					<?php
-						endif;
-					?>
-				</div>
-			</div>
-		</div>
-		<div class="<?php echo $wrightContainerClass; ?>">
-	        <?php
-				if ($wrightSingleArticleDisplay)
-					:
-			?>
-            <div class="full-image">
-                <img src="<?php echo $wrightSingleArticleImage ?>" alt="<?php echo $wrightSingleArticleAlt ?>" />
-            </div>
-            <?php
-				endif;
-			?>
-			<div id="main-content" class="row-fluid">
-				<!-- sidebar1 -->
-				<aside id="sidebar1">
-					<w:module name="sidebar1" chrome="xhtml" />
-				</aside>
-				<!-- main -->
-				<section id="main">
-					<?php
-						if ($this->countModules('above-content'))
-							:
-					?>
-					<!-- above-content -->
-					<div id="above-content">
-						<w:module type="none" name="above-content" chrome="xhtml" />
-					</div>
-					<?php
-						endif;
-					?>
-					<?php
-						if ($this->countModules('breadcrumbs'))
-							:
-					?>
-					<!-- breadcrumbs -->
-					<div id="breadcrumbs">
-							<w:module type="single" name="breadcrumbs" chrome="none" />
-					</div>
-					<?php
-						endif;
-					?>
-					<!-- component -->
-					<w:content />
-					<?php
-						if ($this->countModules('below-content'))
-							:
-					?>
-					<!-- below-content -->
-					<div id="below-content">
-						<w:module type="none" name="below-content" chrome="xhtml" />
-					</div>
-					<?php
-						endif;
-					?>
-				</section>
-				<!-- sidebar2 -->
-				<aside id="sidebar2">
-					<w:module name="sidebar2" chrome="xhtml" />
-				</aside>
-			</div>
-		</div>
-		<?php
-			if ($this->countModules('grid-bottom'))
-				:
-		?>
-		<div class="bg_color_two">
-			<div class="<?php echo $wrightContainerClass; ?>">
-				<div class="row-fluid">
-					<div id="grid-bottom" >
-						<w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
-					</div>
-				</div>
-			</div>
-		</div>
-		<?php
-			endif;
-		?>
-		<?php
-			if ($this->countModules('grid-bottom2'))
-				:
-		?>
-		<div class="bg_color_one">
-			<div class="<?php echo $wrightContainerClass; ?>">
-				<div class="row-fluid">
-					<div id="grid-bottom2" >
-						<w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
-					</div>
-				</div>
-			</div>
-		</div>
-		<?php
-			endif;
-		?>
-
-		<!-- footer -->
-		<div class="wrapper-footer">
-		   <footer id="footer" <?php
-			if ($this->params->get('stickyFooter', 1))
-				:
-				?> class="sticky"<?php
-			endif;
-				?>>
-
-				<div class="bg_color_three">
-					<?php
-						if ($this->countModules('bottom-menu'))
+		<div class="total relative">
+			<div class="bg_color_one padding-none">
+				<?php
+					if ($this->countModules('toolbar'))
 						:
+				?>
+				<!-- menu -->
+				<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+				<?php
+					endif;
+				?>
+				<div class="<?php echo $wrightContainerClass; ?>">
+					<?php 
+						if ($this->countModules('lateral-menu'))
+							: 
 					?>
-					<!-- bottom-menu -->
-					<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" name="bottom-menu" wrapClass="navbar-transparent" />
-					<?php
+					<a class="btn btn-navbar pull-right" id="trigger-lateral-menu">
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			        </a>
+			        <div class="clear"></div>
+			        <?php
 						endif;
 					?>
-				   	<div class="<?php echo $wrightContainerClass; ?> footer-content">
-				   		<?php
-							if ($this->countModules('footer'))
-							:
+					<div class="row-fluid">
+						<!-- header -->
+						<header id="header">
+							<div class="row-fluid clearfix <?php echo $logoClass; ?>">
+								<w:logo name="top" />
+								<div class="clear"></div>
+							</div>
+						</header>
+						<?php
+							if ($this->countModules('menu'))
+								:
 						?>
-								<w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
-					 	<?php
+						<!-- menu -->
+				   		<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" wrapClass="navbar-inverse" type="toolbar" name="menu" />
+						<?php
 							endif;
 						?>
-							<w:footer />
+						<!-- featured -->
+						<?php
+							if ($this->countModules('featured'))
+								:
+						?>
+						<div id="featured">
+							<w:module type="none" name="featured" chrome="xhtml" />
+						</div>
+						<?php
+							endif;
+						?>
+						<!-- grid-top -->
+						<?php
+							if ($this->countModules('grid-top'))
+								:
+						?>
+						<div id="grid-top">
+							<w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
+						</div>
+						<?php
+							endif;
+						?>
+						<?php
+							if ($this->countModules('grid-top2'))
+								:
+						?>
+						<!-- grid-top2 -->
+						<div id="grid-top2">
+							<w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
+						</div>
+						<?php
+							endif;
+						?>
 					</div>
 				</div>
-		   </footer>
+				<div class="<?php echo $wrightContainerClass; ?>">
+			        <?php
+						if ($wrightSingleArticleDisplay)
+							:
+					?>
+		            <div class="full-image">
+		                <img src="<?php echo $wrightSingleArticleImage ?>" alt="<?php echo $wrightSingleArticleAlt ?>" />
+		            </div>
+		            <?php
+						endif;
+					?>
+					<div id="main-content" class="row-fluid">
+						<!-- sidebar1 -->
+						<aside id="sidebar1">
+							<w:module name="sidebar1" chrome="xhtml" />
+						</aside>
+						<!-- main -->
+						<section id="main">
+							<?php
+								if ($this->countModules('above-content'))
+									:
+							?>
+							<!-- above-content -->
+							<div id="above-content">
+								<w:module type="none" name="above-content" chrome="xhtml" />
+							</div>
+							<?php
+								endif;
+							?>
+							<?php
+								if ($this->countModules('breadcrumbs'))
+									:
+							?>
+							<!-- breadcrumbs -->
+							<div id="breadcrumbs">
+									<w:module type="single" name="breadcrumbs" chrome="none" />
+							</div>
+							<?php
+								endif;
+							?>
+							<!-- component -->
+							<w:content />
+							<?php
+								if ($this->countModules('below-content'))
+									:
+							?>
+							<!-- below-content -->
+							<div id="below-content">
+								<w:module type="none" name="below-content" chrome="xhtml" />
+							</div>
+							<?php
+								endif;
+							?>
+						</section>
+						<!-- sidebar2 -->
+						<aside id="sidebar2">
+							<w:module name="sidebar2" chrome="xhtml" />
+						</aside>
+					</div>
+				</div>
+			</div>
+			<?php
+				if ($this->countModules('grid-bottom'))
+					:
+			?>
+			<div class="bg_color_two">
+				<div class="<?php echo $wrightContainerClass; ?>">
+					<div class="row-fluid">
+						<div id="grid-bottom" >
+							<w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<?php
+				endif;
+			?>
+			<?php
+				if ($this->countModules('grid-bottom2'))
+					:
+			?>
+			<div class="bg_color_one">
+				<div class="<?php echo $wrightContainerClass; ?>">
+					<div class="row-fluid">
+						<div id="grid-bottom2" >
+							<w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<?php
+				endif;
+			?>
+
+			<!-- footer -->
+			<div class="wrapper-footer">
+			   <footer id="footer" <?php
+				if ($this->params->get('stickyFooter', 1))
+					:
+					?> class="sticky"<?php
+				endif;
+					?>>
+
+					<div class="bg_color_three">
+						<?php
+							if ($this->countModules('bottom-menu'))
+							:
+						?>
+						<!-- bottom-menu -->
+						<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" name="bottom-menu" wrapClass="navbar-transparent" />
+						<?php
+							endif;
+						?>
+					   	<div class="<?php echo $wrightContainerClass; ?> footer-content">
+					   		<?php
+								if ($this->countModules('footer'))
+								:
+							?>
+									<w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
+						 	<?php
+								endif;
+							?>
+								<w:footer />
+						</div>
+					</div>
+			   </footer>
+			</div>
 		</div>
 		<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_clementine/js/jclementine.js'></script>
 	</body>

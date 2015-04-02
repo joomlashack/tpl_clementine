@@ -1,18 +1,40 @@
 jQuery(document).ready(function($) {
-    jQuery('#trigger-lateral-menu').on('click', function() {
-        var slideMenuWidth = jQuery('#lateral-menu-container').width();
-        if (jQuery(this).hasClass('menu-open')) {
-            jQuery(this).removeClass('menu-open');
-            slideMenuWidth = 0;
-        } else {
-			jQuery(this).addClass('menu-open');
-        }
-        jQuery('.main-content-wrapper').css({
-            transform: 'translateX(-' + slideMenuWidth + 'px)',
-            MozTransform: 'translateX(-' + slideMenuWidth + 'px)',
-            WebkitTransform: 'translateX(-' + slideMenuWidth + 'px)',
-            msTransform: 'translateX(-' + slideMenuWidth + 'px)'
-        });
-
+    jQuery('#trigger-lateral-menu').click(function() {
+        var istMenuVisible = jQuery('#lateral-menu').is(':visible');
+        lateralMenu(istMenuVisible);
     });
+
+    function lateralMenu(istMenuVisible) {
+        if (!istMenuVisible) {
+            var lateralMenuWidth = jQuery('#lateral-menu').width() + 40;
+            jQuery('.total').animate({
+                right: lateralMenuWidth
+            }, 500, animationFinishOpen);
+            jQuery('#lateral-menu').show();
+            jQuery('.navbar-fixed-top').addClass('relative');
+        } else {
+            animationClose();
+        }
+
+        function animationClose() {
+            jQuery('.total').animate({
+                right: '0px'
+            }, 500, animationFinishClose);
+            jQuery('#lateral-menu').removeClass('show-lateral-menu');
+        }
+
+        function animationFinishClose() {
+            jQuery('#lateral-menu').hide();
+            jQuery('.navbar-fixed-top').removeClass(
+                'relative');
+            jQuery('#lateral-menu').unbind('mouseleave');
+        }
+
+        function animationFinishOpen() {
+            jQuery('#lateral-menu').addClass('show-lateral-menu');
+        }
+
+    }
 });
+
+

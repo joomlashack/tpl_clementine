@@ -682,6 +682,7 @@ dl.article-info {
 }
 
 #main {
+    .box-sizing(border-box);
     background-color: @color_five;
     padding: 50px 40px;
 }
@@ -1004,43 +1005,168 @@ dl.article-info {
     background-color: @color_five;
 }
 
+.bg_color_six {
+    background-color: @color_six;
+}
+
 .contact input {
     margin-bottom: 10px;
 }
 
-#lateral-menu {
-    position: relative;
+#trigger-lateral-menu {
+    .box-shadow(none);
+    background-color: transparent;
+    border: none;
+    z-index: 4;
+    margin-top: 15px; 
 
-    .btn-navbar {
-        border: none;
-        position: absolute;
-        right: 0;
-        margin: 15px 0px;
-
-        .icon-bar {
-            display: block;
-            width: 18px;
-            height: 2px;
-        }
-
-        span {
-            background-color: @color_two;
-        }
-
-        &:hover, &:focus {
-            background-color: transparent;
-            box-shadow: none;
-            -webkit-box-shadow: none;
-        }
-
+    .icon-bar {
+        display: block;
+        width: 18px;
+        height: 2px;
     }
 
+    span {
+        background-color: @color_two;
+    }
 
-    .moduletable {
-        position: absolute;
-        background-color: @color_one;
-        right: 0;
-        z-index: -1;
+    &:hover, &:focus {
+        background-color: transparent;
     }
 }
 
+#lateral-menu {
+    .box-sizing(border-box);
+    color: @color_seven;
+    display: none;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &.span4 {
+        width: 370px;
+    }
+
+    a {
+        color: @color_seven;
+    }
+
+    .moduletable {
+        h3 {
+            margin: 0px 0px 10px 0px;
+
+            &:after {
+                content: '';
+                height: 2px;
+                width: 33%;
+                border: 1px solid @color_two;
+                display: inherit;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .nav {
+        > li {
+            > a {
+                font-family: @serifFontFamily;
+                color: @color_seven;
+                font-size: @baseFontSize + 6;
+                border-bottom: 1px solid @lateralMenuLinkBorder;
+                padding-bottom: 12px;
+                padding-top: 12px;
+
+                &:hover, &:focus{
+                    background-color: @lateralMenuLinkBackgroundHover;
+                    color: @color_seven;
+                }
+            }
+
+            > .dropdown-toggle {
+                .caret {
+                    border-top-color: @color_seven;
+                }
+            
+                &:hover, &:focus{
+                    .caret {
+                        border-top-color: @color_seven;
+                    }
+                }
+            }
+
+            &.active {
+                > a {
+                    background-color: @lateralMenuLinkBackgroundHover;
+                    color: @color_seven;
+            
+                    &:hover, &:focus{
+                        color: @color_seven;
+                    }
+                }
+                > .dropdown-toggle {
+                    .caret {
+                        border-top-color: @color_seven;
+                    }
+                    &:hover, &:focus{
+                        .caret {
+                            border-top-color: @color_seven;
+                        }
+                    }
+                }
+            }
+        }
+        // General Submenus (only vertical menus)
+        ul.submenu {
+            > li {
+                > a {
+                    font-size: @baseFontSize + 4;
+                    font-weight: 300;
+                    color: @color_seven;
+
+                    .caret {
+                        border-top-color: @color_seven;
+                    }
+                    &:hover, &:focus{
+                        color: @inputBorder;
+                        .caret {
+                            border-top-color: @inputBorder;
+                        }
+                    }
+                }
+                &.active {
+                    > a {
+                        color: @inputBorder;
+                        .caret {
+                            border-top-color: @inputBorder;
+                        }
+                        &:hover, &:focus{
+                            color: @inputBorder;
+                            .caret {
+                                border-top-color: @inputBorder;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.pull-none {
+    float: none;
+}
+
+.padding-none {
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}

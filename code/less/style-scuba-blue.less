@@ -8,3 +8,35 @@ blockquote {
         }
     }
 }
+
+#lateral-menu {
+    .nav {
+        // General Submenus (only vertical menus)
+        ul.submenu {
+            > li {
+                > a {
+                    &:hover, &:focus{
+                        color: #ddd;
+                        .caret {
+                            border-top-color: #ddd;
+                        }
+                    }
+                }
+                &.active {
+                    > a {
+                        color: #ddd;
+                        .caret {
+                            border-top-color: #ddd;
+                        }
+                        &:hover, &:focus{
+                            color: #ddd;
+                            .caret {
+                                border-top-color: #ddd;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

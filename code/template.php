@@ -79,6 +79,11 @@ defined('_JEXEC') or die('Restricted access');
 								:
 						?>
 						<div id="featured">
+						    <div class="bg-wrapp">
+					            <div class="bg-wrapp-inner">
+					                <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
+					            </div>
+					        </div>
 							<w:module type="none" name="featured" chrome="xhtml" />
 						</div>
 						<?php

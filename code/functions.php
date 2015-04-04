@@ -79,4 +79,26 @@ if ($paramOption == 'com_content' && $paramView == 'article')
 	}
 }
 
-?>
+function checkImage($img, $default) {
+        if ($img == "") {
+                $img = $default;
+        }
+        elseif ($img != "-1") {
+                $img = "images/" . $img;
+        }
+
+        if ($img != "-1") {
+                $img = JPATH_BASE . '/' . $img;
+                if (!file_exists($img)) {
+                        $img = "-1";
+                }
+        }
+
+        return $img;
+}
+
+$user = JFactory::getUser();
+
+$bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_clementine/images/default-bg.jpg");
+
+if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);

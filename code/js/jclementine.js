@@ -35,6 +35,30 @@ jQuery(document).ready(function($) {
         }
 
     }
+
+    var featuredPosition      = jQuery('#featured'),
+        bg          = jQuery("#bg-header"),
+        aspectRatio = bg.width() / bg.height();
+    
+    function resizeBg() {
+        if (bg.length) {
+            if ( (featuredPosition.width() / featuredPosition.height()) < aspectRatio ) {
+                bg
+                    .removeClass()
+                    .addClass('full-height');
+            } else {
+                bg
+                    .removeClass()
+                    .addClass('full-width');
+            }
+        }
+    }
+
+    resizeBg();
+
+    jQuery(window).resize(function() {
+        resizeBg();
+    });
 });
 
 

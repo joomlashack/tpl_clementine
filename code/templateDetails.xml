@@ -131,6 +131,7 @@
                     <option value="10">10</option>
                     <option value="11">11</option>
 				</field>
+				<field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_CLEMENTINE_BACKGROUND_IMAGE" description="TPL_JS_CLEMENTINE_BACKGROUND_IMAGE_DESC" />
 			</fieldset>
 		</fields>
 	</config>

@@ -14,7 +14,8 @@ defined('_JEXEC') or die;
 	$wrightNewsEnableIcons = false;
 	$wrightEnableLinkContent = true;
 	$wrightImageFirst = true;
-	$wrightMaxColumns = 6;
+	$wrightMaxColumns = 4;
+	$wrightTitlePosition = 'below';
 
 include(Overrider::getOverride('mod_articles_news','horizontal'));
 ?>

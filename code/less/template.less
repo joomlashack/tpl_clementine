@@ -836,18 +836,14 @@ dl.article-info {
 #grid-bottom {
     margin-bottom: 0;
     p {
+        color: @white;
+
         &.lead {
             display: table;
             margin: 40px auto;
             font-size: @baseFontSize + 10;
             font-weight: lighter;
         }
-    }
-}
-
-#grid-bottom {
-    p {
-        color: @white;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -856,9 +852,17 @@ dl.article-info {
         font-weight: 300;
 
         small {
+            font-weight: 300;
             font-size: @baseFontSize  + 2;
             color: @white;
         }
+    }
+}
+
+#grid-top, #grid-top2 {
+    margin-bottom: 10px;
+    > div > [class*="module"] {
+        margin-bottom: 20px;
     }
 }
 
@@ -1282,6 +1286,7 @@ body {
     font-family: @sansFontFamily;
 
     .page-header {
+        margin: 0;
         border: 0;
         padding-bottom: 0;
     }

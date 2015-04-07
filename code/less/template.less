@@ -692,6 +692,18 @@ dl.article-info {
     padding: 50px 40px;
 }
 
+.sidebars_no_exist {
+    .container-fluid  {
+        #main {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: auto;
+        }
+    }
+}
+
 #sidebar1, #sidebar2 {
     padding-top: 10px;
 }
@@ -1191,9 +1203,10 @@ dl.article-info {
 }
 
 #featured {
-    position: relative;
-    padding: 70px 110px;
     color: @color_five;
+    margin-bottom: 30px;
+    padding: 70px 110px;
+    position: relative;
     text-align: right;
 
     h1 {
@@ -1217,6 +1230,17 @@ dl.article-info {
         border-width: 2px;
         font-size: 24px;
         padding: 8px 50px;
+    }
+
+    [class*="module"]:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.container-fluid {
+    #featured {
+        margin-left: -20px;
+        margin-right: -20px;
     }
 }
 

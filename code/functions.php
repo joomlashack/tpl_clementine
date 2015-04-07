@@ -17,7 +17,7 @@ $topModules = intval($this->countModules('top'));
 $logoClass = 'no-float-logo';
 $floatLogo = false;
 
-$sidebarsExist = '';
+$sidebarsExist = ' sidebars_no_exist';
 
 if ($topModules > 0) {
 	$logoClass = 'float-logo';

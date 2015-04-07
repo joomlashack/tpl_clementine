@@ -43,9 +43,9 @@ defined('_JEXEC') or die('Restricted access');
 					endif;
 				?>
 				<div class="<?php echo $wrightContainerClass; ?>">
-					<?php 
+					<?php
 						if ($this->countModules('lateral-menu'))
-							: 
+							:
 					?>
 					<a class="btn btn-navbar pull-right" id="trigger-lateral-menu">
 			            <span class="icon-bar"></span>
@@ -64,15 +64,6 @@ defined('_JEXEC') or die('Restricted access');
 								<div class="clear"></div>
 							</div>
 						</header>
-						<?php
-							if ($this->countModules('menu'))
-								:
-						?>
-						<!-- menu -->
-				   		<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" wrapClass="navbar-inverse" type="toolbar" name="menu" />
-						<?php
-							endif;
-						?>
 						<!-- featured -->
 						<?php
 							if ($this->countModules('featured'))

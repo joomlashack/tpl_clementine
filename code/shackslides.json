@@ -1,14 +1,18 @@
 {
   "height": 350,
-  "description_show": false,
   "description_bgcolor_flag": false,
+  "description_color_flag": false,
+  "description_width" : 500,
   "title_bgcolor_flag": false,
+  "title_color_flag": false,
+  "title_width" : 220,
   "navigation_show": 0,
   "navigation_buttons_show": 2,
-  "buttons_theme": "none",
-  "buttons_left_right_position": 1,
   "navigation_buttons_custom_previous": "/templates/js_abc/images/arrows.png",
   "navigation_buttons_custom_next": "/templates/js_abc/images/arrows.png",
   "navigation_buttons_custom_width": 30,
-  "navigation_buttons_custom_height": 30
+  "navigation_buttons_custom_height": 30,
+  "height_adjustment" : "crop",
+  "buttons_theme": "none",
+  "buttons_left_right_position": 1
 }

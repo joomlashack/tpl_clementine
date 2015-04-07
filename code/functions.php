@@ -14,7 +14,7 @@ $app = JFactory::getApplication();
 $input = $app->input;
 
 $topModules = intval($this->countModules('top'));
-$logoClass = '';
+$logoClass = 'no-float-logo';
 $floatLogo = false;
 
 $sidebarsExist = '';

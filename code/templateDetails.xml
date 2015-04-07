@@ -113,23 +113,6 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="Clementine" label="TPL_JS_CLEMENTINE_OPTIONS">
-				<field name="categoryBlogSpecialLayout" type="list" default="0" label="TPL_JS_CLEMENTINE_FIELD_CATEGORY_BLOG_SPECIAL_CLASS" description="TPL_JS_CLEMETINE_FIELD_CATEGORY_BLOG_SPECIAL_CLASS_DESC">
-					<option value="1">JYES</option>
-                    <option value="0">JNO</option>
-				</field>
-				<field name="imageSpan" type="list" default="2" label="TPL_JS_CLEMETINE_FIELD_IMAGE_SPAN" description="TPL_JS_CLEMETINE_FIELD_IMAGE_SPAN_DESC">
-					<option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-				</field>
 				<field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_CLEMENTINE_BACKGROUND_IMAGE" description="TPL_JS_CLEMENTINE_BACKGROUND_IMAGE_DESC" />
 			</fieldset>
 		</fields>

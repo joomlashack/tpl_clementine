@@ -1348,13 +1348,44 @@ body {
 
 // Shackslides 3
 
+.jss-slider .jss-title {
+    color: @color_five;
+
+    h2 {
+        font-size: 35px;
+    }
+}
+
 .jss-slider .jss-description {
     background-color: @color_five;
     color: @textColor;
+
+    h2 {
+        small {
+            color: @textColor;
+            display: block;
+            font-size: @baseFontSize + 2;
+            font-style: italic;
+            line-height: @baseFontSize + 2;
+            margin-top: 10px;
+        }
+    }
 }
 
-.jss-slider .jss-title {
-    color: @color_five;
+div {
+    .jss-slider .owl-carousel .jss-title-description h2,
+    .jss-slider .owl-carousel .jss-title-description p {
+        margin-bottom: 10px;
+    }
+
+    .jss-slider .owl-carousel .jss-title-description .jss-title > * {
+        -ms-align-self: auto;
+        align-self: auto;
+    }
+    .jss-slider .jss-navigation .jss-navigation-buttons {
+        bottom: 50px;
+        top: auto;
+    }
 }
 
 .jss-slider .owl-carousel .jss-image .jss-title-description.jss-alignment-left,
@@ -1369,8 +1400,35 @@ body {
         padding-left: 60px;
         padding-right: 60px;
     }
+    
     .jss-slider .jss-title-description .jss-title {
         height: 50%;
+    }
+    
+    .jss-slider .jss-navigation .jss-navigation-buttons .owl-next {
+        .btn;
+        background-color: transparent;
+        border: 3px solid @bodyBackground;
+        color: @bodyBackground;
+        font-size: 24px;
+        font-weight: 300;
+        padding: 8px 60px;
+        position: relative;
+        text-indent: 0;
+
+        &:hover, &:focus {
+            background-color: @color_two;
+            color: @textColor;
+        }
+
+        &:before {
+            content: 'next >';
+            height: 25px;
+            left: 23px;
+            top: 4px;
+            position: absolute;
+            width: 73px;
+        }
     }
 }
 

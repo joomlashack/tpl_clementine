@@ -9,12 +9,13 @@
   "title_tag": "h2",
   "title_width" : 220,
   "title_description_padding_vertical" : 20,
-  "navigation_show": 1,
+  "navigation_show": 0,
   "navigation_buttons_show": 2,
   "navigation_buttons_custom_width": 30,
   "navigation_buttons_custom_height": 30,
   "height_adjustment" : "crop",
   "navigation_bottons_show": 1,
   "buttons_theme": "none",
+  "navigation_buttons_opacity" : "100",
   "buttons_left_right_position": 1
 }

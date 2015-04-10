@@ -1415,6 +1415,7 @@ div {
         }
     }
 
+    .jss-slider .jss-navigation .jss-navigation-buttons .owl-prev,
     .jss-slider .jss-navigation .jss-navigation-buttons .owl-next {
         .btn;
         background-color: transparent;
@@ -1431,8 +1432,22 @@ div {
             color: @textColor;
         }
 
+    }
+
+    .jss-slider .jss-navigation .jss-navigation-buttons .owl-next {
         &:before {
             content: 'next >';
+            height: 25px;
+            left: 23px;
+            top: 4px;
+            position: absolute;
+            width: 73px;
+        }
+    }
+
+    .jss-slider .jss-navigation .jss-navigation-buttons .owl-prev {
+        &:before {
+            content: '< prev';
             height: 25px;
             left: 23px;
             top: 4px;

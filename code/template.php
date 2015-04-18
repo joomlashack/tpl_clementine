@@ -37,8 +37,24 @@ defined('_JEXEC') or die('Restricted access');
 					if ($this->countModules('toolbar'))
 						:
 				?>
-				<!-- menu -->
-				<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+
+				<div class="wrappToolbar  <?php  echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
+		             <w:nav containerClass="<?php echo $wrightContainerClass ?> clementine-toolbar-container<?php echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="row-fluid" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+				</div>
+	            <?php
+	            	if (!$clementineToolbarDisplayed)
+	            		:
+	            ?>
+                <div class="visible-desktop top-menu-toggler relative <?php echo $wrightContainerClass; ?>">
+                    <div class="btn btn-primary toolbar-collapse-btn">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </div>
+                </div>
+		        <?php
+		        	endif;
+		        ?>
 				<?php
 					endif;
 				?>

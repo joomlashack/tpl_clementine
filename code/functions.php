@@ -102,3 +102,10 @@ $user = JFactory::getUser();
 $bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_clementine/images/default-bg.jpg");
 
 if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
+
+$clementineToolbarDisplayed = ($this->params->get('clementine_toolbar_displayed','1') == '1' ? true : false);
+$clementineToolbarDisplayedClass = "";
+
+if (!$clementineToolbarDisplayed){
+    $clementineToolbarDisplayedClass = " tollbarNoDisplayed";
+}

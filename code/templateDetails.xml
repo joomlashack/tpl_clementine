@@ -115,6 +115,10 @@
 			</fieldset>
 			<fieldset name="Clementine" label="TPL_JS_CLEMENTINE_OPTIONS">
 				<field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_CLEMENTINE_BACKGROUND_IMAGE" description="TPL_JS_CLEMENTINE_BACKGROUND_IMAGE_DESC" />
+				<field name="clementine_toolbar_displayed" type="radio" default="1" label="TPL_JS_CLEMENTINE_TOOLBAR_DISPLAYED" description="TPL_JS_CLEMENTINE_TOOLBAR_DISPLAYED_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>

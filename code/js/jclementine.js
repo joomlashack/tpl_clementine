@@ -39,7 +39,7 @@ jQuery(document).ready(function($) {
     var featuredPosition      = jQuery('#featured'),
         bg          = jQuery("#bg-header"),
         aspectRatio = bg.width() / bg.height();
-    
+
     function resizeBg() {
         if (bg.length) {
             if ( (featuredPosition.width() / featuredPosition.height()) < aspectRatio ) {
@@ -53,6 +53,32 @@ jQuery(document).ready(function($) {
             }
         }
     }
+
+    jQuery('.toolbar-collapse-btn').click(function (b) {
+        if (jQuery('.wrappToolbar').hasClass('collapsedToolbar')) {
+
+            jQuery('.wrappToolbar .navbar-inner .collapsedToolbarInner').animate(
+                { height: '40px' },'fast', function() {
+                    jQuery('.wrappToolbar').removeClass('collapsedToolbar');
+                    jQuery('.wrappToolbar .clementine-toolbar-container').removeClass('collapsedToolbarInner');
+                }
+            );
+
+        }
+        else {
+            jQuery('.wrappToolbar').addClass('collapsedToolbar');
+            jQuery('.wrappToolbar.collapsedToolbar .clementine-toolbar-container').addClass('collapsedToolbarInner');
+            // jQuery(this).animate({ color: '#000'}, 'fast');
+            jQuery(this).animate({top: '0'}, 'fast');
+            jQuery('.wrappToolbar .navbar-inner .collapsedToolbarInner').animate(
+                { height: '0px' },'fast'
+            );
+            jQuery(this).children('i').toggleClass('icon-angle-down', 'fast');
+            jQuery(this).children('i').toggleClass('icon-angle-up', 'fast');
+        }
+        jQuery('.wrappToolbar .wrapper-toolbar').css({minHeight: '40px'});
+
+    });
 
     resizeBg();
 

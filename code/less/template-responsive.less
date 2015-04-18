@@ -10,6 +10,15 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 979px) {
+    .wrapper-toolbar {
+        .navbar .container {
+            width: 724px;
+            position: relative;
+        }
+    }
+}
+
 @media (max-width: 979px) {
     .navbar {
         .navbar-inner {
@@ -132,20 +141,8 @@
     }
     .wrapper-toolbar{
         .navbar .btn-navbar{
-            height: 19px;
-            margin: 0;
-            padding: 14px 6px 7px;
-            position: absolute;
-            right: 20px;
             width: 28px;
             z-index: 4;
-            border-radius: 3px;
-        }
-
-        .nav-collapse{
-            &.collapse{
-                padding-top: 40px;
-            }
         }
 
         #toolbar .navbar-inner .collapsedToolbarInner {
@@ -330,6 +327,13 @@
         }
         .jss-slider .owl-carousel .owl-item .jss-image  {
             height: 430px;
+        }
+    }
+
+    .wrapper-toolbar{
+        .navbar .btn-navbar{
+            padding-left: 1px;
+            padding-right: 1px;
         }
     }
 }

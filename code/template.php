@@ -38,7 +38,7 @@ defined('_JEXEC') or die('Restricted access');
 						:
 				?>
 
-				<div class="wrappToolbar  <?php  echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
+				<div class="wrappToolbar <?php  echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbar ') . $wrightContainerClass; ?>">
 		             <w:nav containerClass="<?php echo $wrightContainerClass ?> clementine-toolbar-container<?php echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="row-fluid" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
 				</div>
 	            <?php
@@ -46,11 +46,9 @@ defined('_JEXEC') or die('Restricted access');
 	            		:
 	            ?>
                 <div class="visible-desktop top-menu-toggler relative <?php echo $wrightContainerClass; ?>">
-                    <div class="btn btn-primary toolbar-collapse-btn">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </div>
+                    <button class="toolbar-collapse-btn">
+                    	<i class="icon-angle-down"></i>
+                    </button>
                 </div>
 		        <?php
 		        	endif;

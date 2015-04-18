@@ -63,6 +63,8 @@ jQuery(document).ready(function($) {
                     jQuery('.wrappToolbar .clementine-toolbar-container').removeClass('collapsedToolbarInner');
                 }
             );
+            jQuery(this).children('i').toggleClass('icon-angle-down', 'fast');
+            jQuery(this).children('i').toggleClass('icon-angle-up', 'fast');
 
         }
         else {

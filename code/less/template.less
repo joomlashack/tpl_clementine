@@ -1554,12 +1554,17 @@ div {
 
 // Easy Social icons
 
-.jssocialicons-horizontal{
-    .clearfix();
-    margin-left: 0;
-}
-
 div {
+    .jssocialicons-horizontal{
+        .clearfix();
+        margin-left: 0;
+
+        > li {
+            display: inline-block;
+            float: none;
+        }
+    }
+
     .socialicon-templatedesign-16 {
         &.socialicon-dribbble {
             background-position: -210px 0px !important;

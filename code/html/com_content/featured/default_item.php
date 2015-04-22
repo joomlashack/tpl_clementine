@@ -38,4 +38,4 @@ $this->item->wrightElementsStructure = Array(
 	"/div"
 );
 
-include Overrider::getOverride('com_content.category', 'default_item');
+include Overrider::getOverride('com_content.featured', 'default_item');

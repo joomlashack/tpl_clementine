@@ -86,8 +86,6 @@ p {font-weight: 300;}
                     }
                     &:hover, &:focus {
                         > a {
-                            background-color: @color_two;
-                            color: @white;
                             &:after {
                                 content: '\f106';
                             }
@@ -122,14 +120,6 @@ p {font-weight: 300;}
                 &.active {
                     > a {
                         box-shadow: none;
-                        color: @white;
-                        background-color: @color_two;
-                    }
-                    &.dropdown {
-                        > a {
-                            color: @white;
-                            background-color: @color_two;
-                        }
                     }
                 }
             }
@@ -615,6 +605,7 @@ blockquote {
 .well {
     -webkit-box-shadow: none;
     box-shadow: none;
+    border: 0 none;
 }
 // Nav tabs
 // Tables
@@ -1001,12 +992,14 @@ dl.article-info {
                 }
             }
             &.active {
-                background-color: transparent;
-                color: darken(@color_five, 6%);
-
-                &:hover, &:focus {
+                >  a {
                     background-color: transparent;
                     color: darken(@color_five, 6%);
+
+                    &:hover, &:focus {
+                        background-color: transparent;
+                        color: darken(@color_five, 6%);
+                    }
                 }
             }
         }

@@ -976,22 +976,42 @@ dl.article-info {
 
     .footer-content {
         padding: 10px 0px;
+        .navbar {
+           .nav  > li {
+                border-left: 1px solid @color_one;
+
+                &:first-child {border-left: 0 none;}
+
+                > a {
+                    padding: 0 5px;
+                }
+            }
+        }
+
     }
 
-    #bottom-menu {
-        .nav {
-            > li {
-                >  a {
-                    color: @color_one;
+    .navbar {
+       .nav  > li {
+            >  a {
+                color: @color_one;
 
-                    &:hover, &:focus {
-                        background-color: transparent;
-                        color: darken(@color_five, 5%);
-                    }
+                &:hover, &:focus {
+                    background-color: transparent;
+                    color: darken(@color_five, 6%);
+                }
+            }
+            &.active {
+                background-color: transparent;
+                color: darken(@color_five, 6%);
+
+                &:hover, &:focus {
+                    background-color: transparent;
+                    color: darken(@color_five, 6%);
                 }
             }
         }
     }
+
 }
 // Typography styles
 .tabs {

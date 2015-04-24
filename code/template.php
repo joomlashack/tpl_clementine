@@ -212,39 +212,38 @@ defined('_JEXEC') or die('Restricted access');
 				endif;
 			?>
 
-			<!-- footer -->
-			<div class="wrapper-footer">
-			   <footer id="footer" <?php
-				if ($this->params->get('stickyFooter', 1))
-					:
-					?> class="sticky"<?php
-				endif;
-					?>>
+		</div>
+		<div class="wrapper-footer">
+		   <footer id="footer" <?php
+			if ($this->params->get('stickyFooter', 1))
+				:
+				?> class="sticky"<?php
+			endif;
+				?>>
 
-					<div class="bg_color_three">
-						<?php
-							if ($this->countModules('bottom-menu'))
+				<div class="bg_color_three">
+					<?php
+						if ($this->countModules('bottom-menu'))
+						:
+					?>
+					<!-- bottom-menu -->
+					<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" name="bottom-menu" wrapClass="navbar-transparent" />
+					<?php
+						endif;
+					?>
+				   	<div class="<?php echo $wrightContainerClass; ?> footer-content">
+				   		<?php
+							if ($this->countModules('footer'))
 							:
 						?>
-						<!-- bottom-menu -->
-						<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" name="bottom-menu" wrapClass="navbar-transparent" />
-						<?php
+								<w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
+					 	<?php
 							endif;
 						?>
-					   	<div class="<?php echo $wrightContainerClass; ?> footer-content">
-					   		<?php
-								if ($this->countModules('footer'))
-								:
-							?>
-									<w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
-						 	<?php
-								endif;
-							?>
-								<w:footer />
-						</div>
+							<w:footer />
 					</div>
-			   </footer>
-			</div>
+				</div>
+		   </footer>
 		</div>
 		<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_clementine/js/jclementine.js'></script>
         <?php

@@ -247,5 +247,23 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 		</div>
 		<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_clementine/js/jclementine.js'></script>
+        <?php
+        $browser = JBrowser::getInstance();
+
+        if ($browser->getBrowser() == 'msie')
+        {
+            $major = $browser->getMajor();
+
+            if ((int)$major <= 9) {
+                echo "<script type='text/javascript' src='" . JURI::root()
+                .  "templates/" . $this->document->template
+                . "/js/jquery.equalheights.js'></script>";
+                echo "<script type='text/javascript' src='" . JURI::root()
+                .  "templates/" . $this->document->template
+                . "/js/fallback.js'></script>";
+            }
+
+        }
+        ?>
 	</body>
 </html>

@@ -10,6 +10,8 @@
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
+JLoader::import('joomla.environment.browser');
+
 $app = JFactory::getApplication();
 $input = $app->input;
 

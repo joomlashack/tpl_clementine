@@ -356,4 +356,34 @@
     .mobile-padding-small {
         padding: 5px;
     }
+
+    .blog,
+    .blog-featured {
+        > .row , > .row-fluid{
+            display: block;
+            > [class*="span"]{
+                border-bottom: 1px solid @color_three;
+                border-left: 0;
+                float: none;
+                margin-bottom: 0;
+                width: 100%;
+
+                &:last-of-type{
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .category, .featured {
+        #main {
+            padding: 0 20px;
+        }
+
+        .cat-children, .blog > .page-header, .blog-featured > .page-header,
+        .category-desc {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }

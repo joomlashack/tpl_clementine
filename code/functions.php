@@ -111,3 +111,14 @@ $clementineToolbarDisplayedClass = "";
 if (!$clementineToolbarDisplayed){
     $clementineToolbarDisplayedClass = " tollbarNoDisplayed";
 }
+
+$option = (JRequest::getVar('option','') == 'com_content' ? JRequest::getVar('option','') : '');
+$layout = (JRequest::getVar('layout','') == 'blog' ? JRequest::getVar('layout','') : '');
+
+$voyageView = '';
+if($option == 'com_content'){
+    if (JRequest::getVar('view','') == 'featured')
+        $voyageView = ' featured';
+    if($layout == 'blog' && JRequest::getVar('view','') == 'category')
+        $voyageView = ' category';
+}

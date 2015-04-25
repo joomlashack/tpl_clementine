@@ -845,6 +845,11 @@ dl.article-info {
         .flexbox-content();
         background-color: @color_six;
 
+        &:before , &:after {
+            display: none !important;
+            content: none !important;
+        }
+
         .item {
             [class^="img-intro-"], .item-image{
                 margin: 0;

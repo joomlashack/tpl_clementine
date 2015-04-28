@@ -54,6 +54,15 @@ jQuery(document).ready(function($) {
         }
     }
 
+    function resizeTotal() {
+        var wheight = jQuery(window).height();
+        var footerheight = jQuery("#footer").height();
+
+        jQuery(".total").css({
+           'min-height' :  wheight - footerheight + 'px'})
+
+    }
+
     jQuery('.toolbar-collapse-btn').click(function (b) {
         if (jQuery('.wrappToolbar').hasClass('collapsedToolbar')) {
 
@@ -83,9 +92,11 @@ jQuery(document).ready(function($) {
     });
 
     resizeBg();
+    resizeTotal()
 
     jQuery(window).resize(function() {
         resizeBg();
+        resizeTotal()
     });
 });
 

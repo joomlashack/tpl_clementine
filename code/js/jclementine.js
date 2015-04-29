@@ -54,12 +54,19 @@ jQuery(document).ready(function($) {
         }
     }
 
-    function resizeTotal() {
+    function resizeTotal(el, heightType) {
         var wheight = jQuery(window).height();
         var footerheight = jQuery("#footer").height();
+        var htype = heightType;
 
-        jQuery(".total").css({
-           'min-height' :  wheight - footerheight + 'px'})
+        if (jQuery(el).length) {
+            if (wheight > jQuery('.total').height()) {
+                if (htype == 'min-height')
+                    jQuery(el).css({'min-height' :  (wheight - footerheight) + 'px'})
+            }
+            if (htype == 'height')
+                    jQuery(el).css({'height' :  jQuery('.total').height() + 'px'})
+        }
 
     }
 
@@ -92,11 +99,13 @@ jQuery(document).ready(function($) {
     });
 
     resizeBg();
-    resizeTotal()
+    resizeTotal('.total', 'min-height');
+    resizeTotal('#lateral-menu' ,'height');
 
     jQuery(window).resize(function() {
         resizeBg();
-        resizeTotal()
+        resizeTotal('.total', 'min-height');
+        resizeTotal('#lateral-menu' ,'height');
     });
 });
 

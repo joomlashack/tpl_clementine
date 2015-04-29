@@ -1252,6 +1252,14 @@ dl.article-info {
     }
 }
 
+#lateral-menu-container {
+    overflow: auto;
+
+    [class*="module"] {
+        overflow: auto;
+    }
+}
+
 #lateral-menu {
     .box-sizing(border-box);
     color: @color_seven;
@@ -1260,6 +1268,7 @@ dl.article-info {
     padding-left: 20px;
     padding-right: 20px;
     position: absolute;
+    overflow: auto;
     right: 0;
     top: 0;
 

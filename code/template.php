@@ -70,55 +70,61 @@ defined('_JEXEC') or die('Restricted access');
 			        <?php
 						endif;
 					?>
-					<div class="row-fluid">
-						<!-- header -->
-						<header id="header">
-							<div class="row-fluid clearfix <?php echo $logoClass; ?>">
-								<w:logo name="top" />
-								<div class="clear"></div>
-							</div>
-						</header>
-						<!-- featured -->
-						<?php
-							if ($this->countModules('featured'))
-								:
-						?>
-						<div id="featured">
-						    <div class="bg-wrapp">
-					            <div class="bg-wrapp-inner">
-					                <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
-					            </div>
-					        </div>
+				</div>
+				<!-- header -->
+				<header id="header">
+					<div class="row-fluid clearfix <?php echo $logoClass; ?>">
+						<w:logo name="top" />
+						<div class="clear"></div>
+					</div>
+				</header>
+				<!-- featured -->
+				<?php
+					if ($this->countModules('featured'))
+						:
+				?>
+				<div id="featured">
+				    <div class="bg-wrapp">
+			            <div class="bg-wrapp-inner">
+			                <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
+			            </div>
+			        </div>
+					<div class="<?php echo $wrightContainerClass; ?>">
+						<div class="row-fluid">
 							<w:module type="none" name="featured" chrome="xhtml" />
 						</div>
-						<?php
-							endif;
-						?>
-						<!-- grid-top -->
-						<?php
-							if ($this->countModules('grid-top'))
-								:
-						?>
-						<div id="grid-top">
-							<w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
-						</div>
-						<?php
-							endif;
-						?>
-						<?php
-							if ($this->countModules('grid-top2'))
-								:
-						?>
-						<!-- grid-top2 -->
-						<div id="grid-top2">
-							<w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
-						</div>
-						<?php
-							endif;
-						?>
 					</div>
 				</div>
+				<?php
+					endif;
+				?>
 				<div class="<?php echo $wrightContainerClass; ?>">
+					<!-- grid-top -->
+					<?php
+						if ($this->countModules('grid-top'))
+							:
+					?>
+					<div id="grid-top">
+						<w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
+					</div>
+					<?php
+						endif;
+					?>
+				</div>
+			</div>
+			<div class="bg_color_five padding-none">
+				<div class="<?php echo $wrightContainerClass; ?>">
+					<?php
+						if ($this->countModules('grid-top2'))
+							:
+					?>
+					<!-- grid-top2 -->
+					<div id="grid-top2">
+						<w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
+					</div>
+					<?php
+						endif;
+					?>
 			        <?php
 						if ($wrightSingleArticleDisplay)
 							:

@@ -4,6 +4,8 @@
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
+    margin-left: auto;
+
     > [class*="span"]{
         .box-sizing(border-box);
         float: none;
@@ -31,6 +33,38 @@
             }
         }
     }
+}
+
+#container-unlimited {
+    .core (@gridColumnWidth, @gridGutterWidth) {
+        .span (@columns) {
+          width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+        }
+
+        .blog > .category-desc { .span(@gridColumns); }
+        .blog > .page-header { .span(@gridColumns); }
+
+        .blog > .page-header,
+        .blog > .category-desc {
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+#container-unlimited > .core(@fluidGridColumnWidth, @fluidGridGutterWidth);
+
+#grid > .core(@fluidGridColumnWidth, @fluidGridGutterWidth);
+
+.row {margin-left: 0;}
+
+.container {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 h1 {
@@ -761,16 +795,7 @@ dl.article-info {
         padding: 0;
     }
 
-    .cat-children, .blog > .page-header, .blog-featured > .page-header,
-    .category-desc {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .blog .category-desc, .blog-featured .category-desc {
-        margin: 0;
-    }
-
-    #breadcrumbs { padding: 10px 20px; }
+    #breadcrumbs { padding: 10px 0; }
 
     .blog .items-leading,
     .blog-featured .items-leading {padding-left: 20px;padding-right: 20px;}
@@ -834,6 +859,19 @@ dl.article-info {
 
 .blog, .blog-featured {
     margin: 0;
+
+    .container-items {
+        background-color: @color_six;
+
+        > div {
+            #grid > .core(@fluidGridColumnWidth, @fluidGridGutterWidth);
+
+            [class*="span"]:first-child {margin-left: 0;}
+        }
+
+        .container {padding-left: 0;padding-right: 0;}
+
+    }
     .items-leading {
         display: block;
         width: auto;

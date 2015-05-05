@@ -73,9 +73,11 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 				<!-- header -->
 				<header id="header">
-					<div class="row-fluid clearfix <?php echo $logoClass; ?>">
-						<w:logo name="top" />
-						<div class="clear"></div>
+					<div class="<?php echo $wrightContainerClass; ?>">
+						<div class="row-fluid clearfix <?php echo $logoClass; ?>">
+							<w:logo name="top" />
+							<div class="clear"></div>
+						</div>
 					</div>
 				</header>
 				<!-- featured -->
@@ -135,6 +137,14 @@ defined('_JEXEC') or die('Restricted access');
 		            <?php
 						endif;
 					?>
+		           </div>
+				<?php if ($voyageView != ' category' && $voyageView != ' featured')
+						:
+		        ?>
+				<div class="<?php echo $wrightContainerClass; ?>">
+				<?php
+					endif;
+				?>
 					<div id="main-content" class="row-fluid">
 						<!-- sidebar1 -->
 						<aside id="sidebar1">
@@ -142,6 +152,13 @@ defined('_JEXEC') or die('Restricted access');
 						</aside>
 						<!-- main -->
 						<section id="main">
+							<?php if ($voyageView == ' category' || $voyageView == ' featured')
+								:
+					        ?>
+							<div class="<?php echo $wrightContainerClass; ?>">
+							<?php
+								endif;
+							?>
 							<?php
 								if ($this->countModules('above-content'))
 									:
@@ -164,6 +181,13 @@ defined('_JEXEC') or die('Restricted access');
 							<?php
 								endif;
 							?>
+							<?php if ($voyageView == ' category' || $voyageView == ' featured')
+								:
+					        ?>
+					        </div>
+					        <?php
+					        	endif;
+					        ?>
 							<!-- component -->
 							<w:content />
 							<?php
@@ -184,7 +208,13 @@ defined('_JEXEC') or die('Restricted access');
 						</aside>
 					</div>
 				</div>
+			<?php if ($voyageView != ' category' && $voyageView != ' featured')
+					:
+			 ?>
 			</div>
+			<?php
+				endif;
+			?>
 			<?php
 				if ($this->countModules('grid-bottom'))
 					:

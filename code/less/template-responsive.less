@@ -27,12 +27,12 @@
         }
     }
 
-    #container-unlimited > .core(@gridColumnWidth1200, @gridGutterWidth1200);
+    #container-unlimited > .core(97.5px, 0);
 
     .blog, .blog-featured {
         .container-items {
             > div {
-                #grid > .core(@gridColumnWidth1200, @gridGutterWidth1200);
+                #grid > .core(97.5px, 0);
             }
         }
     }
@@ -41,7 +41,10 @@
     .blog > .category-desc,
     .container {
         .box-sizing(border-box);
+        padding-left: 0;
+        padding-right: 0;
     }
+
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -54,7 +57,7 @@
 }
 
 @media (max-width: 979px) {
-    #container-unlimited > .core(@fluidGridColumnWidth, @fluidGridGutterWidth);
+    #container-unlimited > .core(@fluidGridColumnWidth, 0);
 
     #grid > .core(@fluidGridColumnWidth, @fluidGridGutterWidth);
 

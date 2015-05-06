@@ -26,8 +26,11 @@ if ($topModules > 0) {
 	$floatLogo = true;
 }
 
-if ($this->countModules('sidebar1') || $this->countModules('sidebar2'))
+if ($this->countModules('sidebar1') || $this->countModules('sidebar2')){
 	$sidebarsExist = ' sidebars_exist';
+}
+
+$showContainerMain = false;
 
 $paramOption = $input->getVar('option', '');
 $paramView = $input->getVar('view', '');
@@ -119,6 +122,10 @@ $voyageView = '';
 if($option == 'com_content'){
     if (JRequest::getVar('view','') == 'featured')
         $voyageView = ' featured';
+
     if($layout == 'blog' && JRequest::getVar('view','') == 'category')
         $voyageView = ' category';
+
+    if ($sidebarsExist == ' sidebars_exist')
+		$showContainerMain = true;
 }

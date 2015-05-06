@@ -53,11 +53,64 @@
             padding-right: 20px;
         }
     }
+
+    .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
+
+        .spanX (@index) when (@index > 0) {
+            .span@{index} { .span(@index); }
+            .spanX(@index - 1);
+        }
+        .spanX (0) {}
+
+        .offsetX (@index) when (@index > 0) {
+        .offset@{index} { .offset(@index); }
+        .offset@{index}:first-child { .offsetFirstChild(@index); }
+            .offsetX(@index - 1);
+        }
+        .offsetX (0) {}
+
+        .offset (@columns) {
+            margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth*2);
+            *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + (@fluidGridGutterWidth*2) - (.5 / @gridRowWidth * 100 * 1%);
+        }
+
+        .offsetFirstChild (@columns) {
+            margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth);
+            *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
+        }
+
+        .span (@columns) {
+            width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
+            *width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%);
+        }
+
+        > div {
+            .clearfix();
+
+            [class*="span"] {
+                .input-block-level();
+                float: left;
+                margin-left: @fluidGridGutterWidth;
+                *margin-left: @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
+            }
+
+            [class*="span"]:first-child {
+                margin-left: 0;
+            }
+
+            // Space grid-sized controls properly if multiple per line
+            .controls-row [class*="span"] + [class*="span"] {
+                margin-left: @fluidGridGutterWidth;
+            }
+
+            // generate .spanX and .offsetX
+            .spanX (@gridColumns);
+            .offsetX (@gridColumns);
+        }
+    }
 }
 
-#container-unlimited > .core(@fluidGridColumnWidth, @fluidGridGutterWidth);
-
-#grid > .core(@fluidGridColumnWidth, @fluidGridGutterWidth);
+#container-unlimited > .core(@fluidGridColumnWidth, 0);
 
 .row {margin-left: 0;}
 
@@ -862,9 +915,11 @@ dl.article-info {
 
     .container-items {
         background-color: @color_six;
+        padding: 0;
+
+        #container-unlimited > .fluid(percentage(90px/@gridRowWidth), 0);
 
         > div {
-            #grid > .core(@fluidGridColumnWidth, @fluidGridGutterWidth);
 
             [class*="span"]:first-child {margin-left: 0;}
         }
@@ -993,7 +1048,6 @@ dl.article-info {
         color: @color_five;
     }
 
-    #grid > .fluid(percentage(78.3334px/@gridRowWidth), 0);
 
     .category-desc {
         position: relative;
@@ -2005,4 +2059,10 @@ div {
 
 .total {
     background-color: @bodyBackground;
+}
+
+.sidebars_no_exist {
+    #main {
+        width: 100%;
+    }
 }

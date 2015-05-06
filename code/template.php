@@ -138,7 +138,7 @@ defined('_JEXEC') or die('Restricted access');
 						endif;
 					?>
 		           </div>
-				<?php if ($voyageView != ' category' && $voyageView != ' featured')
+				<?php if ($showContainerMain)
 						:
 		        ?>
 				<div class="<?php echo $wrightContainerClass; ?>">
@@ -208,7 +208,7 @@ defined('_JEXEC') or die('Restricted access');
 						</aside>
 					</div>
 				</div>
-			<?php if ($voyageView != ' category' && $voyageView != ' featured')
+			<?php if ($showContainerMain)
 					:
 			 ?>
 			</div>

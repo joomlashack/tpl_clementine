@@ -18,8 +18,21 @@ $mondrianFullWidthBg = ($template->params->get('mondrian_full_width_background',
 $gridMode = $template->params->get('bs_rowmode','row');  // template's gridMode
 $containerClass = ($gridMode == 'row-fluid' ? 'container-fluid' : 'container');
 
-$this->wrightIntroItemsClass = 'container-fluid container-items';  // Class added to the intro articles (adds an extra wrapper)
-$this->wrightIntroRowMode = 'container';  // row mode for each row of the intro articles
+
+$sidebarsExist = false;
+
+if (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2')) {
+	$sidebarsExist = true;
+}
+
+if ($sidebarsExist) {
+	$this->wrightIntroItemsClass = 'container-items';  // Class added to the intro articles (adds an extra wrapper)
+	$this->wrightIntroRowMode = 'row-fluid';  // row mode for each row of the intro articles
+}
+else {
+	$this->wrightIntroItemsClass = 'container-fluid container-items';  // Class added to the intro articles (adds an extra wrapper)
+	$this->wrightIntroRowMode = 'container';  // row mode for each row of the intro articles
+}
 
 $this->wrightComplementOuterClass = $containerClass; // Class added to the complements (links, subcategories and pagination) - adds an extra wrapper for all of them
 $this->wrightComplementExtraClass = $gridMode; // Class added to each complement (links, subcategories and pagination - as blocks).  Adds an extra wrapper before the "Inner" div

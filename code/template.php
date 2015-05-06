@@ -141,7 +141,7 @@ defined('_JEXEC') or die('Restricted access');
 				<?php if ($showContainerMain)
 						:
 		        ?>
-				<div class="<?php echo $wrightContainerClass; ?>">
+				<div class="<?php echo $wrightContainerClass; ?> container-main">
 				<?php
 					endif;
 				?>

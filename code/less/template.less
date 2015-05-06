@@ -403,8 +403,8 @@ p {font-weight: 300;}
             &.submenu {
                 .active {
                     > a {
-                        color: @white;
-                        background-color: @color_four;
+                        color: lighten(@color_two, 20%);
+                        background-color: transparent;
                     }
                 }
                 .deeper {
@@ -428,7 +428,8 @@ p {font-weight: 300;}
                 }
                 a {
                     &:hover, &:focus {
-                        background-color: @lateralMenuLinkBackgroundHover;
+                        color: lighten(@color_two, 20%);
+                        background-color: transparent;
                     }
                 }
             }
@@ -1559,7 +1560,7 @@ dl.article-info {
     .btn-large {
         border-width: 2px;
         font-size: 24px;
-        padding: 8px 50px;
+        padding: 8px 70px;
     }
 
     [class*="module"] {

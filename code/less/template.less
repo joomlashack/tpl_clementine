@@ -1054,7 +1054,6 @@ dl.article-info {
 
     .category-desc {
         position: relative;
-        margin-bottom: 15px;
 
         > img {
             width: 100%;
@@ -1311,6 +1310,15 @@ dl.article-info {
 
 .bg_color_two {
     background-color: @color_two;
+    ::selection {
+        background-color: fade(@color_three, 80%);
+        color: @white;
+    }
+
+    ::-moz-selection {
+        background-color: fade(@color_three, 80%);
+        color: @white;
+    }
 }
 
 .bg_color_three {
@@ -2068,4 +2076,14 @@ div {
     #main {
         width: 100%;
     }
+}
+
+::selection {
+    background-color: fade(@color_two, 80%);
+    color: @white;
+}
+
+::-moz-selection {
+    background-color: fade(@color_two, 80%);
+    color: @white;
 }

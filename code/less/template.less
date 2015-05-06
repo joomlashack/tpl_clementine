@@ -1115,7 +1115,7 @@ dl.article-info {
     }
 
     a {
-        color: @color_three;
+        color: @black;
     }
 }
 
@@ -2101,4 +2101,21 @@ div {
 ::-moz-selection {
     background-color: fade(@color_two, 80%);
     color: @white;
+}
+
+form {
+    .search,
+    .finder{
+        > *{
+            margin-left: 6px;
+
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+
+        label{
+            display: inline-block;
+        }
+    }
 }

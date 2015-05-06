@@ -30,7 +30,7 @@ if ($this->countModules('sidebar1') || $this->countModules('sidebar2')){
 	$sidebarsExist = ' sidebars_exist';
 }
 
-$showContainerMain = false;
+$showContainerMain = true;
 
 $paramOption = $input->getVar('option', '');
 $paramView = $input->getVar('view', '');
@@ -120,12 +120,20 @@ $layout = (JRequest::getVar('layout','') == 'blog' ? JRequest::getVar('layout','
 
 $voyageView = '';
 if($option == 'com_content'){
-    if (JRequest::getVar('view','') == 'featured')
+    if (JRequest::getVar('view','') == 'featured'){
         $voyageView = ' featured';
+		$showContainerMain = false;
 
-    if($layout == 'blog' && JRequest::getVar('view','') == 'category')
+	    if ($sidebarsExist == ' sidebars_exist')
+			$showContainerMain = true;
+    }
+
+    if($layout == 'blog' && JRequest::getVar('view','') == 'category'){
         $voyageView = ' category';
+		$showContainerMain = false;
 
-    if ($sidebarsExist == ' sidebars_exist')
-		$showContainerMain = true;
+        if ($sidebarsExist == ' sidebars_exist')
+			$showContainerMain = true;
+    }
+
 }

@@ -1525,8 +1525,23 @@ dl.article-info {
     text-align: right;
 
     h1 {
+        display: inline;
         font-size: 40px;
-        text-decoration: underline;
+        border-bottom: 2px solid @color_five;
+        font-weight: 400;
+
+        &:after {
+            content: '';
+            display: block;
+        }
+
+        + * {
+            margin-top: 50px;
+        }
+
+        br {
+            margin: 0;
+        }
     }
 
     .btn {

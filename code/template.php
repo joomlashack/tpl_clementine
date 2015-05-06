@@ -114,7 +114,7 @@ defined('_JEXEC') or die('Restricted access');
 					?>
 				</div>
 			</div>
-			<div class="bg_color_five padding-none">
+			<div class="bg_color_five  <?php echo ($voyageView == ' category' || $voyageView == ' featured') ? 'padding-none' : '' ; ?>">
 				<div class="<?php echo $wrightContainerClass; ?>">
 					<?php
 						if ($this->countModules('grid-top2'))

@@ -1586,10 +1586,19 @@ dl.article-info {
 
 #featured div, #grid-top div, #grid-top2 div {
     .jss-slider .jss-title-description .jss-description {
-        width: 70%;
+        width: 76.59574468085107%;
+        .box-sizing(border-box);
     }
     .jss-slider .jss-title-description .jss-title {
-        width: 30%;
+        text-align: right;
+        width: 38.297872340425535%;
+        .box-sizing(border-box);
+
+        > * {
+            display: block;
+            padding-left: 14px;
+            padding-right: 14px;
+        }
     }
 }
 
@@ -1737,7 +1746,7 @@ div {
 }
 
 #featured div, #grid-top div, #grid-top2 div {
-    .jss-slider .jss-title-description .jss-description {
+    .jss-slider .jss-title-description .jss-description > div {
         padding-left: 60px;
         padding-right: 60px;
     }
@@ -1798,7 +1807,6 @@ div {
         }
     }
 }
-
 
 .toolbar-collapse-btn{
     background-color: transparent;

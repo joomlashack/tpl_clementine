@@ -2144,3 +2144,15 @@ form {
         }
     }
 }
+
+div {
+    .prettyprint {
+        background-color: @wellBackground;
+    }
+    .prettyprint.linenums {
+        box-shadow : 40px 0px 0px darken(@wellBackground, 4%) inset, 41px 0px 0px @textColor inset;
+    }
+    ol.linenums li {
+        color: @textColor;
+    }
+}

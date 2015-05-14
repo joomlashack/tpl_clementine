@@ -1,10 +1,14 @@
 blockquote {
+    background-image: url(../images/tangerine/blockquote-left.png);
     p {
-        &:before {
+        background-image: url(../images/tangerine/blockquote-right.png);
+    }
+
+    &.pull-right {
+        background-image: url(../images/tangerine/blockquote-right.png);
+
+        p {
             background-image: url(../images/tangerine/blockquote-left.png);
-        }
-        &:after {
-            background-image: url(../images/tangerine/blockquote-right.png);
         }
     }
 }

@@ -705,36 +705,38 @@ a {
     }
 }
 blockquote {
+    background-image: url(../images/blockquote-left.png);
+    background-repeat: no-repeat;
+    border-left: none;
     font-family: @serifFontFamily;
     font-size: @baseFontSize + 10;
-    border-left: none;
+    padding-left: 40px;
+
     small {
         font-size: @baseFontSize;
         margin: 10px 0px;
     }
+
     p {
-        display: inline-block;
-        &:before {
-            content: ' ';
-            height: 26px;
-            width: 26px;
-            background-repeat: no-repeat;
-            background-image: url(../images/blockquote-left.png);
-            display: inline-block;
-        }
-        &:after {
-            content: ' ';
-            height: 26px;
-            width: 26px;
-            background-repeat: no-repeat;
-            background-image: url(../images/blockquote-right.png);
-            display: inline-block;
-            position: relative;
-            top: 17px;
-        }
+        background-image: url(../images/blockquote-right.png);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        padding-bottom: 5px;
+        padding-right: 40px;
     }
+
     &.pull-right {
+        background-image: url(../images/blockquote-right.png);
+        background-position: right top;
         border-right: none;
+        padding-right: 40px;
+
+        p {
+            background-image: url(../images/blockquote-left.png);
+            background-position: left bottom;
+            padding-right: 0;
+            padding-left: 40px;
+        }
     }
 }
 .label {

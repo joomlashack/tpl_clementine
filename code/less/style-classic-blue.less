@@ -83,3 +83,12 @@ div {
         background-image: url(../images/classic-blue/jssocialicons/socialicons-templatedesign-64.png) !important;
     }
 }
+
+.table-striped tbody > tr:nth-child(2n+1) > td,
+.table-striped tbody > tr:nth-child(2n+1) > th {
+    color: darken(@textColor,15%);
+}
+
+.table-hover tbody tr:hover > td, .table-hover tbody tr:hover > th {
+    color: darken(@textColor,15%);
+}

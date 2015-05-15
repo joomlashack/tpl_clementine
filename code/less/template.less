@@ -294,6 +294,9 @@ p {font-weight: 300;}
                 }
             }
         }
+        .brand {
+            color: @white;
+        }
     }
 }
 .dropdown-menu {
@@ -634,7 +637,7 @@ a {
             color: @white;
         }
         .caret {
-            color: @white;
+            border-top-color: @white;
         }
     }
 }
@@ -699,7 +702,15 @@ a {
             }
         }
     }
+
+    &.dropup {
+        .caret {
+            border-bottom-color: @white;
+        }
+    }
 }
+
+
 blockquote {
     background-image: url(../images/blockquote-left.png);
     background-repeat: no-repeat;

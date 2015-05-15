@@ -2158,6 +2158,28 @@ div {
     ol.linenums li {
         color: @textColor;
     }
+    .show-grid [class*="span"] {
+        background-color: lighten(@color_two, 5%);
+        color: @white;
+
+        &:hover {
+            background-color: lighten(@color_two, 2%);
+        }
+
+        [class*="span"] {
+            background-color: @color_two;
+            &:hover {
+                background-color: darken(@color_two, 3%);
+            }
+
+            [class*="span"] {
+                background-color: darken(@color_two, 6%);
+                &:hover {
+                    background-color: darken(@color_two, 8%);
+                }
+            }
+        }
+    }
 }
 
 .img-polaroid {

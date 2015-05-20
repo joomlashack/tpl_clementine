@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
         if (jQuery('.wrappToolbar').hasClass('collapsedToolbar')) {
 
             jQuery('.wrappToolbar .navbar-inner .collapsedToolbarInner').animate(
-                { height: '40px' },'fast', function() {
+                { height:  jQuery("#toolbar .nav").height() + 'px' },'fast', function() {
                     jQuery('.wrappToolbar').removeClass('collapsedToolbar');
                     jQuery('.wrappToolbar .clementine-toolbar-container').removeClass('collapsedToolbarInner');
                 }
@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
             jQuery(this).children('i').toggleClass('icon-angle-down', 'fast');
             jQuery(this).children('i').toggleClass('icon-angle-up', 'fast');
         }
-        jQuery('.wrappToolbar .wrapper-toolbar').css({minHeight: '40px'});
+        jQuery('.wrappToolbar .wrapper-toolbar').css({minHeight:  jQuery("#toolbar .nav").height() + 'px'});
 
     });
 

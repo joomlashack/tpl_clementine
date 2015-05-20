@@ -156,7 +156,6 @@ p {font-weight: 300;}
     margin-bottom: 0;
 
     .navbar-inner {
-        border-bottom: 4px double @color_two;
         box-shadow: none;
         padding-left: 0;
         padding-right: 0;
@@ -257,12 +256,6 @@ p {font-weight: 300;}
         margin-left: 0;
     }
 
-    &.navbar-inverse,
-    &.navbar-transparent {
-        .navbar-inner {
-            border-bottom: 0 none;
-        }
-    }
     &.navbar-transparent {
         .nav {
             > li {
@@ -2055,10 +2048,10 @@ div {
         .navbar-inner{
             background-color: transparent;
             background-image: none;
-            border-bottom: 0 none;
+            filter: none;
 
             .clementine-toolbar-container {
-                background-color: @color_two;
+                background-color: @navbarBackground;
             }
         }
     }

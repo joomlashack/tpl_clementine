@@ -43,6 +43,7 @@
 
         .blog > .category-desc { .span(@gridColumns); }
         .blog > .page-header { .span(@gridColumns); }
+        #nav-toolbar { .span(@gridColumns); }
 
         .blog > .page-header,
         .blog > .category-desc {
@@ -114,7 +115,7 @@
 
 .row {margin-left: 0;}
 
-.container {
+.container , .navbar-fixed-top .container{
     width: auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -153,12 +154,10 @@ p {font-weight: 300;}
 
 .navbar {
     margin-bottom: 0;
-    ul {
-        &.navbar-inner {
-            border-bottom: 4px double @color_two;
-        }
-    }
+
     .navbar-inner {
+    //     border-bottom: 4px double @color_two;
+
         .btn {
             &.btn-navbar {
                 -webkit-border-radius: 0;
@@ -181,10 +180,7 @@ p {font-weight: 300;}
         padding-left: 0;
         padding-right: 0;
         border: none;
-        .container, .container-fluid {
-            border-bottom: 4px double @color_two;
-            background-color: @color_one;
-        }
+
         .nav, &.nav {
             li {
                 a {
@@ -196,53 +192,41 @@ p {font-weight: 300;}
             }
             > li {
                 > a {
-                    color: @color_two;
-                    &:hover, &:focus {
-                        background-color: @color_two;
-                        color: @white;
+                    &:after {
+                        content: '\f107';
+                        font-family: FontAwesome;
+                        margin-left: 5px;
                     }
                 }
-                &.deeper {
+                &:hover, &:focus {
                     > a {
                         &:after {
-                            content: '\f107';
-                            font-family: FontAwesome;
-                            margin-left: 5px;
+                            content: '\f106';
                         }
                     }
-                    &:hover, &:focus {
-                        > a {
-                            &:after {
-                                content: '\f106';
-                            }
-                        }
-                    }
-                    .dropdown-menu {
-                        border: none;
-                        padding: 0;
-                        > li {
-                            &.deeper {
-                                .dropdown-menu {
-                                    -webkit-border-radius: 0;
-                                    border-radius: 0;
-                                }
-                                &.dropdown-submenu {
-                                    > a {
-                                        &:after {
-                                            content: '\f105';
-                                            font-family: FontAwesome;
-                                            float: none;
-                                            margin: 0;
-                                            border: none;
-                                            display: inline-block;
-                                            margin-left: 5px;
-                                        }
-                                    }
+                }
+
+                .dropdown-menu {
+                    border: none;
+                    padding: 0;
+
+                    > li {
+                        &.dropdown-submenu {
+                            > a {
+                                &:after {
+                                    content: '\f105';
+                                    font-family: FontAwesome;
+                                    float: none;
+                                    margin: 0;
+                                    border: none;
+                                    display: inline-block;
+                                    margin-left: 5px;
                                 }
                             }
                         }
                     }
                 }
+
                 &.active {
                     > a {
                         box-shadow: none;
@@ -255,8 +239,16 @@ p {font-weight: 300;}
         > li {
             > a {
                 text-shadow: none;
+
+                &:hover, &:focus {
+                    [class^="icon-"], [class*=" icon-"] {
+                        color: @navbarLinkColorHover;
+                        text-decoration: none;
+                    }
+                }
             }
-            >.dropdown-menu {
+
+            > .dropdown-menu {
                 &:after, &:before {
                     display: none;
                 }
@@ -267,6 +259,7 @@ p {font-weight: 300;}
         text-shadow: none;
         margin-left: 0;
     }
+
     &.navbar-inverse {
         ul {
             &.navbar-inner {
@@ -281,17 +274,9 @@ p {font-weight: 300;}
                     }
                 }
             }
-            background-color: @color_six;
             .container {
                 background-color: transparent;
                 border-bottom: none;
-            }
-            .nav, &.nav {
-                li {
-                    a {
-                        color: @white;
-                    }
-                }
             }
         }
         .brand {
@@ -299,6 +284,7 @@ p {font-weight: 300;}
         }
     }
 }
+
 .dropdown-menu {
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -1999,6 +1985,11 @@ div {
     }
 }
 
+#nav-toolbar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .no-responsive{
     .top-menu-toggler{
         min-width: 940px;
@@ -2007,21 +1998,20 @@ div {
 }
 
 .wrappToolbar{
-    border-bottom: 4px double @color_two;
-
+    &.collapsedToolbarEnable {
+        .navbar-inner{
+            background-color: transparent;
+            background-image: none;
+            .clementine-toolbar-container {
+                background-color: @navbarBackground;
+            }
+        }
+    }
     &.collapsedToolbar{
         .navbar-inner{
             .collapsedToolbarInner {
                 height: 0;
                 overflow: hidden;
-            }
-        }
-    }
-
-    .navbar {
-        .navbar-inner {
-            .container, .container-fluid {
-                border-bottom: 0 none;
             }
         }
     }

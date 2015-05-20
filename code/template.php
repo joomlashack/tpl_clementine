@@ -38,8 +38,8 @@ defined('_JEXEC') or die('Restricted access');
 						:
 				?>
 
-				<div class="wrappToolbar <?php  echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbar ') . $wrightContainerClass; ?>">
-		             <w:nav containerClass="<?php echo $wrightContainerClass ?> clementine-toolbar-container<?php echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="row-fluid" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+				<div class="wrappToolbar <?php  echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbar collapsedToolbarEnable ') . $wrightContainerClass; ?>">
+		             <w:nav containerClass="clementine-toolbar-container<?php echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
 				</div>
 	            <?php
 	            	if (!$clementineToolbarDisplayed)

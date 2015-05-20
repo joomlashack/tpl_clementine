@@ -222,7 +222,7 @@ defined('_JEXEC') or die('Restricted access');
 			<div class="bg_color_two">
 				<div class="<?php echo $wrightContainerClass; ?>">
 					<div class="row-fluid">
-						<div id="grid-bottom" >
+						<div id="grid-bottom">
 							<w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
 						</div>
 					</div>
@@ -263,7 +263,7 @@ defined('_JEXEC') or die('Restricted access');
 						:
 					?>
 					<!-- bottom-menu -->
-					<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" name="bottom-menu" wrapClass="navbar-transparent" />
+					<w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="row-fluid" name="bottom-menu" wrapClass="navbar-transparent dropup" />
 					<?php
 						endif;
 					?>

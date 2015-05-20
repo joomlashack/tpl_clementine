@@ -263,6 +263,22 @@ p {font-weight: 300;}
             border-bottom: 0 none;
         }
     }
+    &.navbar-transparent {
+        .nav {
+            > li {
+                margin-left: 15px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                > a {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
 
     &.navbar-inverse {
         .navbar-inner {
@@ -318,6 +334,9 @@ p {font-weight: 300;}
 
         }
     }
+}
+.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu  {
+    margin-bottom: 0;
 }
 
 // Style navs
@@ -1348,6 +1367,7 @@ dl.article-info {
     background-image: none;
     background: none;
     filter: none;
+    overflow: visible;
 
     .footer-content {
         padding: 10px 20px;

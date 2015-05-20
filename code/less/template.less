@@ -206,8 +206,6 @@ p {font-weight: 300;}
                 }
 
                 .dropdown-menu {
-                    border: none;
-                    padding: 0;
 
                     > li {
                         &.dropdown-submenu {
@@ -259,10 +257,14 @@ p {font-weight: 300;}
         margin-left: 0;
     }
 
-    &.navbar-inverse {
+    &.navbar-inverse,
+    &.navbar-transparent {
         .navbar-inner {
             border-bottom: 0 none;
         }
+    }
+
+    &.navbar-inverse {
         .navbar-inner {
             .btn {
                 &.btn-navbar {
@@ -287,10 +289,33 @@ p {font-weight: 300;}
     -webkit-box-shadow: none;
     border-radius: 0;
     -webkit-border-radius: 0;
-    border: none;
+    border-color: @color_five;
+
     li {
         a {
-            padding: 10px 10px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+
+        .dropdown-menu {
+            background-color: @color_five;
+
+            > li {
+                > a {
+                    &:hover, &:focus {
+                        background-color: darken(@color_five, 7%);
+                    }
+                }
+            }
+            > .active {
+                a {
+                    background-color: darken(@color_five, 7%);
+                    &:hover, &:focus {
+                        background-color: darken(@color_five, 7%);
+                    }
+                }
+            }
+
         }
     }
 }
@@ -681,10 +706,10 @@ p {font-weight: 300;}
 // Pagination
 .pagination ul > .disabled > a, .pagination ul > .disabled > span {
     background-color: @color_two;
-    color: @dropdownGradientLeft;
+    color: @blue;
     &:hover , &:focus {
         background-color: @color_two;
-        color: @dropdownGradientLeft;
+        color: @blue;
     }
 }
 .pagination ul > li > a, .pagination ul > li > span {
@@ -2027,33 +2052,24 @@ div {
 }
 
 
-#toolbar{
-    .nav {
-        > li {
-            > a {
-                &:hover, &:focus {
-                    background-color: transparent;
-                    background-image: none;
-                    color: @dropdownGradientLeft;
-                }
-            }
+// #toolbar{
+//     .nav {
+//         > li {
+//             > a {
+//                 &:hover, &:focus {
+//                     background-color: transparent;
+//                     background-image: none;
+//                 }
+//             }
 
-            &.deeper {
-                &:hover > a {
-                    background-color: transparent;
-                    color: @dropdownGradientLeft;
-                }
-            }
-        }
-        .dropdown-menu {
-            background: -webkit-linear-gradient(left, @dropdownGradientLeft 39%, @dropdownGradientRight 135%); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(left, @dropdownGradientLeft 39%, @dropdownGradientRight 135%); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(left, @dropdownGradientLeft 39%, @dropdownGradientRight 135%); /* For Firefox 3.6 to 15 */
-            background: -ms-linear-gradient(left, @dropdownGradientLeft 39%, @dropdownGradientRight 135%); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(left, @dropdownGradientLeft 39%, @dropdownGradientRight 135%); /* Standard syntax */
-        }
-    }
-}
+//             &.deeper {
+//                 &:hover > a {
+//                     background-color: transparent;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 // Easy Social icons
 

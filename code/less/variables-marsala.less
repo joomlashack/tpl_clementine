@@ -11,9 +11,6 @@
 @lateralMenuLinkBackgroundHover : #9D9E90;
 @lateralMenuLinkBorder : #E4CCCE;
 
-@dropdownGradientLeft : #BB3518;
-@dropdownGradientRight : @color_two;
-
 //Special for overrides
 @color_seven: #F9F9F7;
 
@@ -226,22 +223,22 @@
 @navbarBackground:                transparent;
 @navbarBorder:                    transparent;
 
-@navbarText:                      @color_two;
-@navbarLinkColor:                 @color_two;
+@navbarText:                      @white;
+@navbarLinkColor:                 @white;
 @navbarLinkColorHover:            @white;
 @navbarLinkColorActive:           @white;
-@navbarLinkBackgroundHover:       @color_two;
-@navbarLinkBackgroundActive:      @color_two;
+@navbarLinkBackgroundHover:       darken(@color_two, 10%);
+@navbarLinkBackgroundActive:      darken(@color_two, 10%);
 
 @navbarBrandColor:                @navbarLinkColor;
 
 // Inverted navbar
-@navbarInverseBackground:                transparent;
-@navbarInverseBackgroundHighlight:       transparent;
-@navbarInverseBorder:                    transparent;
+@navbarInverseBackground:                @color_six;
+@navbarInverseBackgroundHighlight:       @color_six;
+@navbarInverseBorder:                    @color_six;
 
-@navbarInverseText:                      @color_two;
-@navbarInverseLinkColor:                 @color_two;
+@navbarInverseText:                      @white;
+@navbarInverseLinkColor:                 @white;
 @navbarInverseLinkColorHover:            @color_two;
 @navbarInverseLinkColorActive:           @color_two;
 @navbarInverseLinkBackgroundHover:       transparent;

@@ -205,7 +205,6 @@ p {font-weight: 300;}
                 }
 
                 .dropdown-menu {
-
                     > li {
                         &.dropdown-submenu {
                             > a {
@@ -327,9 +326,35 @@ p {font-weight: 300;}
 
         }
     }
+}
+.dropdown-submenu > .dropdown-menu {
+    border-radius: 0;
+}
 
-    > .dropdown-menu {
-        border-radius: 0;
+.navbar-inverse {
+    .dropdown-menu {
+        li {
+            .dropdown-menu {
+                background-color: @navbarInverseLinkBackgroundActive;
+
+                > li {
+                    > a {
+                        &:hover, &:focus {
+                            background-color: darken(@navbarInverseLinkBackgroundActive, 7%);
+                        }
+                    }
+                }
+                > .active {
+                    a {
+                        background-color: darken(@navbarInverseLinkBackgroundActive, 7%);
+                        &:hover, &:focus {
+                            background-color: darken(@navbarInverseLinkBackgroundActive, 7%);
+                        }
+                    }
+                }
+
+            }
+        }
     }
 }
 .dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu  {
@@ -443,7 +468,7 @@ p {font-weight: 300;}
 
 
             &:hover, &:focus {
-                background-color: darken(@color_two, 5%);
+                background-color: darken(@color_two, 10%);
                 color: white;
                 text-decoration: none;
 
@@ -479,7 +504,7 @@ p {font-weight: 300;}
             > a {
                 color: @white;
                 border: none;
-                background-color: darken(@color_two, 5%);
+                background-color: darken(@color_two, 10%);
 
 
                 [class^="icon-"], [class*=" icon-"] {
@@ -489,7 +514,7 @@ p {font-weight: 300;}
                 &:hover, &:focus {
                     color: @white;
                     border: none;
-                    background-color: darken(@color_two, 5%);
+                    background-color: darken(@color_two, 10%);
 
                     [class^="icon-"], [class*=" icon-"] {
                         color: @white;
@@ -501,7 +526,6 @@ p {font-weight: 300;}
             .dropdown-menu {
                 border-radius: 0;
                 -webkit-border-radius: 0;
-                padding: 0;
                 margin: 0;
                 .deeper {
                     > a {
@@ -526,11 +550,6 @@ p {font-weight: 300;}
                 }
             }
         }
-        li {
-            a {
-                color: @white;
-            }
-        }
         ul.submenu {
             > li {
                 .deeper {
@@ -553,6 +572,11 @@ p {font-weight: 300;}
                     }
                 }
                 > a {
+                    color: @white;
+                    [class^="icon-"], [class*=" icon-"] {
+                        color: @white;
+                    }
+
                     &:hover, &:focus {
                         color: darken(@color_two, 25%);
                         background-color: transparent;
@@ -717,6 +741,10 @@ p {font-weight: 300;}
 
 .nav-list > li > a, .nav-list .nav-header {
     text-shadow: none;
+}
+
+.nav-pills .dropdown-menu {
+    border-radius: 0;
 }
 
 // Pagination

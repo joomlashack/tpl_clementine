@@ -31,14 +31,14 @@
 
 // Dropdown For navbar-inverse
 // -------------------------
-@navbarInverseDropdownBackground : @color_two;
-@navbarInverseDropdownBorderFallback : transparent;
-@navbarInverseDropdownBorder : transparent;
+@navbarInverseDropdownBackground : @color_three;
+@navbarInverseDropdownBorderFallback : @navbarInverseLinkBackgroundActive;
+@navbarInverseDropdownBorder : @navbarInverseLinkBackgroundActive;
 @navbarInverseDropdownLinkColor : @white;
 @navbarInverseDropdownLinkColorHover : @white;
 @navbarInverseDropdownLinkColorActive : @white;
-@navbarInverseDropdownLinkBackgroundHover : @color_four;
-@navbarInverseDropdownLinkBackgroundActive : @color_four;
+@navbarInverseDropdownLinkBackgroundHover : @navbarInverseLinkBackgroundActive;
+@navbarInverseDropdownLinkBackgroundActive : @navbarInverseLinkBackgroundActive;
 
 
 // Global values
@@ -239,10 +239,10 @@
 
 @navbarInverseText:                      @white;
 @navbarInverseLinkColor:                 @white;
-@navbarInverseLinkColorHover:            @color_two;
-@navbarInverseLinkColorActive:           @color_two;
-@navbarInverseLinkBackgroundHover:       transparent;
-@navbarInverseLinkBackgroundActive:      transparent;
+@navbarInverseLinkColorHover:            @white;
+@navbarInverseLinkColorActive:           @white;
+@navbarInverseLinkBackgroundHover:       darken(@color_three, 5%);
+@navbarInverseLinkBackgroundActive:      darken(@color_three, 5%);
 
 @navbarInverseSearchBackground:          @white;
 @navbarInverseSearchBackgroundFocus:     @white;

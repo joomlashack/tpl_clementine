@@ -183,17 +183,17 @@ p {font-weight: 300;}
             li {
                 a {
                     font-family: @sansFontFamily;
-                    .caret {
-                        display: none;
-                    }
                 }
             }
-            > li {
+            > .parent {
                 > a {
                     &:after {
                         content: '\f107';
                         font-family: FontAwesome;
                         margin-left: 5px;
+                    }
+                    .caret {
+                        display: none;
                     }
                 }
                 &:hover, &:focus {
@@ -204,6 +204,8 @@ p {font-weight: 300;}
                     }
                 }
 
+            }
+            > li {
                 .dropdown-menu {
                     > li {
                         &.dropdown-submenu {
@@ -2006,24 +2008,42 @@ div {
     }
 
     .jss-slider .jss-navigation .jss-navigation-buttons .owl-next {
-        &:before {
-            content: 'next >';
-            height: 25px;
-            left: 23px;
-            top: 4px;
+        &:before,
+        &:after {
             position: absolute;
-            width: 73px;
+            height: 25px;
+            top: 5px;
+        }
+        &:after {
+            content: '\f054';
+            font-family: FontAwesome;
+            font-size: 20px;
+            right: 23px;
+            line-height: 25px;
+        }
+        &:before {
+            content: ' next';
+            left: 23px;
         }
     }
 
     .jss-slider .jss-navigation .jss-navigation-buttons .owl-prev {
-        &:before {
-            content: '< prev';
-            height: 25px;
-            left: 23px;
-            top: 4px;
+        &:before,
+        &:after {
             position: absolute;
-            width: 73px;
+            height: 25px;
+            top: 5px;
+        }
+        &:after {
+            right: 23px;
+            content: ' prev';
+        }
+        &:before {
+            content: '\f053';
+            font-family: FontAwesome;
+            left: 23px;
+            line-height: 25px;
+            font-size: 20px;
         }
     }
 }

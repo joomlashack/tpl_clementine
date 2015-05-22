@@ -1300,50 +1300,6 @@ dl.article-info {
 
 #grid-bottom {
     margin-bottom: 0;
-    p {
-        color: @white;
-
-        &.lead {
-            display: table;
-            margin: 40px auto;
-            font-size: @baseFontSize + 10;
-            font-weight: lighter;
-        }
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-family: @sansFontFamily;
-        color: @white;
-        font-weight: 300;
-
-        small {
-            font-weight: 300;
-            font-size: @baseFontSize  + 2;
-            color: @white;
-        }
-    }
-
-    .list-striped li:nth-child(2n+1), .list-striped dd:nth-child(2n+1), .row-striped .row:nth-child(2n+1), .row-striped .row-fluid:nth-child(2n+1) {
-        background-color: @lateralMenuLinkBorder;
-        color: @textColor;
-
-        p {
-            color: @textColor;
-        }
-    }
-
-    .list-striped li:hover, .list-striped dd:hover, .row-striped .row:hover, .row-striped .row-fluid:hover {
-        background-color: darken(@lateralMenuLinkBorder,5%);
-        color: @textColor;
-
-        p {
-            color: @textColor;
-        }
-    }
-
-    a {
-        color: @black;
-    }
 }
 
 #grid-top {
@@ -1534,10 +1490,28 @@ dl.article-info {
 
 .bg_color_one {
     background-color: @color_one;
+
+    .list-striped, .row-striped {
+        border-top-color: darken(@color_one, 10%) ;
+    }
+
+    .list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid {
+        border-bottom-color: darken(@color_one, 10%);
+        &:hover {
+            background-color: darken(@color_one, 7%);
+        }
+    }
+
+    .list-striped li:nth-child(2n+1), .list-striped dd:nth-child(2n+1),
+    .row-striped .row:nth-child(2n+1), .row-striped .row-fluid:nth-child(2n+1) {
+        background-color: darken(@color_one, 5%);
+    }
 }
 
 .bg_color_two {
     background-color: @color_two;
+    color: @white;
+
     ::selection {
         background-color: fade(@color_three, 80%);
         color: @white;
@@ -1547,22 +1521,126 @@ dl.article-info {
         background-color: fade(@color_three, 80%);
         color: @white;
     }
+
+    .list-striped, .row-striped {
+        border-top-color: darken(@color_two, 10%) ;
+    }
+
+    .list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid {
+        border-bottom-color: darken(@color_two, 10%);
+        &:hover {
+            background-color: darken(@color_two, 7%);
+        }
+    }
+
+    .list-striped li:nth-child(2n+1), .list-striped dd:nth-child(2n+1),
+    .row-striped .row:nth-child(2n+1), .row-striped .row-fluid:nth-child(2n+1) {
+        background-color: darken(@color_two, 5%);
+    }
+
+    p {
+        &.lead {
+            display: table;
+            margin: 40px auto;
+            font-size: @baseFontSize + 10;
+            font-weight: lighter;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: @sansFontFamily;
+        color: @white;
+        font-weight: 300;
+
+        small {
+            font-weight: 300;
+            font-size: @baseFontSize  + 2;
+            color: @white;
+        }
+    }
+
+    a {
+        color: @black;
+    }
 }
 
 .bg_color_three {
     background-color: @color_three;
+
+    .list-striped, .row-striped {
+        border-top-color: darken(@color_three, 10%) ;
+    }
+
+    .list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid {
+        border-bottom-color: darken(@color_three, 10%);
+        &:hover {
+            background-color: darken(@color_three, 7%);
+        }
+    }
+
+    .list-striped li:nth-child(2n+1), .list-striped dd:nth-child(2n+1),
+    .row-striped .row:nth-child(2n+1), .row-striped .row-fluid:nth-child(2n+1) {
+        background-color: darken(@color_three, 5%);
+    }
 }
 
 .bg_color_four {
     background-color: @color_four;
+    .list-striped, .row-striped {
+        border-top-color: darken(@color_four, 10%) ;
+    }
+
+    .list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid {
+        border-bottom-color: darken(@color_four, 10%);
+        &:hover {
+            background-color: darken(@color_four, 7%);
+        }
+    }
+
+    .list-striped li:nth-child(2n+1), .list-striped dd:nth-child(2n+1),
+    .row-striped .row:nth-child(2n+1), .row-striped .row-fluid:nth-child(2n+1) {
+        background-color: darken(@color_four, 5%);
+    }
 }
 
 .bg_color_five {
     background-color: @color_five;
+
+    .list-striped, .row-striped {
+        border-top-color: darken(@color_five, 10%) ;
+    }
+
+    .list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid {
+        border-bottom-color: darken(@color_five, 10%);
+        &:hover {
+            background-color: darken(@color_five, 7%);
+        }
+    }
+
+    .list-striped li:nth-child(2n+1), .list-striped dd:nth-child(2n+1),
+    .row-striped .row:nth-child(2n+1), .row-striped .row-fluid:nth-child(2n+1) {
+        background-color: darken(@color_five, 5%);
+    }
 }
 
 .bg_color_six {
     background-color: @color_six;
+
+    .list-striped, .row-striped {
+        border-top-color: darken(@color_six, 10%) ;
+    }
+
+    .list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid {
+        border-bottom-color: darken(@color_six, 10%);
+        &:hover {
+            background-color: darken(@color_six, 7%);
+        }
+    }
+
+    .list-striped li:nth-child(2n+1), .list-striped dd:nth-child(2n+1),
+    .row-striped .row:nth-child(2n+1), .row-striped .row-fluid:nth-child(2n+1) {
+        background-color: darken(@color_six, 5%);
+    }
 }
 
 .contact input {

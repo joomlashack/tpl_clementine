@@ -106,6 +106,10 @@ jQuery(document).ready(function($) {
         resizeBg();
         resizeTotal('.total', 'min-height');
         resizeTotal('#lateral-menu' ,'height');
+
+        if (jQuery.window.width() < 769) {
+            jQuery('.clementine-toolbar-container').height('auto');
+        }
     });
 });
 

@@ -88,52 +88,56 @@
         font-size: 30px;
     }
 
+
     .navbar {
         .navbar-inner {
-            .nav, &.nav {
-                > li {
-                    > a {
+            .nav-collapse {
+                .nav, &.nav {
+                    > li {
+                        > a {
+                            &:hover, &:focus {
+                                border-radius: 0;
+                                -webkit-border-radius: 0;
+                            }
+                        }
                         &:hover, &:focus {
-                            border-radius: 0;
-                            -webkit-border-radius: 0;
+                            a {
+                                border-radius: 0;
+                                -webkit-border-radius: 0;
+                            }
                         }
-                    }
-                    &:hover, &:focus {
-                        a {
-                            border-radius: 0;
-                            -webkit-border-radius: 0;
+                        &.active {
+                            a {
+                                border-radius: 0;
+                                -webkit-border-radius: 0;
+                            }
                         }
-                    }
-                    &.active {
-                        a {
-                            border-radius: 0;
-                            -webkit-border-radius: 0;
-                        }
-                    }
-                    &.deeper {
-                        .dropdown-menu {
-                            margin: 0;
-                            > li {
+                        &.deeper {
+                            &:hover, &:focus {
                                 > a {
-                                    color: @color_three;
-                                    padding: 9px 15px 9px 25px;
-                                    &:hover, &:focus {
-                                        color: @white;
-                                        background-color: @color_two;
-                                    }
-                                }
-                                &.current {
-                                    > a {
-                                        background-color: @color_two;
-                                        color: @white;
+                                    &:after {
+                                        content: '\f107';
                                     }
                                 }
                             }
                         }
-                        &:hover, &:focus {
-                            > a {
-                                &:after {
-                                    content: '\f107';
+
+                        .dropdown-menu {
+                            background-color: darken(@color_two,20%);
+                            > li{
+                                > a {
+                                    &:hover, &:focus {
+                                        background-color: darken(@color_two,25%);
+                                    }
+                                }
+                            }
+
+                            > .active {
+                                > a {
+                                    background-color: darken(@color_two,25%);
+                                    &:hover, &:focus {
+                                        background-color: darken(@color_two,25%);
+                                    }
                                 }
                             }
                         }
@@ -141,35 +145,26 @@
                 }
             }
         }
-        &.navbar-inverse {
-            .navbar-inner {
-                .nav, &.nav {
-                    > li {
-                        > a {
-                            &:hover, &:focus {
-                                background-color: @color_two;
-                            }
-                        }
-                        &.deeper {
-                            .dropdown-menu {
-                                > li {
-                                    > a {
-                                        color: @white;
-                                    }
-                                    &.deeper {
-                                        > a {
-                                            &:after {
-                                                content: '\f107';
-                                            }
-                                        }
-                                    }
-                                    &:hover, &:focus {
-                                        > a {
-                                            background-color: @color_two;
-                                        }
-                                    }
-                                }
-                            }
+    }
+
+    .nav-collapse {
+        .dropdown-menu {
+            margin-left: 0;
+            margin-right: 0;
+
+            > li{
+                > a {
+                    color: @white;
+
+                    [class^="icon-"], [class*=" icon-"] {
+                        color: @white;
+                    }
+
+                    &:hover, &:focus {
+                        color: @white;
+
+                        [class^="icon-"], [class*=" icon-"] {
+                            color: @white;
                         }
                     }
                 }
@@ -220,6 +215,12 @@
 
         .wrappToolbar .wrapper-toolbar {
             height: auto !important;
+        }
+    }
+
+    .wrappToolbar.collapsedToolbarEnable {
+        .navbar-inner{
+            background-color: @color_two;
         }
     }
 

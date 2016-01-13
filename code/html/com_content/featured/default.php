@@ -19,19 +19,19 @@ $gridMode = $template->params->get('bs_rowmode','row');  // template's gridMode
 $containerClass = ($gridMode == 'row-fluid' ? 'container-fluid' : 'container');
 
 
-$sidebarsExist = false;
+$sidebarsExist = 0;
 
 if (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2')) {
-	$sidebarsExist = true;
+	$sidebarsExist = 1;
 }
 
 if ($sidebarsExist) {
 	$this->wrightIntroItemsClass = 'container-items';  // Class added to the intro articles (adds an extra wrapper)
-	$this->wrightIntroRowMode = 'row-fluid';  // row mode for each row of the intro articles
+	$this->wrightIntroRowsClass = 'row-fluid';  // row mode for each row of the intro articles
 }
 else {
 	$this->wrightIntroItemsClass = 'container-fluid container-items';  // Class added to the intro articles (adds an extra wrapper)
-	$this->wrightIntroRowMode = $containerClass;  // row mode for each row of the intro articles
+	$this->wrightIntroRowsClass = $containerClass;  // row mode for each row of the intro articles
 	$this->wrightLeadingItemsClass = $containerClass;
 }
 
@@ -39,7 +39,6 @@ $this->wrightComplementOuterClass = $containerClass; // Class added to the compl
 $this->wrightComplementExtraClass = $gridMode; // Class added to each complement (links, subcategories and pagination - as blocks).  Adds an extra wrapper before the "Inner" div
 $this->wrightComplementInnerClass = 'span12'; // Class added to each complement (links, subcategories and pagination - as blocks).  Adds an extra wrapper when needed, or uses the existing one if found
 
-
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
-include(Overrider::getOverride('com_content.category','blog'));
+include(Overrider::getOverride('com_content.featured'));
 ?>

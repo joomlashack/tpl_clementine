@@ -2412,6 +2412,16 @@ div {
             }
         }
     }
+    #container-unlimited {
+        .core (@gridColumnWidth, @gridGutterWidth) {
+            .span (@columns) {
+              width: (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+            }
+
+            .blog > .category-desc { .span(@gridColumns); }
+            .blog > .page-header { .span(@gridColumns); }
+            #nav-toolbar { .span(@gridColumns); }
+    }
 }
 
 .total {

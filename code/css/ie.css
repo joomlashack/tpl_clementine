@@ -1,0 +1,19 @@
+.explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_8 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_8 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+.explorer.v_8 #grid-top2 div .jss-slider .jss-title-description .jss-title {
+  float: left;
+  text-align: left;
+}
+.explorer.v_9 .jss-description,
+.explorer.v_8 .jss-description {
+  float: right;
+  height: 100% !important;
+  position: absolute;
+}
+.explorer.v_9 .jss-title-description,
+.explorer.v_8 .jss-title-description {
+  position: relative;
+}

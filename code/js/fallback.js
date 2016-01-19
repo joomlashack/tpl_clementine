@@ -5,8 +5,9 @@ jQuery(document).ready(function($) {
 	}
 
 	jQuery(window).load(function(){
-			setBlogItems();
+		setBlogItems();
 	});
+
 	jQuery(window).resize(function(){
 		if (jQuery(".is_internet.v_9").length) {
 			setBlogItems();

@@ -1,0 +1,46 @@
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+.explorer.v_9,
+.explorer.v_8 {
+	#featured div, #grid-top div, #grid-top2 div {
+	    .jss-slider .jss-title-description {
+			height: 100%;
+			width: 100%;
+
+			.jss-title, .jss-description {
+				height: 100% !important;
+				position: absolute;
+			}
+
+			.jss-title {
+				left: 0;
+				text-align: left;
+				width: 25%;
+			}
+
+			.jss-description {
+				padding: 5%;
+				right: 0;
+				width: 75%;
+			}
+	    }
+	}
+
+	.container {
+		width: 960px;
+	}
+}

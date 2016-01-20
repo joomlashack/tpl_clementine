@@ -1,9 +1,9 @@
 <?php
 /**
- * @package     Clementinea
+ * @package     Clementine
  * @subpackage  Overrider
  *
- * @copyright   Copyright (C) 2005 - 2015 Joomlashack. Meritage Assets.  All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2016 Joomlashack. Meritage Assets.  All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 // No direct access.
@@ -11,13 +11,15 @@ defined('_JEXEC') or die;
 
 $app = JFactory::getApplication();
 
-require_once(JPATH_THEMES.'/'.$app->getTemplate().'/html/com_content/com_content.helper.php');
-require_once(JPATH_THEMES.'/'.$app->getTemplate().'/wright/html/overrider.php');
+require_once "JPATH_THEMES . '/' . $app->getTemplate() . '/html/com_content/com_content.helper.php'";
+require_once "JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php'";
+
 $params = &$this->item->params;
 $images = json_decode($this->item->images);
 
 
-if ($images->image_intro != '') {
+if ($images->image_intro != '')
+{
 	$this->item->wrightElementsStructure = Array(
 		"div.article-image-top",
 			"image",
@@ -35,7 +37,9 @@ if ($images->image_intro != '') {
 			"legendtop",
 		"/div"
 	);
-} else {
+}
+else
+{
 	$this->item->wrightElementsStructure = Array(
 		"image",
 		"legendtop",
@@ -50,4 +54,3 @@ if ($images->image_intro != '') {
 }
 
 include Overrider::getOverride('com_content.featured', 'default_item');
-

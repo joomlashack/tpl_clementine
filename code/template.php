@@ -23,39 +23,51 @@ defined('_JEXEC') or die('Restricted access');
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 	</head>
-	<body class="<?php echo $wrightBodyClass . $sidebarsExist . $voyageView . ' mode-' . $wrightContainerClass; ?>">
-		<?php if ($this->countModules('lateral-menu')): ?>
+	<body
+		class="<?php echo $wrightBodyClass . $sidebarsExist . $voyageView . ' mode-' . $wrightContainerClass; ?>">
+
+		<?php
+			if ($this->countModules('lateral-menu'))
+				:
+		?>
 		<div id="lateral-menu" class="span4 pull-none bg_color_six">
 			<div id="lateral-menu-container">
 				<w:module type="none" wrapClass="inner-menu" name="lateral-menu" chrome="xhtml" />
 			</div>
 		</div>
-		<?php endif; ?>
+		<?php
+			endif;
+		?>
+
 		<div class="total relative">
 			<div class="bg_color_one padding-none">
 				<?php
 					if ($this->countModules('toolbar'))
 						:
 				?>
-
-				<div class="wrappToolbar <?php  echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbar collapsedToolbarEnable '); ?>">
-		             <w:nav containerClass="clementine-toolbar-container<?php echo ($clementineToolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+				<div class="wrappToolbar
+					<?php  echo "$clementineToolbarDisplayed ? '' : ' collapsedToolbar collapsedToolbarEnable '"; ?>">
+		             <w:nav containerClass="clementine-toolbar-container
+		             <?php echo "$clementineToolbarDisplayed ? '' : ' collapsedToolbarInner'"; ?>"
+		             wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
 				</div>
-	            <?php
-	            	if (!$clementineToolbarDisplayed)
-	            		:
-	            ?>
+				<?php
+					endif;
+				?>
+
+				<?php
+					if (!$clementineToolbarDisplayed)
+						:
+				?>
                 <div class="visible-desktop top-menu-toggler relative <?php echo $wrightContainerClass; ?>">
                     <button class="toolbar-collapse-btn">
                     	<i class="icon-angle-down"></i>
                     </button>
                 </div>
-		        <?php
-		        	endif;
-		        ?>
 				<?php
 					endif;
 				?>
+
 				<div class="<?php echo $wrightContainerClass; ?>">
 					<?php
 						if ($this->countModules('lateral-menu'))
@@ -100,6 +112,7 @@ defined('_JEXEC') or die('Restricted access');
 				<?php
 					endif;
 				?>
+
 				<div class="<?php echo $wrightContainerClass; ?>">
 					<!-- grid-top -->
 					<?php
@@ -114,7 +127,7 @@ defined('_JEXEC') or die('Restricted access');
 					?>
 				</div>
 			</div>
-			<div class="bg_color_five  <?php echo ($voyageView == ' category' || $voyageView == ' featured') ? 'padding-none' : '' ; ?>">
+			<div class="bg_color_five  <?php echo "$voyageView == ' category' || $voyageView == ' featured') ? 'padding-none' : '' "; ?>">
 				<div class="<?php echo $wrightContainerClass; ?>">
 					<?php
 						if ($this->countModules('grid-top2'))
@@ -127,6 +140,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php
 						endif;
 					?>
+
 			        <?php
 						if ($wrightSingleArticleDisplay)
 							:
@@ -138,9 +152,10 @@ defined('_JEXEC') or die('Restricted access');
 						endif;
 					?>
 		           </div>
-				<?php if ($showContainerMain)
+				<?php
+					if ($showContainerMain)
 						:
-		        ?>
+				?>
 				<div class="<?php echo $wrightContainerClass; ?> container-main">
 				<?php
 					endif;
@@ -152,13 +167,16 @@ defined('_JEXEC') or die('Restricted access');
 						</aside>
 						<!-- main -->
 						<section id="main">
-							<?php if ($voyageView == ' category' || $voyageView == ' featured')
-								:
-					        ?>
+							<?php
+								if ($voyageView == ' category' || $voyageView == ' featured')
+									:
+							?>
 							<div class="<?php echo $wrightContainerClass; ?>">
+
 							<?php
 								endif;
 							?>
+
 							<?php
 								if ($this->countModules('above-content'))
 									:
@@ -170,6 +188,7 @@ defined('_JEXEC') or die('Restricted access');
 							<?php
 								endif;
 							?>
+
 							<?php
 								if ($this->countModules('breadcrumbs'))
 									:
@@ -178,16 +197,19 @@ defined('_JEXEC') or die('Restricted access');
 							<div id="breadcrumbs">
 									<w:module type="single" name="breadcrumbs" chrome="none" />
 							</div>
+
 							<?php
 								endif;
 							?>
-							<?php if ($voyageView == ' category' || $voyageView == ' featured')
-								:
-					        ?>
+							<?php
+								if ($voyageView == ' category' || $voyageView == ' featured')
+									:
+							?>
 					        </div>
-					        <?php
-					        	endif;
-					        ?>
+							<?php
+								endif;
+							?>
+
 							<!-- component -->
 							<w:content />
 							<?php
@@ -208,13 +230,15 @@ defined('_JEXEC') or die('Restricted access');
 						</aside>
 					</div>
 				</div>
-			<?php if ($showContainerMain)
+			<?php
+				if ($showContainerMain)
 					:
-			 ?>
+			?>
 			</div>
 			<?php
 				endif;
 			?>
+
 			<?php
 				if ($this->countModules('grid-bottom'))
 					:
@@ -282,23 +306,19 @@ defined('_JEXEC') or die('Restricted access');
 		   </footer>
 		</div>
 		<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_clementine/js/jclementine.js'></script>
-        <?php
-        $browser = JBrowser::getInstance();
+	<?php $browser = JBrowser::getInstance();
 
-        if ($browser->getBrowser() == 'msie')
-        {
-            $major = $browser->getMajor();
+	if ($browser->getBrowser() == 'msie')
+	{
+	$major = $browser->getMajor();
 
-            if ((int)$major <= 9) {
-                echo "<script type='text/javascript' src='" . JURI::root()
-                .  "templates/" . $this->document->template
-                . "/js/jquery.equalheights.js'></script>";
-                echo "<script type='text/javascript' src='" . JURI::root()
-                .  "templates/" . $this->document->template
-                . "/js/fallback.js'></script>";
-            }
-
-        }
-        ?>
+	if ((int) $major <= 9)
+	{
+	echo
+	"<script type='text/javascript' src='" . JURI::root() . "templates/" . $this->document->template . "/js/jquery.equalheights.js'></script>";
+	echo "<script type='text/javascript' src='" . JURI::root() . "templates/" . $this->document->template . "/js/fallback.js'></script>";
+	}
+	}
+	?>
 	</body>
 </html>

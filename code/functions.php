@@ -21,12 +21,14 @@ $floatLogo = false;
 
 $sidebarsExist = ' sidebars_no_exist';
 
-if ($topModules > 0) {
+if ($topModules > 0)
+{
 	$logoClass = 'float-logo';
 	$floatLogo = true;
 }
 
-if ($this->countModules('sidebar1') || $this->countModules('sidebar2')){
+if ($this->countModules('sidebar1') || $this->countModules('sidebar2'))
+{
 	$sidebarsExist = ' sidebars_exist';
 }
 
@@ -60,6 +62,7 @@ if ($paramOption == 'com_content' && $paramView == 'article')
 		{
 			$wrightSingleArticleDisplay = true;
 		}
+
 		elseif ($imagesArray->image_fulltext != '' && $imagesArray->float_fulltext == '')
 		{
 			$query->clear()
@@ -74,7 +77,7 @@ if ($paramOption == 'com_content' && $paramView == 'article')
 			{
 				$wrightSingleArticleDisplay = true;
 			}
-		}
+		};
 
 		if ($wrightSingleArticleDisplay)
 		{
@@ -84,56 +87,81 @@ if ($paramOption == 'com_content' && $paramView == 'article')
 	}
 }
 
-function checkImage($img, $default) {
-        if ($img == "") {
-                $img = $default;
-        }
-        elseif ($img != "-1") {
-                $img = "images/" . $img;
-        }
+/**
+ * Check Image
+ *
+ * @param   string  $img      New image path
+ * @param   string  $default  Default image path
+ *
+ * @return  void
+ */
+function checkImage($img, $default)
+{
+	if ($img == "")
+	{
+		$img = $default;
+	}
+	elseif ($img != "-1")
+	{
+		$img = "images/" . $img;
+	};
 
-        if ($img != "-1") {
-                $img = JPATH_BASE . '/' . $img;
-                if (!file_exists($img)) {
-                        $img = "-1";
-                }
-        }
+	if ($img != "-1")
+	{
+		$img = JPATH_BASE . '/' . $img;
 
-        return $img;
+		if (!file_exists($img))
+		{
+			$img = "-1";
+		}
+	}
+
+	return $img;
 }
 
 $user = JFactory::getUser();
 
 $bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_clementine/images/default-bg.jpg");
 
-if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
-
-$clementineToolbarDisplayed = ($this->params->get('clementine_toolbar_displayed','1') == '1' ? true : false);
-$clementineToolbarDisplayedClass = "";
-
-if (!$clementineToolbarDisplayed){
-    $clementineToolbarDisplayedClass = " tollbarNoDisplayed";
+if ($bg != "-1")
+{
+	$bg = str_replace(JPATH_BASE, '', $bg);
 }
 
-$option = (JRequest::getVar('option','') == 'com_content' ? JRequest::getVar('option','') : '');
-$layout = (JRequest::getVar('layout','') == 'blog' ? JRequest::getVar('layout','') : '');
+$clementineToolbarDisplayed = ($this->params->get('clementine_toolbar_displayed', '1') == '1' ? true : false);
+$clementineToolbarDisplayedClass = "";
+
+if (!$clementineToolbarDisplayed)
+{
+	$clementineToolbarDisplayedClass = " tollbarNoDisplayed";
+}
+
+$option = (JRequest::getVar('option', '') == 'com_content' ? JRequest::getVar('option', '') : '');
+$layout = (JRequest::getVar('layout', '') == 'blog' ? JRequest::getVar('layout', '') : '');
 
 $voyageView = '';
-if($option == 'com_content'){
-    if (JRequest::getVar('view','') == 'featured'){
-        $voyageView = ' featured';
+
+if ($option == 'com_content')
+{
+	if (JRequest::getVar('view', '') == 'featured')
+	{
+		$voyageView = ' featured';
 		$showContainerMain = false;
 
-	    if ($sidebarsExist == ' sidebars_exist')
+		if ($sidebarsExist == ' sidebars_exist')
+		{
 			$showContainerMain = true;
-    }
+		}
+	}
 
-    if($layout == 'blog' && JRequest::getVar('view','') == 'category'){
-        $voyageView = ' category';
+	if ($layout == 'blog' && JRequest::getVar('view', '') == 'category')
+	{
+		$voyageView = ' category';
 		$showContainerMain = false;
 
-        if ($sidebarsExist == ' sidebars_exist')
+		if ($sidebarsExist == ' sidebars_exist')
+		{
 			$showContainerMain = true;
-    }
-
+		}
+	}
 }

@@ -56,5 +56,5 @@ $this->wrightComplementExtraClass = $gridMode;
 // subcategories and pagination - as blocks).  Adds an extra wrapper when needed, or uses the existing one if found
 $this->wrightComplementInnerClass = 'span12';
 
-require_once "JPATH_THEMES . '/' . $app->getTemplate() . '/' . 'wright' . '/' . 'html' . '/' . 'overrider.php'";
+require_once JPATH_THEMES . '/' . $app->getTemplate() . '/' . 'wright' . '/' . 'html' . '/' . 'overrider.php';
 include Overrider::getOverride('com_content.featured');

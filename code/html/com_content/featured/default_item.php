@@ -11,8 +11,8 @@ defined('_JEXEC') or die;
 
 $app = JFactory::getApplication();
 
-require_once "JPATH_THEMES . '/' . $app->getTemplate() . '/html/com_content/com_content.helper.php'";
-require_once "JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php'";
+require_once JPATH_THEMES . '/' . $app->getTemplate() . '/html/com_content/com_content.helper.php';
+require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 
 $params = &$this->item->params;
 $images = json_decode($this->item->images);

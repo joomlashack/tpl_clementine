@@ -174,3 +174,4 @@ if (!$clementineToolbarDisplayed)
 	$containerToolbarClass .= ' collapsedToolbarInner';
 }
 
+$containerGridTop2Content = ($voyageView == ' category' || $voyageView == ' featured') ? ' padding-none' : '';

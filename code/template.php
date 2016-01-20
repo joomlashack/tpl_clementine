@@ -124,7 +124,7 @@ defined('_JEXEC') or die('Restricted access');
 					?>
 				</div>
 			</div>
-			<div class="bg_color_five  <?php echo ($voyageView == ' category' || $voyageView == ' featured') ? 'padding-none' : ''; ?>">
+			<div class="bg_color_five <?php echo $containerGridTop2Content; ?>">
 				<div class="<?php echo $wrightContainerClass; ?>">
 					<?php
 						if ($this->countModules('grid-top2'))
@@ -226,15 +226,15 @@ defined('_JEXEC') or die('Restricted access');
 							<w:module name="sidebar2" chrome="xhtml" />
 						</aside>
 					</div>
+				<?php
+					if ($showContainerMain)
+						:
+				?>
 				</div>
-			<?php
-				if ($showContainerMain)
-					:
-			?>
+				<?php
+					endif;
+				?>
 			</div>
-			<?php
-				endif;
-			?>
 
 			<?php
 				if ($this->countModules('grid-bottom'))

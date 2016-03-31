@@ -288,13 +288,13 @@ defined('_JEXEC') or die('Restricted access');
 					<?php
 						endif;
 					?>
-				   	<div class="<?php echo $wrightContainerClass; ?> footer-content">
-				   		<?php
+					<div class="<?php echo $wrightContainerClass; ?> footer-content">
+						<?php
 							if ($this->countModules('footer'))
 							:
 						?>
 								<w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
-					 	<?php
+						<?php
 							endif;
 						?>
 							<w:footer />

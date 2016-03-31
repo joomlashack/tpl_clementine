@@ -1166,7 +1166,7 @@ dl.article-info {
         background-color: @color_six;
         padding: 0;
 
-        #container-unlimited > .fluid(percentage(90px/@gridRowWidth), 0);
+        #container-unlimited > .fluid(percentage(@gridColumnWidth/(@gridColumns * @gridColumnWidth) + (0 * (@gridColumns - 1))), percentage(0/@gridRowWidth));
 
         > div {
             [class*="span"]:first-child {margin-left: 0;}

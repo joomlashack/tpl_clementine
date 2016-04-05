@@ -1037,16 +1037,43 @@ table {
     -webkit-border-radius: 0;
     color: @textColor;
 }
-.breadcrumbs {
-    .breadcrumb {
-        background-color: transparent;
-        border-radius: 0;
-        -webkit-border-radius: 0;
 
-        > li {
-            text-shadow: none;
-        }
+
+.breadcrumb {
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+
+    > li {
+        text-shadow: none;
+
+		> .divider {
+			color : @textColor;
+			
+			.icon-caret-right {
+				&:before {
+					content: '|';
+				}
+			}
+		}
+
+		> .pathway {
+			+ .divider {
+				padding-left: 10px;
+				padding-right: 10px;
+
+				.icon-caret-right {
+					&:before {
+						content: '';
+					}
+				}
+			}
+		}
     }
+
+	> .active {
+		color: @linkColor;
+	}
 }
 
 .breadcrumb {

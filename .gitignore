@@ -41,7 +41,10 @@ autobuild.properties
 # Composer
 composer.lock
 /vendor
- 
+
+# PHAR
+*.phar
+
 # Test related files
 /tests/system/servers/configdef.php
 /tests/system/webdriver/tests/logs/

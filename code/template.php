@@ -19,7 +19,7 @@ defined('_JEXEC') or die('Restricted access');
 <html>
 	<head>
 		<w:head />
-		<link href='http://fonts.googleapis.com/css?family=Rozha+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 	</head>

@@ -38,7 +38,7 @@ defined('_JEXEC') or die('Restricted access');
 		?>
 
 		<div class="total relative">
-			<div class="bg_color_one padding-none">
+			<div class="bg_color_one padding-none shadow-bottom">
 				<?php
 					if ($this->countModules('toolbar'))
 						:

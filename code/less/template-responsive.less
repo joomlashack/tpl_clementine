@@ -254,6 +254,18 @@
         background-size: auto auto !important;
     }
 
+    .jss-slider .jss-navigation .jss-navigation-buttons [class*="owl-"] {
+        border-color: @color_two !important;
+        color: @color_two !important;
+        &:hover, &:focus {
+            color: @color_seven !important;
+        }
+    }
+
+    .jss-slider .jss-navigation .jss-navigation-buttons .owl-next {
+        right: 30px !important;
+    }
+
     #header {
         #logo {
             margin-bottom: 20px;
@@ -410,10 +422,10 @@
 				align-self: flex-end;
 				height: auto;
                 width: auto;
-				padding: 10px 0;
+				padding: 10px 0 50px;
 
                 > div {
-                    padding: 10px 10px;
+                    padding: 30px;
                 }
 
                 h1, h2, h3, h4, h5, h6 {

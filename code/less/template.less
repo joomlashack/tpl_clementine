@@ -1235,12 +1235,11 @@ dl.article-info {
             }
             .article-content {
                 background-color: @color_six;
-                padding: 20px;
+                padding: 30px;
                 float: left;
 
                 p {
                     color: @color_seven;
-                    font-style: italic;
                     font-weight: 300;
                 }
 
@@ -1250,9 +1249,9 @@ dl.article-info {
 
                     &:after {
                         content: '';
-                        height: 2px;
+                        height: 0;
                         width: 25%;
-                        border: 1px solid @color_two;
+                        border: 2px solid @color_seven;
                         display: inherit;
                         margin: 10px 0px;
                     }
@@ -1277,19 +1276,6 @@ dl.article-info {
                 }
             }
 
-            [class*="article-image-"] {
-                + .article-content {
-                    position: relative;
-                    &:before {
-                        border-bottom: 32px solid @color_six;
-                        border-left: 20px solid transparent;
-                        border-right: 20px solid transparent;
-                        bottom: 100%;
-                        content: '';
-                        position: absolute;
-                    }
-                }
-            }
         }
     }
 
@@ -1307,6 +1293,7 @@ dl.article-info {
 
             .article-content {
                 position: relative;
+                min-height: 190px;
 
                 &:before {
                     border-bottom: 0 none !important;
@@ -1538,8 +1525,8 @@ dl.article-info {
 }
 
 [class*="bg_color"] {
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .bg_color_one {
@@ -2126,7 +2113,7 @@ div {
     .jss-slider .jss-navigation .jss-navigation-buttons .owl-next {
         .btn;
         background-color: transparent;
-        border: 3px solid @bodyBackground;
+        border: 2px solid @bodyBackground;
         color: @bodyBackground;
         font-size: 24px;
         font-weight: 300;

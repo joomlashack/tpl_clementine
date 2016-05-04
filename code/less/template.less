@@ -1355,6 +1355,11 @@ dl.article-info {
     margin-left: -30px;
 }
 
+.newsflash-horiz {
+    [class^="icon-"]:before {
+        color: @color_two;
+    }
+}
 .img_caption {
     margin: 0;
 }
@@ -1364,10 +1369,12 @@ dl.article-info {
 }
 
 #grid-top {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    margin-top: 17px;
     [class*="module"] {
         .children-rm-m();
         margin-bottom: 0;
+        text-align: center;
     }
 }
 
@@ -1943,8 +1950,8 @@ dl.article-info {
 
         > * {
             display: block;
-            padding-left: 14px;
-            padding-right: 14px;
+            padding-left: 30px;
+            padding-right: 30px;
         }
     }
 }
@@ -2016,9 +2023,10 @@ body {
 }
 
 [class*="newsflash-title"] {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 22px;
-    font-family: @sansFontFamily;
+    font-family: @serifFontFamily;
+    margin-top: 0;
 
     .page-header {
         margin: 0;
@@ -2049,7 +2057,9 @@ body {
     color: @color_five;
 
     h2 {
-        font-size: 35px;
+        font-size: 47px;
+        line-height: 50px;
+        text-align: left;
     }
 }
 
@@ -2061,9 +2071,9 @@ body {
         small {
             color: @textColor;
             display: block;
-            font-size: @baseFontSize + 2;
+            font-size: @baseFontSize - 1;
             font-style: italic;
-            line-height: @baseFontSize + 2;
+            line-height: @baseFontSize + 3;
             margin-top: 10px;
         }
     }
@@ -2080,7 +2090,7 @@ div {
         align-self: auto;
     }
     .jss-slider .jss-navigation .jss-navigation-buttons {
-        bottom: 50px;
+        bottom: 65px;
         top: auto;
     }
 }
@@ -2133,6 +2143,8 @@ div {
     }
 
     .jss-slider .jss-navigation .jss-navigation-buttons .owl-next {
+        border-color: @color_two;
+        color: @color_two;
         &:before,
         &:after {
             position: absolute;
@@ -2153,6 +2165,7 @@ div {
     }
 
     .jss-slider .jss-navigation .jss-navigation-buttons .owl-prev {
+        left: 30px;
         &:before,
         &:after {
             position: absolute;
@@ -2546,4 +2559,8 @@ div {
     .box-sizing(border-box);
     background-color: @color_two;
     border-color: @wellBackground;
+}
+
+.jss-slider .owl-carousel .jss-image .jss-image-int {
+    background-size: 75% auto !important;
 }

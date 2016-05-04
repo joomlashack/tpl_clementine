@@ -74,9 +74,15 @@
             position: relative;
         }
     }
+
+    .jss-slider .owl-carousel .jss-image .jss-image-int {
+        background-size: 85% auto !important;
+    }
+
 }
 
 @media (max-width: 979px) {
+
     #container-unlimited > .core(@fluidGridColumnWidth, 0);
 
     #grid > .core(@fluidGridColumnWidth, @fluidGridGutterWidth);
@@ -243,6 +249,11 @@
 
 }
 @media (max-width: 767px) {
+
+    .jss-slider .owl-carousel .jss-image .jss-image-int {
+        background-size: auto auto !important;
+    }
+
     #header {
         #logo {
             margin-bottom: 20px;

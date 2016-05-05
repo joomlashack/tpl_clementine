@@ -69,49 +69,72 @@
   right: 0;
   width: 65%;
 }
-.explorer.v_9 .container,
 .explorer.v_8 .container {
   width: 960px;
 }
+.explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
 .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
 .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
 .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-title {
   width: 33.33333333333333%;
 }
+.explorer.v_9 #featured div .jss-slider .jss-title-description .jss-description,
 .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-description,
+.explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-description,
 .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-description,
+.explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-description,
 .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-description {
   width: 66.66666666666666%;
 }
 @media (min-width: 1200px) {
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
   .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
   .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
   .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-title {
     width: 390px;
   }
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-description,
   .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-description,
   .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-description,
   .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-description {
     width: 780px;
   }
 }
 @media (max-width: 768px) {
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
   .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
   .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
   .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-description,
   .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-description,
   .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-description,
   .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-description {
     height: auto !important;
     position: static;
   }
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
   .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
   .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
   .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-title {
     width: auto;
   }
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-description,
   .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-description,
   .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-description,
   .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-description {
     width: auto;
   }

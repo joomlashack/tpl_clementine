@@ -84,15 +84,9 @@
     }
 
     .mode-container {
-		#container-unlimited > .fluid(percentage(@gridColumnWidth/(@gridColumns * @gridColumnWidth) + (0 * (@gridColumns - 1))), percentage(0/@gridRowWidth));
-
-
-        .blog, .blog-featured {
-            .container-items {
-                > div {
-                }
-            }
-        }
+		.blog, .blog-featured {
+			#container-unlimited > .fluid(percentage(@gridColumnWidth/(@gridColumns * @gridColumnWidth) + (0 * (@gridColumns - 1))), percentage(0/@gridRowWidth));
+		}
     }
 
     .blog > .page-header,

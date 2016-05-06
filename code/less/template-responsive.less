@@ -331,7 +331,11 @@
 
         .btn-large{
             color: @color_two;
+            border-color: @color_two;
             background: @color_five;
+            &:hover, &:focus {
+                border-color: inherit;
+            }
         }
     }
 

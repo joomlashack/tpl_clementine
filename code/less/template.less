@@ -1206,7 +1206,13 @@ dl.article-info {
             [class*="span"]:first-child {margin-left: 0;}
         }
 
-        .container {padding-left: 0;padding-right: 0;}
+		+ .container {
+			padding: 0 50px;
+
+			> .row {
+				margin-left: 0;
+			}
+		}
 
     }
     .items-leading {

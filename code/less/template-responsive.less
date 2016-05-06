@@ -16,6 +16,61 @@
             padding-right: 20px;
         }
     }
+
+	.fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
+
+		.spanX (@index) when (@index > 0) {
+			.span@{index} { .span(@index); }
+			.spanX(@index - 1);
+		}
+		.spanX (0) {}
+
+		.offsetX (@index) when (@index > 0) {
+		.offset@{index} { .offset(@index); }
+		.offset@{index}:first-child { .offsetFirstChild(@index); }
+			.offsetX(@index - 1);
+		}
+		.offsetX (0) {}
+
+		.offset (@columns) {
+			margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth*2);
+			*margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + (@fluidGridGutterWidth*2) - (.5 / @gridRowWidth * 100 * 1%);
+		}
+
+		.offsetFirstChild (@columns) {
+			margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth);
+			*margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
+		}
+
+		.span (@columns) {
+			width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
+			*width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%);
+		}
+
+		> div {
+			.clearfix();
+
+			[class*="span"] {
+				.input-block-level();
+				float: left;
+				margin-left: @fluidGridGutterWidth;
+				*margin-left: @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
+			}
+
+			[class*="span"]:first-child {
+				margin-left: 0;
+			}
+
+			// Space grid-sized controls properly if multiple per line
+			.controls-row [class*="span"] + [class*="span"] {
+				margin-left: @fluidGridGutterWidth;
+			}
+
+			// generate .spanX and .offsetX
+			.spanX (@gridColumns);
+			.offsetX (@gridColumns);
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -29,12 +84,12 @@
     }
 
     .mode-container {
-        #container-unlimited > .core(97.5px, 0);
+		#container-unlimited > .fluid(percentage(@gridColumnWidth/(@gridColumns * @gridColumnWidth) + (0 * (@gridColumns - 1))), percentage(0/@gridRowWidth));
+
 
         .blog, .blog-featured {
             .container-items {
                 > div {
-                    #grid > .core(97.5px, 0);
                 }
             }
         }
@@ -51,7 +106,7 @@
 
 	.blog, .blog-featured {
 	    .container-items {
-			+ .container {
+			+ .container-fluid {
 				padding: 0 30px;
 			}
 		}
@@ -280,12 +335,10 @@
         }
     }
 
-    .blog .article-image-bottom,
     .blog-featured .article-image-bottom {
         display: inherit;
     }
 
-    .blog .article-image-top,
     .blog-featured .article-image-top {
         display: none;
     }

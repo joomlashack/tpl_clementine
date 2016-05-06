@@ -153,17 +153,6 @@ if ($option == 'com_content')
 			$showContainerMain = true;
 		}
 	}
-
-	if ($layout == 'blog' && JRequest::getVar('view', '') == 'category')
-	{
-		$voyageView = ' category';
-		$showContainerMain = false;
-
-		if ($sidebarsExist == ' sidebars_exist')
-		{
-			$showContainerMain = true;
-		}
-	}
 }
 
 $wrappToolbarClass = ($clementineToolbarDisplayed) ? '' : ' collapsedToolbar collapsedToolbarEnable ';

@@ -39,18 +39,14 @@ if ($sidebarsExist)
 else
 {
 	// Class added to the intro articles (adds an extra wrapper)
-	$this->wrightIntroItemsClass = 'container-fluid container-items';
-
-	// Row mode for each row of the intro articles
-	$this->wrightIntroRowMode = $containerClass;
-	$this->wrightLeadingItemsClass = $containerClass;
+	$this->wrightIntroItemsClass = 'container-items';
 }
 
 // Class added to the complements (links, subcategories and pagination) - adds an extra wrapper for all of them
-$this->wrightComplementOuterClass = $containerClass;
+$this->wrightComplementOuterClass = 'container-fluid';
 
 // Class added to each complement (links, subcategories and pagination - as blocks).  Adds an extra wrapper before the "Inner" div
-$this->wrightComplementExtraClass = $gridMode;
+$this->wrightComplementExtraClass = 'row-fluid';
 
 // Class added to each complement (links, subcategories and pagination - as blocks).
 // Adds an extra wrapper when needed, or uses the existing one if found

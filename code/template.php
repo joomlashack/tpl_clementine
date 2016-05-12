@@ -63,21 +63,20 @@ defined('_JEXEC') or die('Restricted access');
 					endif;
 				?>
 
-				<div class="<?php echo $wrightContainerClass; ?>">
-					<?php
-						if ($this->countModules('lateral-menu'))
-							:
-					?>
+				<?php
+					if ($this->countModules('lateral-menu'))
+					:
+				?>
+				<div class="<?php echo $wrightContainerClass; ?> trigger-lateral-menu">
 					<a class="btn btn-navbar pull-right" id="trigger-lateral-menu">
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			        </a>
-			        <div class="clear"></div>
-			        <?php
-						endif;
-					?>
 				</div>
+				<?php
+					endif;
+				?>
 				<!-- header -->
 				<header id="header">
 					<div class="<?php echo $wrightContainerClass; ?>">

@@ -60,7 +60,10 @@ if ($paramOption == 'com_content' && $paramView == 'article')
 		// If there is an image and the float is not set, it checks the global config
 		if ($imagesArray->image_fulltext != '' && $imagesArray->float_fulltext == 'none')
 		{
-			$wrightSingleArticleDisplay = true;
+			if ($sidebarsExist != ' sidebars_exist')
+			{
+				$wrightSingleArticleDisplay = true;
+			}
 		}
 
 		elseif ($imagesArray->image_fulltext != '' && $imagesArray->float_fulltext == '')
@@ -75,7 +78,10 @@ if ($paramOption == 'com_content' && $paramView == 'article')
 
 			if ($configArray->float_fulltext == 'none')
 			{
-				$wrightSingleArticleDisplay = true;
+				if ($sidebarsExist != ' sidebars_exist')
+				{
+					$wrightSingleArticleDisplay = true;
+				}
 			}
 		};
 

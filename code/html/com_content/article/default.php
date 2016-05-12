@@ -14,6 +14,7 @@ $app = JFactory::getApplication();
 
 $params = $this->item->params;
 $images = json_decode($this->item->images);
+$sidebarsExist = (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'));  // check if there's a sidebar at all
 
 if ($params->get('access-view'))
 {
@@ -22,7 +23,14 @@ if ($params->get('access-view'))
 
 	if ($imageExist && $imageFloat == 'none')
 	{
-		$this->wrightElementsStructure = Array("title","icons","article-info","legendtop","content","legendbottom");
+		if ($sidebarsExist)
+		{
+			$this->wrightElementsStructure = Array("title","image","icons","article-info","legendtop","content","legendbottom");
+		}
+		else
+		{
+			$this->wrightElementsStructure = Array("title","icons","article-info","legendtop","content","legendbottom");
+		}
 	}
 }
 

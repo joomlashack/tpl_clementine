@@ -108,19 +108,19 @@ defined('_JEXEC') or die('Restricted access');
 					endif;
 				?>
 
+				<!-- grid-top -->
+				<?php
+					if ($this->countModules('grid-top'))
+					:
+				?>
 				<div class="<?php echo $wrightContainerClass; ?>">
-					<!-- grid-top -->
-					<?php
-						if ($this->countModules('grid-top'))
-							:
-					?>
 					<div id="grid-top">
 						<w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
 					</div>
-					<?php
-						endif;
-					?>
 				</div>
+				<?php
+					endif;
+				?>
 			</div>
 			<div class="bg_color_five <?php echo $containerGridTop2Content; ?>">
 				<div class="<?php echo $wrightContainerClass; ?>">

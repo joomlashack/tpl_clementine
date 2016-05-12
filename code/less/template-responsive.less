@@ -97,7 +97,6 @@
         padding-right: 0;
     }
 
-
 	.blog, .blog-featured {
 	    .container-items {
 			+ .container-fluid {
@@ -123,12 +122,18 @@
         padding: 0;
     }
 
+	.wrapper-toolbar {
+		.clementine-toolbar-container.container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
     .wrapper-toolbar {
         .navbar .container {
-            width: 724px;
             position: relative;
         }
     }
@@ -144,6 +149,10 @@
     #container-unlimited > .core(@fluidGridColumnWidth, 0);
 
     #grid > .core(@fluidGridColumnWidth, @fluidGridGutterWidth);
+
+	#nav-toolbar {
+		margin: 0 auto;
+	}
 
 	.row {
 		margin-left: 0;

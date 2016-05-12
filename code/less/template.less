@@ -43,7 +43,6 @@
 
         .blog > .category-desc { .span(@gridColumns); }
         .blog > .page-header { .span(@gridColumns); }
-        #nav-toolbar { .span(@gridColumns); }
 
         .blog > .page-header,
         .blog > .category-desc {
@@ -154,8 +153,6 @@ h6 {
 p {font-weight: 300;}
 
 .navbar {
-    margin-bottom: 0;
-
     .navbar-inner {
         box-shadow: none;
         padding-left: 0;
@@ -1521,6 +1518,11 @@ dl.article-info {
 #bottom-menu, #menu {
     margin-bottom: 0;
 }
+
+.wrapper-bottom-menu .navbar {
+	margin-bottom: 0;	
+}
+
 #footer {
     background-color: transparent;
     background-image: none;
@@ -2356,11 +2358,6 @@ div {
     }
 }
 
-#nav-toolbar {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .no-responsive{
     .top-menu-toggler{
         min-width: 940px;
@@ -2393,6 +2390,10 @@ div {
         }
 
     }
+
+	.navbar {
+		margin-bottom: 0;
+	}
 }
 
 .wrapper-toolbar {

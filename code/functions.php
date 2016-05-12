@@ -156,7 +156,7 @@ if ($option == 'com_content')
 }
 
 $wrappToolbarClass = ($clementineToolbarDisplayed) ? '' : ' collapsedToolbar collapsedToolbarEnable ';
-$containerToolbarClass = "clementine-toolbar-container";
+$containerToolbarClass = "clementine-toolbar-container ";
 
 if (!$clementineToolbarDisplayed)
 {

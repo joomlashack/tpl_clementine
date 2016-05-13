@@ -237,15 +237,17 @@ defined('_JEXEC') or die('Restricted access');
 				if ($this->countModules('grid-bottom'))
 					:
 			?>
-			<div class="bg_color_two">
-				<div class="<?php echo $wrightContainerClass; ?>">
-					<div class="row-fluid">
-						<div id="grid-bottom">
-							<w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
-						</div>
-					</div>
-				</div>
-			</div>
+            <div class="shadow-top">
+                <div class="bg_color_two">
+                    <div class="<?php echo $wrightContainerClass; ?>">
+                        <div class="row-fluid">
+                            <div id="grid-bottom">
+                                <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 			<?php
 				endif;
 			?>

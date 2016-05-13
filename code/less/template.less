@@ -1687,6 +1687,20 @@ dl.article-info {
   z-index: 2;
 }
 
+.shadow-top:before {
+  background-image: url(../images/shadow-top.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  background-size: auto 100%;
+  content: "";
+  display: block;
+  height: 26px;
+  margin-top: -26px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
 [class*="bg_color"] {
     padding-bottom: 30px;
     padding-top: 30px;
@@ -2041,9 +2055,15 @@ dl.article-info {
     h1 {
         display: inline;
         font-size: 35px;
+        line-height: 50px;
         font-weight: 400;
         text-transform: uppercase;
-
+        background: rgba(0, 0, 0, 0.4);
+        box-decoration-break: clone;
+        box-shadow: 10px 0 0 rgba(0, 0, 0, 0.4), -10px 0 0 rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 10px 0 0 rgba(0, 0, 0, 0.4), -10px 0 0 rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 10px 0 0 rgba(0, 0, 0, 0.4), -10px 0 0 rgba(0, 0, 0, 0.4);
+        -o-box-shadow: 10px 0 0 rgba(0, 0, 0, 0.4), -10px 0 0 rgba(0, 0, 0, 0.4);
         &:after {
             content: '';
             display: block;
@@ -2059,14 +2079,14 @@ dl.article-info {
     }
 
     .btn {
-        background-color: transparent;
-        border-color: @color_five;
-        color: @color_five;
+        background-color: @color_two;
+        color: @color_one;
+        border-color: @color_two;
         font-weight: 700;
 
         &:hover, &:focus {
-            background-color: @color_five;
-            color: @textColor;
+            background-color: @color_one;
+            color: @color_two;
         }
     }
 

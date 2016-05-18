@@ -1,3 +1,12 @@
+ul,
+ol {
+    margin: 0 0 20px 15px;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
 .flexbox-content(){
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -753,15 +762,6 @@ p {font-weight: 300;}
 }
 
 // Pagination
-.pagination ul > .disabled > a, .pagination ul > .disabled > span {
-    background-color: @color_two;
-    color: @blue;
-    &:hover , &:focus {
-        background-color: @color_two;
-        color: @blue;
-    }
-}
-
 .pagination ul > li > a, .pagination ul > li > span {
     border-color: @white;
 }
@@ -771,9 +771,17 @@ p {font-weight: 300;}
     color: @color_one;
 }
 
-.pagination ul > li > span {
+.pagination ul > li > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > span,
+.btn.disabled,
+.btn[disabled] {
     background-color: @grayLighter;
     color: @gray;
+    &:hover , &:focus {
+        background-color: @grayLighter;
+        color: @gray;
+    }
 }
 
 .pagination ul > li > a:hover, .pagination ul > li > a:focus, .pagination ul > .active > a, .pagination ul > .active > span {
@@ -941,38 +949,17 @@ a {
 
 
 blockquote {
-    background-image: url(../images/blockquote-left.png);
-    background-repeat: no-repeat;
-    border-left: none;
+    border-left-color: @color_two;
     font-family: @serifFontFamily;
     font-size: @baseFontSize + 10;
-    padding-left: 40px;
 
     small {
         font-size: @baseFontSize;
         margin: 10px 0px;
     }
 
-    p {
-        background-image: url(../images/blockquote-right.png);
-        background-repeat: no-repeat;
-        background-position: right bottom;
-        padding-bottom: 5px;
-        padding-right: 40px;
-    }
-
     &.pull-right {
-        background-image: url(../images/blockquote-right.png);
-        background-position: right top;
-        border-right: none;
-        padding-right: 40px;
-
-        p {
-            background-image: url(../images/blockquote-left.png);
-            background-position: left bottom;
-            padding-right: 0;
-            padding-left: 40px;
-        }
+        border-right-color: @color_two;
     }
 }
 .label {
@@ -1019,6 +1006,12 @@ table {
                 color: @color_one;
             }
         }
+    }
+    &.table-striped tbody > tr:nth-child(2n+1) > td,
+    &.table-striped tbody > tr:nth-child(2n+1) > th,
+    &.table-hover tbody tr:hover > td,
+    &.table-hover tbody tr:hover > th {
+        background-color: lighten(@color_two, 40%);
     }
 }
 
@@ -1600,6 +1593,10 @@ dl.article-info {
 
 }
 // Typography styles
+.item-page .bs-docs-example {
+    padding-left: 0;
+    padding-right: 0;
+}
 .tabs {
     .bs-docs-example {
         background-color: transparent;
@@ -2459,190 +2456,6 @@ div {
         > li {
             display: inline-block;
             float: none;
-        }
-    }
-
-    .socialicon-templatedesign-16 {
-        &.socialicon-dribbble {
-            background-position: -210px 0px !important;
-        }
-        &.socialicon-digg {
-            background-position: -16px 0px !important;
-        }
-        &.socialicon-youtube {
-            background-position: -290px 0px !important;
-        }
-        &.socialicon-vine {
-            background-position: -306px 0px !important;
-        }
-        &.socialicon-pandora {
-            background-position: -161px 0px !important;
-        }
-        &.socialicon-pinterest {
-            background-position: -193px 0px !important;
-        }
-        &.socialicon-linkedin {
-            background-position: -145px 0px !important;
-        }
-        &.socialicon-picasa {
-            background-position: -177px 0px !important;
-        }
-        &.socialicon-stumbleupon {
-            background-position: -225px 0px !important;
-        }
-        &.socialicon-twitter {
-            background-position: -258px 0px !important;
-        }
-        &.socialicon-tumblr {
-            background-position: -241px 0px !important;
-        }
-        &.socialicon-vimeo {
-            background-position: -274px 0px !important;
-        }
-        &.socialicon-lastfm {
-            background-position: -129px 0px !important;
-        }
-    }
-
-    .socialicon-templatedesign-24 {
-        &.socialicon-delicious {
-            background-position: 1px 0px !important;
-        }
-        &.socialicon-digg {
-            background-position: -23px 0px !important;
-        }
-        &.socialicon-dribbble {
-            background-position: -313px 0px !important;
-        }
-        &.socialicon-facebook {
-            background-position: -47px 0px !important;
-        }
-        &.socialicon-flickr {
-            background-position: -71px 0px !important;
-        }
-        &.socialicon-pinterest {
-            background-position: -289px 0px !important;
-        }
-        &.socialicon-stumbleupon {
-            background-position: -336px 0px !important;
-        }
-        &.socialicon-stumbleupon {
-            background-position: -337px 0px !important;
-        }
-        &.socialicon-tumblr {
-            background-position: -360px 0px !important;
-        }
-        &.socialicon-tumblr {
-            background-position: -361px 0px !important;
-        }
-        &.socialicon-twitter {
-            background-position: -385px 0px !important;
-        }
-        &.socialicon-vimeo {
-            background-position: -409px 0px !important;
-        }
-        &.socialicon-vine {
-            background-position: -456px 0px !important;
-        }
-        &.socialicon-vine {
-            background-position: -458px 0px !important;
-        }
-        &.socialicon-youtube {
-            background-position: -434px 0px !important;
-        }
-    }
-    .socialicon-templatedesign-32 {
-        &.socialicon-dribbble {
-            background-position: -419px 0px !important;
-        }
-        &.socialicon-googleplus {
-            background-position: -161px 0px !important
-        }
-        &.socialicon-instagram {
-            background-position: -225px 0px !important;
-        }
-        &.socialicon-lastfm {
-            background-position: -257px 0px !important;
-        }
-        &.socialicon-linkedin {
-            background-position: -289px 0px !important;
-        }
-        &.socialicon-pandora {
-            background-position: -322px 0px !important;
-        }
-        &.socialicon-picasa {
-            background-position: -354px 0px !important;
-        }
-        &.socialicon-pinterest {
-            background-position: -386px 0px !important;
-        }
-        &.socialicon-stumbleupon {
-            background-position: -451px 0px !important;
-        }
-        &.socialicon-tumblr {
-            background-position: -483px 0px !important;
-        }
-        &.socialicon-twitter {
-            background-position: -515px 0px !important;
-        }
-        &.socialicon-vimeo {
-            background-position: -547px 0px !important;
-        }
-        &.socialicon-vine {
-            background-position: -612px 0px !important;
-        }
-        &.socialicon-youtube {
-            background-position: -580px 0px !important;
-        }
-        &.socialicon-grooveshark {
-            background-position: -193px 0px !important;
-        }
-    }
-    .socialicon-templatedesign-48 {
-        &.socialicon-dribbble {
-            background-position: -628px 0px !important;
-        }
-        &.socialicon-googleplus {
-            background-position: -241px 0px !important;
-        }
-        &.socialicon-grooveshark {
-            background-position: -289px 0px !important;
-        }
-        &.socialicon-instagram {
-            background-position: -337px 0px !important;
-        }
-        &.socialicon-lastfm {
-            background-position: -386px 0px !important;
-        }
-        &.socialicon-linkedin {
-            background-position: -434px 0px !important;
-        }
-        &.socialicon-pandora {
-            background-position: -482px 0px !important;
-        }
-        &.socialicon-picasa {
-            background-position: -531px 0px !important;
-        }
-        &.socialicon-pinterest {
-            background-position: -580px 0px !important;
-        }
-        &.socialicon-tumblr {
-            background-position: -725px 0px !important;
-        }
-        &.socialicon-twitter {
-            background-position: -773px 0px !important;
-        }
-        &.socialicon-vimeo {
-            background-position: -821px 0px !important;
-        }
-        &.socialicon-vine {
-            background-position: -918px 0px !important;
-        }
-        &.socialicon-youtube {
-            background-position: -870px 0px !important;
-        }
-        &.socialicon-stumbleupon {
-            background-position: -676px 0px !important;
         }
     }
 }

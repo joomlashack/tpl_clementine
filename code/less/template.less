@@ -950,38 +950,17 @@ a {
 
 
 blockquote {
-    background-image: url(../images/blockquote-left.png);
-    background-repeat: no-repeat;
-    border-left: none;
+    border-left-color: @color_two;
     font-family: @serifFontFamily;
     font-size: @baseFontSize + 10;
-    padding-left: 40px;
 
     small {
         font-size: @baseFontSize;
         margin: 10px 0px;
     }
 
-    p {
-        background-image: url(../images/blockquote-right.png);
-        background-repeat: no-repeat;
-        background-position: right bottom;
-        padding-bottom: 5px;
-        padding-right: 40px;
-    }
-
     &.pull-right {
-        background-image: url(../images/blockquote-right.png);
-        background-position: right top;
-        border-right: none;
-        padding-right: 40px;
-
-        p {
-            background-image: url(../images/blockquote-left.png);
-            background-position: left bottom;
-            padding-right: 0;
-            padding-left: 40px;
-        }
+        border-right-color: @color_two;
     }
 }
 .label {
@@ -1609,11 +1588,14 @@ dl.article-info {
 
 }
 // Typography styles
+.bs-docs-example {
+    padding-left: 0;
+    padding-right: 0;
+}
 .tabs {
     .bs-docs-example {
         background-color: transparent;
         border: none;
-        padding: 39px 0 14px;
         &:after {
             background-color: transparent;
             font-family: @sansFontFamily;

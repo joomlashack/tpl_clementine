@@ -1092,12 +1092,20 @@ dl.article-info {
 #main {
     .box-sizing(border-box);
     background-color: #fff;
-    padding: 50px 40px;
+    padding: @mainPadding (@mainPadding - 10);
+
+	.moduletable, dl {
+		margin-bottom: @mainPadding;
+	}
 }
 
 #below-content {
-	> *:last-child {
+	*:last-child {
 		margin-bottom: 0;
+	}
+
+	> *:last-child {
+		margin-top: @mainPadding;
 	}
 }
 

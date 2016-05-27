@@ -2522,10 +2522,18 @@ div {
 }
 
 .is_ipad.v_8{
-  #featured .full-width {
-    width: auto !important;
-    max-width: none !important;
-  }
+    #featured .full-width {
+        width: auto !important;
+        max-width: none !important;
+    }
+    #featured div .jss-slider .jss-title-description .jss-description,
+    #grid-top div .jss-slider .jss-title-description .jss-description,
+    #grid-top2 div .jss-slider .jss-title-description .jss-description  {
+        float: right !important;
+    }
+    .jss-slider .owl-carousel .jss-image .jss-image-int {
+        background-size: auto 100% !important;
+    }
 }
 
 .total {

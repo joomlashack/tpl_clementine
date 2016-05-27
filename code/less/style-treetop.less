@@ -1,0 +1,30 @@
+#lateral-menu {
+    .nav {
+        ul.submenu {
+            > li {
+                > a {
+                    &:hover, &:focus{
+                        color: #D2E7E3;
+                        .caret {
+                            border-top-color: #D2E7E3;
+                        }
+                    }
+                }
+                &.active {
+                    > a {
+                        color: #D2E7E3;
+                        .caret {
+                            border-top-color: #D2E7E3;
+                        }
+                        &:hover, &:focus{
+                            color: #D2E7E3;
+                            .caret {
+                                border-top-color: #D2E7E3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

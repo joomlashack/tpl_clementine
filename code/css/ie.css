@@ -1,0 +1,141 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.explorer.v_10 #featured div .jss-slider .jss-title-description,
+.explorer.v_9 #featured div .jss-slider .jss-title-description,
+.explorer.v_8 #featured div .jss-slider .jss-title-description,
+.explorer.v_10 #grid-top div .jss-slider .jss-title-description,
+.explorer.v_9 #grid-top div .jss-slider .jss-title-description,
+.explorer.v_8 #grid-top div .jss-slider .jss-title-description,
+.explorer.v_10 #grid-top2 div .jss-slider .jss-title-description,
+.explorer.v_9 #grid-top2 div .jss-slider .jss-title-description,
+.explorer.v_8 #grid-top2 div .jss-slider .jss-title-description {
+  height: 100%;
+  width: 100%;
+}
+.explorer.v_10 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_8 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_8 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+.explorer.v_8 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+.explorer.v_10 #featured div .jss-slider .jss-title-description .jss-description,
+.explorer.v_9 #featured div .jss-slider .jss-title-description .jss-description,
+.explorer.v_8 #featured div .jss-slider .jss-title-description .jss-description,
+.explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-description,
+.explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-description,
+.explorer.v_8 #grid-top div .jss-slider .jss-title-description .jss-description,
+.explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-description,
+.explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-description,
+.explorer.v_8 #grid-top2 div .jss-slider .jss-title-description .jss-description {
+  height: 100% !important;
+  position: absolute;
+}
+.explorer.v_10 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_8 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_8 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+.explorer.v_8 #grid-top2 div .jss-slider .jss-title-description .jss-title {
+  left: 0;
+  text-align: left;
+  width: 35%;
+}
+.explorer.v_10 #featured div .jss-slider .jss-title-description .jss-description,
+.explorer.v_9 #featured div .jss-slider .jss-title-description .jss-description,
+.explorer.v_8 #featured div .jss-slider .jss-title-description .jss-description,
+.explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-description,
+.explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-description,
+.explorer.v_8 #grid-top div .jss-slider .jss-title-description .jss-description,
+.explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-description,
+.explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-description,
+.explorer.v_8 #grid-top2 div .jss-slider .jss-title-description .jss-description {
+  padding: 5%;
+  right: 0;
+  width: 65%;
+}
+.explorer.v_8 .container {
+  width: 960px;
+}
+.explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_10 #featured div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-title,
+.explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+.explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-title {
+  width: 33.33333333333333%;
+}
+.explorer.v_9 #featured div .jss-slider .jss-title-description .jss-description,
+.explorer.v_10 #featured div .jss-slider .jss-title-description .jss-description,
+.explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-description,
+.explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-description,
+.explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-description,
+.explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-description {
+  width: 66.66666666666666%;
+}
+@media (min-width: 1200px) {
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-title {
+    width: 390px;
+  }
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-description {
+    width: 780px;
+  }
+}
+@media (max-width: 768px) {
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-description {
+    height: auto !important;
+    position: static;
+  }
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-title,
+  .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-title {
+    width: auto;
+  }
+  .explorer.v_9 #featured div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_10 #featured div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_10 #grid-top div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_9 #grid-top2 div .jss-slider .jss-title-description .jss-description,
+  .explorer.v_10 #grid-top2 div .jss-slider .jss-title-description .jss-description {
+    width: auto;
+  }
+}

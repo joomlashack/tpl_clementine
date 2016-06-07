@@ -92,11 +92,18 @@ defined('_JEXEC') or die('Restricted access');
 						:
 				?>
 				<div id="featured">
+					<?php
+						if ($bg != "-1")
+							:
+					 ?>
 				    <div class="bg-wrapp">
 			            <div class="bg-wrapp-inner">
 			                <img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
 			            </div>
 			        </div>
+					<?php
+						endif;
+					?>
 					<div class="<?php echo $wrightContainerClass; ?>">
 						<div class="row-fluid">
 							<w:module type="none" name="featured" chrome="xhtml" />

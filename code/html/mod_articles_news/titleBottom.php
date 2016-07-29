@@ -15,4 +15,5 @@ defined('_JEXEC') or die;
 	$wrightMaxColumns = 4;
 	$wrightTitlePosition = 'below';
 
+require_once JPATH_THEMES . '/' . $app->getTemplate() . '/' . 'wright' . '/' . 'html' . '/' . 'overrider.php';
 include Overrider::getOverride('mod_articles_news', 'horizontal');

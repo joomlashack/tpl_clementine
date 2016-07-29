@@ -9,11 +9,13 @@
 // No direct access
 defined('_JEXEC') or die;
 
-	$wrightNewsEnableIcons = false;
-	$wrightEnableLinkContent = true;
-	$wrightImageFirst = true;
-	$wrightMaxColumns = 4;
-	$wrightTitlePosition = 'below';
+$app = JFactory::getApplication();
+
+$wrightNewsEnableIcons = false;
+$wrightEnableLinkContent = true;
+$wrightImageFirst = true;
+$wrightMaxColumns = 4;
+$wrightTitlePosition = 'below';
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/' . 'wright' . '/' . 'html' . '/' . 'overrider.php';
 include Overrider::getOverride('mod_articles_news', 'horizontal');

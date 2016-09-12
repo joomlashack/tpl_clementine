@@ -16,7 +16,6 @@
   "navigation_buttons_custom_width": 30,
   "navigation_buttons_custom_height": 30,
   "height_adjustment" : "crop",
-  "navigation_bottons_show": 1,
   "buttons_theme": "none",
   "navigation_buttons_opacity" : "100",
   "buttons_left_right_position": 1

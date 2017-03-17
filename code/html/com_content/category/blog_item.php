@@ -20,35 +20,39 @@ $images = json_decode($this->item->images);
 if ($images->image_intro != '')
 {
 	$this->item->wrightElementsStructure = Array(
-		"div.article-image-top",
-			"image",
-			"legendtop",
-		"/div",
-		"div.article-content",
-			"title",
-			"icons",
-			"article-info",
-			"content",
-			"legendbottom",
-		"/div",
-		"div.article-image-bottom",
-			"image",
-			"legendtop",
-		"/div"
+        "div.article-image-top",
+            "image",
+            "legendtop",
+        "/div",
+        "div.article-content",
+            "title",
+            "icons",
+            "article-info",
+            "content",
+            "legendbottom",
+            "article-info-below",
+            "article-info-split",
+        "/div",
+        "div.article-image-bottom",
+            "image",
+            "legendtop",
+        "/div"
 	);
 }
 else
 {
 	$this->item->wrightElementsStructure = Array(
-		"image",
-		"legendtop",
-		"div.article-content",
-			"title",
-			"icons",
-			"article-info",
-			"content",
-			"legendbottom",
-		"/div"
+        "image",
+        "legendtop",
+        "div.article-content",
+            "title",
+            "icons",
+            "article-info",
+            "content",
+            "legendbottom",
+            "article-info-below",
+            "article-info-split",
+        "/div"
 	);
 }
 

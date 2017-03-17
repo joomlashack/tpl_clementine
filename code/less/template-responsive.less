@@ -291,7 +291,6 @@
 
     .wrapper-toolbar{
         .navbar .btn-navbar{
-            width: 28px;
             z-index: 4;
         }
 
@@ -313,6 +312,10 @@
 
 }
 @media (max-width: 767px) {
+
+	#toolbar .navbar .navbar-inner .btn.btn-navbar:before {
+		left: -15px;
+	}
 
     #bg-header .full-width {
         height: 100%;

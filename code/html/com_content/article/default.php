@@ -21,17 +21,38 @@ if ($params->get('access-view'))
 	$imageExist = (isset($images->image_fulltext) && !empty($images->image_fulltext)) ? true : false;
 	$imageFloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext;
 
-	if ($imageExist && $imageFloat == 'none')
-	{
-		if ($sidebarsExist)
-		{
-			$this->wrightElementsStructure = Array("title","image","icons","article-info","legendtop","content","legendbottom");
-		}
-		else
-		{
-			$this->wrightElementsStructure = Array("title","icons","article-info","legendtop","content","legendbottom");
-		}
-	}
+    if ($imageExist && $imageFloat == 'none')
+    {
+        if ($sidebarsExist)
+        {
+            $this->wrightElementsStructure = Array(
+                "title",
+                "image",
+                "icons",
+                "article-info",
+                "legendtop",
+                "content",
+                "legendbottom",
+                "article-info-below",
+                "article-info-split",
+                "bottom"
+            );
+        }
+        else
+        {
+            $this->wrightElementsStructure = Array(
+                "title",
+                "icons",
+                "article-info",
+                "legendtop",
+                "content",
+                "legendbottom",
+                "article-info-below",
+                "article-info-split",
+                "bottom"
+            );
+        }
+    }
 }
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';

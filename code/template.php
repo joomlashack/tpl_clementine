@@ -172,7 +172,7 @@ defined('_JEXEC') or die('Restricted access');
 								if ($voyageView == ' category' || $voyageView == ' featured')
 									:
 							?>
-							<div class="<?php echo $wrightContainerClass; ?>">
+							<div class="<?php echo $contentModuleClass; ?>">
 
 							<?php
 								endif;

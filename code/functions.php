@@ -170,3 +170,12 @@ if (!$clementineToolbarDisplayed)
 }
 
 $containerGridTop2Content = ($voyageView == ' category' || $voyageView == ' featured') ? ' padding-none' : '';
+
+if ($sidebarsExist == ' sidebars_exist')
+{
+    $contentModuleClass = '';
+}
+else
+{
+    $contentModuleClass = $wrightContainerClass;
+}

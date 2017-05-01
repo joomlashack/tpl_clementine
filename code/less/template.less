@@ -2608,8 +2608,12 @@ div {
 // Fix for leading featured articles when sidebars exists
 body.sidebars_exist {
 
-	#main .blog-featured .items-leading {
-		padding: 30px;
+	#main .blog-featured .items-leading > [class*="leading-"] {
+		padding: 30px 30px 0 30px;
+
+		&:last-of-type {
+			padding-bottom: 30px;
+		}
 	}
 
 	#below-content {

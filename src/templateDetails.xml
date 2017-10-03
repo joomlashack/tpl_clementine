@@ -118,11 +118,6 @@
                 <field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
 				<field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
-			                
-                <field
-                    type="customfooter"
-                    name="customfooter"
-                    media="tpl_js_clementine" />
             </fieldset>
 			<fieldset name="Clementine" label="TPL_JS_CLEMENTINE_OPTIONS">
 				<field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_CLEMENTINE_BACKGROUND_IMAGE" description="TPL_JS_CLEMENTINE_BACKGROUND_IMAGE_DESC" />
@@ -131,6 +126,12 @@
 					<option value="0">JNO</option>
 				</field>
 			</fieldset>
+			<fieldset name="footer" addfieldpath="/templates/js_clementine/form/fields">     
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_clementine" />
+            </fieldset>
 		</fields>
 	</config>
 

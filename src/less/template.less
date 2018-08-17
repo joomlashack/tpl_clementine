@@ -354,6 +354,37 @@ p {font-weight: 300;}
     border-radius: 0;
 }
 
+#toolbar {
+
+	.dropdown-menu li .dropdown-menu {
+		background-color: @color_two;
+
+		> li > a {
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: @dropdownLinkBackgroundHover;
+			}
+
+			@media (max-width: 979px) {
+				padding-left: 45px;
+			}
+		}
+
+		// 4th+ menu level
+		li .dropdown-menu {
+
+			> li > a {
+
+				@media (max-width: 979px) {
+					padding-left: 65px;
+				}
+			}
+		}
+	}
+}
+
 .navbar-inverse {
     .dropdown-menu {
         li {

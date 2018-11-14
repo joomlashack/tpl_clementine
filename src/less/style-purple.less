@@ -1,0 +1,39 @@
+#lateral-menu {
+    .nav {
+        ul.submenu {
+            > li {
+                > a {
+                    &:hover, &:focus{
+                        color: #ddd;
+                        .caret {
+                            border-top-color: #ddd;
+                        }
+                    }
+                }
+                &.active {
+                    > a {
+                        color: #ddd;
+                        .caret {
+                            border-top-color: #ddd;
+                        }
+                        &:hover, &:focus{
+                            color: #ddd;
+                            .caret {
+                                border-top-color: #ddd;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table-striped tbody > tr:nth-child(2n+1) > td,
+.table-striped tbody > tr:nth-child(2n+1) > th {
+    color: darken(@textColor,15%);
+}
+
+.table-hover tbody tr:hover > td, .table-hover tbody tr:hover > th {
+    color: darken(@textColor,15%);
+}

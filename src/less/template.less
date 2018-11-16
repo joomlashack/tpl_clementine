@@ -1498,6 +1498,15 @@ dl.article-info {
 
             .article-image-bottom {
                 display: block;
+
+				.pull-left,
+				.pull-right,
+				.pull-none {
+
+					&.item-image {
+						margin-bottom: 0 !important;
+					}
+				}
             }
         }
     }
@@ -2676,6 +2685,97 @@ div {
 
 .jss-slider.jss-slider-template-design .owl-carousel .jss-image .jss-image-int {
     background-size: 75% auto !important;
+}
+
+// Shack Forms
+
+.moduletable,
+.module {
+
+	&_template-design {
+
+		form.pwebcontact-form {
+
+			textarea,
+			input[type="text"],
+			input[type="password"],
+			input[type="datetime"],
+			input[type="datetime-local"],
+			input[type="date"],
+			input[type="month"],
+			input[type="time"],
+			input[type="week"],
+			input[type="number"],
+			input[type="email"],
+			input[type="url"],
+			input[type="search"],
+			input[type="tel"],
+			input[type="color"] {
+				background-color: @inputBackground;
+				border-color: @inputBorder;
+				.box-shadow(inset 0 1px 1px rgba(0,0,0,0.075));
+				-webkit-transition: border linear .2s, box-shadow linear .2s;
+				-moz-transition: border linear .2s, box-shadow linear .2s;
+				-o-transition: border linear .2s, box-shadow linear .2s;
+				transition: border linear .2s, box-shadow linear .2s;
+				.border-radius(@inputBorderRadius);
+				line-height: @inputHeight;
+				padding-top: 4px;
+				padding-bottom: 4px;
+			}
+
+			button,
+			.btn {
+				.buttonBackgroundNotGradient(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+				border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+				color: @white;
+				.box-shadow(none);
+				.border-radius(5px);
+				background-image: none;
+				color: @white;
+				text-shadow: none;
+				padding-left: 20px;
+				padding-right: 20px;
+				.transition(all ease-in .2s);
+
+				&:hover {
+					color: @white;
+				}
+
+				&:focus {
+					color: @color_two;
+				}
+			}
+
+			.chzn-container-single {
+
+				.chzn-single {
+					background-color: @inputBackground;
+					border-color: @inputBorder;
+					.border-radius(@inputBorderRadius);
+				}
+			}
+		}
+	}
+}
+
+// Improve contrast for button in modules wrapped by containers with bg_color_two
+.bg_color_two {
+
+	.moduletable,
+	.module {
+
+		&_template-design {
+
+			form.pwebcontact-form {
+
+				button,
+				.btn {
+					.buttonBackgroundNotGradient(rgba(0,0,0,0.6), @btnPrimaryBackgroundHighlight);
+				}
+			}
+		}
+	}
 }
 
 // Fix for leading featured articles when sidebars exists

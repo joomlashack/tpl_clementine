@@ -179,14 +179,14 @@ p {font-weight: 300;}
                 position: relative;
                 height: 25px;
 
-                &:before {
-                    font-family: FontAwesome;
-                    content: '\f107';
-                    position: absolute;
-                    color: @white;
-                    font-size: 17px;
+				&:before {
+					font-family: FontAwesome;
+					content: '\f107';
+					position: absolute;
+					color: @white;
+					font-size: 17px;
 					left: -5px;
-                }
+				}
 
                 span {
                     display: none;
@@ -206,51 +206,55 @@ p {font-weight: 300;}
                     font-family: @sansFontFamily;
                 }
             }
-            > .parent {
-                > a {
-                    &:after {
-                        content: '\f107';
-                        font-family: FontAwesome;
-                        margin-left: 5px;
-                    }
-                    .caret {
-                        display: none;
-                    }
-                }
-                &:hover, &:focus {
-                    > a {
-                        &:after {
-                            content: '\f106';
-                        }
-                    }
-                }
 
-            }
-            > li {
-                .dropdown-menu {
-                    > li {
-                        &.dropdown-submenu {
-                            > a {
-                                &:after {
-                                    content: '\f105';
-                                    font-family: FontAwesome;
-                                    float: none;
-                                    margin: 0;
-                                    border: none;
-                                    display: inline-block;
-                                    margin-left: 5px;
-                                }
-                            }
-                        }
-                    }
-                }
+			@media (min-width: 980px) {
 
-                &.active {
-                    > a {
-                        box-shadow: none;
-                    }
-                }
-            }
+				> .parent {
+					> a {
+						&:after {
+							content: '\f107';
+							font-family: FontAwesome;
+							margin-left: 5px;
+						}
+						.caret {
+							display: none;
+						}
+					}
+					&:hover, &:focus {
+						> a {
+							&:after {
+								content: '\f106';
+							}
+						}
+					}
+
+				}
+				> li {
+					.dropdown-menu {
+						> li {
+							&.dropdown-submenu {
+								> a {
+									&:after {
+										content: '\f105';
+										font-family: FontAwesome;
+										float: none;
+										margin: 0;
+										border: none;
+										display: inline-block;
+										margin-left: 5px;
+									}
+								}
+							}
+						}
+					}
+
+					&.active {
+						> a {
+							box-shadow: none;
+						}
+					}
+				}
+			}
         }
     }
     .nav {

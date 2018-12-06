@@ -129,6 +129,29 @@
 
 }
 
+@media (min-width: 980px) {
+
+	.navbar {
+		.navbar-inner {
+			.nav-collapse {
+				.nav, &.nav {
+					> li {
+						&.deeper {
+							&:hover, &:focus {
+								> a {
+									&:after {
+										content: '\f107';
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
     .wrapper-toolbar {
         .navbar .container {
@@ -187,15 +210,6 @@
                             a {
                                 border-radius: 0;
                                 -webkit-border-radius: 0;
-                            }
-                        }
-                        &.deeper {
-                            &:hover, &:focus {
-                                > a {
-                                    &:after {
-                                        content: '\f107';
-                                    }
-                                }
                             }
                         }
 

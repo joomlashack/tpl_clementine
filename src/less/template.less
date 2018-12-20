@@ -515,7 +515,9 @@ p {font-weight: 300;}
             margin-right: 0;
 
 
-            &:hover, &:focus {
+			&:active,
+			&:hover,
+			&:focus {
                 background-color: darken(@color_two, 10%);
                 color: white;
                 text-decoration: none;
@@ -533,13 +535,6 @@ p {font-weight: 300;}
             &:hover, &:focus {
                 &:after {
                     content: '\f106';
-                }
-            }
-            .submenu {
-                li {
-                    a {
-                        color: @white;
-                    }
                 }
             }
             &:after {
@@ -619,10 +614,10 @@ p {font-weight: 300;}
                         }
                     }
                 }
-                > a {
-                    color: @white;
+				a {
+					color: @color_two;
                     [class^="icon-"], [class*=" icon-"] {
-                        color: @white;
+                        color: @color_two;
                     }
 
                     &:hover, &:focus {
@@ -741,6 +736,8 @@ p {font-weight: 300;}
 
 .tabs-left, .tabs-right {
     .nav-tabs {
+		margin-left: 0;
+		margin-right: 0;
         > li {
             > .dropdown-toggle {
                 .caret {
@@ -763,7 +760,7 @@ p {font-weight: 300;}
                 > li {
                     > .dropdown-toggle {
                         .caret {
-                            border-top-color: @white;
+                            border-top-color: @color_two;
                             display: inline-block;
                         }
 

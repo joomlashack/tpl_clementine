@@ -838,7 +838,7 @@ a {
     outline: 0;
 }
 
-.btn {
+.base_button() {
     .box-shadow(none);
     .border-radius(5px);
     background-image: none;
@@ -914,6 +914,9 @@ a {
             border-top-color: @white;
         }
     }
+}
+.btn {
+	.base_button();
 }
 .pagenav {
     .pagenav-next, .pagenav-prev {
@@ -2415,7 +2418,7 @@ body {
 
 .jss-slider.jss-slider-template-design .jss-navigation .jss-navigation-buttons .owl-prev,
 .jss-slider.jss-slider-template-design .jss-navigation .jss-navigation-buttons .owl-next {
-    .btn !important;
+    .base_button() !important;
     background-color: transparent !important;
     border: 2px solid @bodyBackground !important;
     color: @bodyBackground !important;

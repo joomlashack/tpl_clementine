@@ -4,16 +4,16 @@
 @color_one: #FBFBF7;
 @color_two: #FF4D4D;
 @color_three: #575746;
-@color_four: #FF9B75;
+@color_four: lighten(saturate(spin(@color_two, 16.5217), 0.0000), 7.8431);
 @color_five: #F0F0E1;
-@color_six: #858675;
+@color_six: lighten(desaturate(spin(@color_three, 3.5294), 4.0551), 18.4314);
 @mainPadding: 50px;
 
-@lateralMenuLinkBackgroundHover : #9D9E90;
+@lateralMenuLinkBackgroundHover : lighten(desaturate(spin(@color_three, 4.2857), 4.0973), 28.4314);
 @lateralMenuLinkBorder : #FFCFCE;
 
 //Special for overrides
-@color_seven: #F9F9F7;
+@color_seven: lighten(saturate(spin(@color_three, 0.0000), 3.4577), 66.4706);
 
 // Options dropdown-submenu , this is a element parent with arrow for submenu
 // You can use true/false for show arrow

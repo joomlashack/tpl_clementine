@@ -1,0 +1,22 @@
+{
+  "height": 450,
+  "description_bgcolor_flag": false,
+  "description_color_flag": false,
+  "description_width" : 610,
+  "description_height" : 450,
+  "title_bgcolor_flag": false,
+  "title_color_flag": false,
+  "title_tag": "h2",
+  "title_width" : 220,
+  "title_description_padding_vertical" : 20,
+  "title_description_padding_horizontal" : 0,
+  "navigation_show": 0,
+  "navigation_buttons_show": 2,
+  "navigation_buttons_custom_width": 30,
+  "navigation_buttons_custom_height": 30,
+  "height_adjustment" : "crop",
+  "navigation_bottons_show": 1,
+  "buttons_theme": "none",
+  "navigation_buttons_opacity" : "100",
+  "buttons_left_right_position": 1
+}

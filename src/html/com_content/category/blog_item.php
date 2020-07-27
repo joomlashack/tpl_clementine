@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Clementinea
+ * @package     Clementine
  * @subpackage  Overrider
  *
  * @copyright   Copyright (C) 2005 - 2020 Joomlashack. All rights reserved.

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Voyage
+ * @package     Clementine
  * @subpackage  Content Helper
  *
  * @copyright   Copyright (C) 2005 - 2020 Joomlashack. All rights reserved.

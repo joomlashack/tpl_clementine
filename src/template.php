@@ -323,5 +323,6 @@ defined('_JEXEC') or die('Restricted access');
 	}
 	}
 	?>
+        <w:module type="none" name="debug" chrome="none" />
 	</body>
 </html>
